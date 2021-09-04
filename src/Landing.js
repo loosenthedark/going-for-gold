@@ -6,13 +6,12 @@ import Search from "./SearchInput";
 import Medallists from "./Medallists";
 
 const Landing = () => {
-  const testData = useGlobalContext();
-  // console.log(testData.medallists);
+  const { info } = useGlobalContext();
+  console.log(info);
 
   return (
     <main>
-      <h2>Landing component</h2>
-      <Search />
+      <h2>Landing component</h2> <Search />
       <Medallists />
     </main>
   );

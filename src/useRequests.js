@@ -20,26 +20,31 @@ const useRequests = (urlParams) => {
     try {
       const responseFromAPI = await fetch(url);
       const data = await responseFromAPI.json();
-      // console.log(data);
       let filteredArray = [];
       data.filter((item) => {
         return medallists.forEach((medallist) => {
           if (item.cioc === medallist.country_alpha3) {
-            filteredArray.push(item);
+            filteredArray.push({
+              ...item,
+              totalMedals: medallist.medals.total,
+            });
           }
         });
       });
       filteredArray.splice(48, 0, kosovoData);
-      console.log(filteredArray);
-      console.log(filteredArray[48]);
-      // if (data.Response === "True") {
-      //   setInfo(data.Search || data);
-      //   setError({ show: false, msg: "" });
-      // } else if (data.Response === "False") {
-      //   setError({ show: true, msg: data.Error });
-      // }
+      // STEP 20 = Check whether data returned from API is valid and usable, i.e. that there is a filtered array of countries...
+      if (filteredArray.length > 0) {
+        // STEP 21 = If an array has been returned, update the info state value accordingly and (re)set the error state value...
+        setInfo(filteredArray);
+        setError(false);
+      } else if (filteredArray.length < 1 || !filteredArray) {
+        // STEP 22 = But, if no array has been returned, update the error state value to reflect this...
+        setError(true);
+      }
+      // STEP 23 = Either way, toggle isLoading to false once API request has been completed...
       setIsLoading(false);
     } catch (error) {
+      // STEP 24 = Handle misfiring attempt(s) at making an API request, as well as disabling loading in the state value...
       console.log(error);
       setIsLoading(false);
     }
