@@ -1,5 +1,7 @@
 ![Code Institute logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+![Tokyo 2020 Olympics logo](https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/2020_Summer_Olympics_logo_new.svg/1200px-2020_Summer_Olympics_logo_new.svg.png)
+
 # Going for Gold!
 
 [Site concept partly inspired by this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/)
@@ -11,5 +13,7 @@
 [Project title is a respectful nod to the greatest TV game show of all time](https://www.youtube.com/watch?v=lTjVNwYRCNk)
 
 ['Fetch API'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) (MDN Web Docs)
+
+[REST Countries API](https://restcountries.eu/)
 
 [Guidance on additional configuration requirements to facilitate continuous deployment (via Netlify) from John Smilga](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/22778973#content)
