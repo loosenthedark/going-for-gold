@@ -1,6 +1,7 @@
 // STEP 45 = Create a dynamic and reusable breakout custom hook to handle the majority of fetch functionality and make codebase more DRY-compliant...
 import { useState, useEffect } from "react";
 import medalsData from "./medalsData";
+import kosovoData from "./kosovoData";
 
 // STEP 14 = Store root API request URL in a variable...
 const API_ENDPOINT = "https://restcountries.eu/rest/v2/";
@@ -19,7 +20,18 @@ const useRequests = (urlParams) => {
     try {
       const responseFromAPI = await fetch(url);
       const data = await responseFromAPI.json();
-      console.log(data);
+      // console.log(data);
+      let filteredArray = [];
+      data.filter((item) => {
+        return medallists.forEach((medallist) => {
+          if (item.cioc === medallist.country_alpha3) {
+            filteredArray.push(item);
+          }
+        });
+      });
+      filteredArray.splice(48, 0, kosovoData);
+      console.log(filteredArray);
+      console.log(filteredArray[48]);
       // if (data.Response === "True") {
       //   setInfo(data.Search || data);
       //   setError({ show: false, msg: "" });

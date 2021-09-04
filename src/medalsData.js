@@ -44,7 +44,7 @@ const medallists = [{
     },
     {
         "country": "ROC",
-        "country_alpha3": "ROC",
+        "country_alpha3": "RUS",
         "medals": {
             "bronze": 23,
             "gold": 20,
@@ -462,7 +462,7 @@ const medallists = [{
     },
     {
         "country": "Kosovo",
-        "country_alpha3": "KOS",
+        "country_alpha3": "XK",
         "medals": {
             "bronze": 0,
             "gold": 2,
