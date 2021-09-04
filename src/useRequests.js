@@ -11,7 +11,6 @@ const useRequests = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [info, setInfo] = useState([]);
-  const [medallists, setMedallists] = useState(medalsData);
 
   // STEP 16 = Set up async fetchMedallists fn with try/catch logic and error handling...
   const fetchMedallists = async (url) => {
@@ -22,7 +21,7 @@ const useRequests = (urlParams) => {
       const data = await responseFromAPI.json();
       let filteredArray = [];
       data.filter((item) => {
-        return medallists.forEach((medallist) => {
+        return medalsData.forEach((medallist) => {
           if (item.cioc === medallist.country_alpha3) {
             filteredArray.push({
               ...item,
@@ -58,7 +57,7 @@ const useRequests = (urlParams) => {
     //   }
   }, [urlParams]);
 
-  return { isLoading, error, info, medallists };
+  return { isLoading, error, info };
 };
 
 export default useRequests;
