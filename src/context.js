@@ -5,11 +5,11 @@ import useRequests from "./useRequests";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const { isLoading, error, info } = useRequests("all");
+  const { isLoading, error, info, medallists } = useRequests("all");
 
   // STEP 24 = Pass all necessary state values through the Provider component's value prop to be accessed from elsewhere within the app...
   return (
-    <AppContext.Provider value={{ isLoading, error, info }}>
+    <AppContext.Provider value={{ isLoading, error, info, medallists }}>
       {children}
     </AppContext.Provider>
   );

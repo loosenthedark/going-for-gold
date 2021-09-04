@@ -1,5 +1,6 @@
 // STEP 45 = Create a dynamic and reusable breakout custom hook to handle the majority of fetch functionality and make codebase more DRY-compliant...
 import { useState, useEffect } from "react";
+import medalsData from "./medalsData";
 
 // STEP 14 = Store root API request URL in a variable...
 const API_ENDPOINT = "https://restcountries.eu/rest/v2/";
@@ -9,6 +10,7 @@ const useRequests = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [info, setInfo] = useState([]);
+  const [medallists, setMedallists] = useState(medalsData);
 
   // STEP 16 = Set up async fetchMedallists fn with try/catch logic and error handling...
   const fetchMedallists = async (url) => {
@@ -39,7 +41,7 @@ const useRequests = (urlParams) => {
     //   }
   }, [urlParams]);
 
-  return { isLoading, error, info };
+  return { isLoading, error, info, medallists };
 };
 
 export default useRequests;

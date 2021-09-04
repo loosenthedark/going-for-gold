@@ -1,6 +1,6 @@
 ![Code Institute logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-![Tokyo 2020 Olympics logo](https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/2020_Summer_Olympics_logo_new.svg/1200px-2020_Summer_Olympics_logo_new.svg.png)
+![Tokyo 2020 Olympics logo](https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/2020_Summer_Olympics_logo_new.svg/316px-2020_Summer_Olympics_logo_new.svg.png)
 
 # Going for Gold!
 

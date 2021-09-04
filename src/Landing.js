@@ -7,7 +7,7 @@ import Medallists from "./Medallists";
 
 const Landing = () => {
   const testData = useGlobalContext();
-  console.log(testData);
+  console.log(testData.medallists);
 
   return (
     <main>

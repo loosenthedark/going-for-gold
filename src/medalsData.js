@@ -1,4 +1,4 @@
-[{
+const medallists = [{
         "country": "United States of America",
         "country_alpha3": "USA",
         "medals": {
@@ -1022,3 +1022,5 @@
         "rank": 86
     }
 ]
+
+export default medallists
