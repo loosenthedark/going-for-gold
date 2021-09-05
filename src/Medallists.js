@@ -21,20 +21,35 @@ const Medallists = () => {
     <section>
       {medalCountries.map((country) => {
         // STEP 29 = Destructure all relevant props from country object in fn arg, allocating more appropriate/simplified aliases where necessary...
-        const { alpha3Code: id, name, flag, population, totalMedals } = country;
+        const {
+          alpha3Code: id,
+          name,
+          flag,
+          population,
+          totalMedals,
+          goldMedals,
+        } = country;
         // STEP 30 = Link functionality here needs to be dynamic, so template literal syntax should be used...
         return (
           // <Link key={id} className='movie' to={`/movies/${id}`}>
           <article key={id}>
             <div className='flag-container'>
-              <img className='flag' src={flag} alt={`${name} flag`} />
+              <div className='flag-wrapper flag-spin'>
+                <img className='flag' src={flag} alt={`${name} flag`} />
+                <div className='flag-olympic'></div>
+              </div>
             </div>
             <div>
               <h3>{name}</h3>
               <h4>Population: {population}</h4>
+              <h4>Gold medals: {goldMedals}</h4>
               <h4>Total medals: {totalMedals}</h4>
               <h4>
-                Medals per million:{" "}
+                Gold medals per million:
+                {((goldMedals / population) * 1000000).toFixed(2)}
+              </h4>
+              <h4>
+                Total medals per million:
                 {((totalMedals / population) * 1000000).toFixed(2)}
               </h4>
             </div>

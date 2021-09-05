@@ -25,6 +25,7 @@ const useRequests = (urlParams) => {
           if (item.cioc === medallist.country_alpha3) {
             filteredArray.push({
               ...item,
+              goldMedals: medallist.medals.gold,
               totalMedals: medallist.medals.total,
             });
           }
