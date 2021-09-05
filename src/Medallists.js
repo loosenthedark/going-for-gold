@@ -26,7 +26,9 @@ const Medallists = () => {
         return (
           // <Link key={id} className='movie' to={`/movies/${id}`}>
           <article key={id}>
-            <img className='flag' src={flag} alt={`${name} flag`} />
+            <div className='flag-container'>
+              <img className='flag' src={flag} alt={`${name} flag`} />
+            </div>
             <div>
               <h3>{name}</h3>
               <h4>Population: {population}</h4>
