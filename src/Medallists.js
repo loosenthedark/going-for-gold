@@ -48,14 +48,8 @@ const Medallists = () => {
                 <p>Population: {population}</p>
                 <p>Gold medals: {goldMedals}</p>
                 <p>Total medals: {totalMedals}</p>
-                <p>
-                  Gold medals per million:
-                  {goldsPerMillion}
-                </p>
-                <p>
-                  Total medals per million:
-                  {medalsPerMillion}
-                </p>
+                <p>Gold medals per million: {goldsPerMillion}</p>
+                <p>Total medals per million: {medalsPerMillion}</p>
               </div>
             </article>
             // </Link>
