@@ -11,15 +11,14 @@ import ErrorHandler from "./ErrorHandler";
 function App() {
   return (
     <>
-      <h1>Going for Gold!</h1>
       <Switch>
         <Route path='/' exact>
           <Landing />
-        </Route>
+        </Route>{" "}
         <Route path='*'>
           <ErrorHandler />
-        </Route>
-      </Switch>
+        </Route>{" "}
+      </Switch>{" "}
     </>
   );
 }

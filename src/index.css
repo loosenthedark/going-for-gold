@@ -13,6 +13,13 @@ Variables
 */
 
 
+/* $blue: hsl(201, 100%, 39%)
+$yellow: hsl(39, 97%, 58%)
+$black: hsl(0, 0%, 0%)
+$green: hsl(149, 99%, 33%)
+$red: hsl(351, 85%, 56%) */
+
+
 /* :root {
     
 } */
@@ -38,8 +45,13 @@ body {
     color: var(--clr-grey-1); */
     line-height: 1.5;
     font-size: 0.875rem;
-    background: #c4cdd4;
-    background: linear-gradient(to left, #c4cdd4, #eef2f3);
+    color: hsl(0, 0%, 0%);
+    background: linear-gradient(to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 ul {
@@ -98,6 +110,68 @@ Search
 Loading
 ===============
 */
+
+.spinner-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.spinner {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: -36px;
+    background: none;
+    border-radius: 50%;
+    border: 6px solid currentColor;
+    box-sizing: border-box;
+    animation-name: spin;
+    animation-duration: 1.2s;
+    /* animation-direction: alternate; */
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spinner:first-child {
+    margin-left: 0;
+    color: hsla(201, 100%, 39%, 20%);
+    border-top-color: hsl(201, 100%, 39%);
+}
+
+.spinner:nth-child(2) {
+    color: hsla(39, 97%, 58%, 20%);
+    border-top-color: hsl(39, 97%, 58%);
+}
+
+.spinner:nth-child(3) {
+    color: hsla(0, 0%, 0%, 20%);
+    border-top-color: hsl(0, 0%, 0%);
+}
+
+.spinner:nth-child(4) {
+    color: hsla(149, 99%, 33%, 20%);
+    border-top-color: hsl(149, 99%, 33%);
+}
+
+.spinner:nth-child(5) {
+    color: hsla(351, 85%, 56%, 20%);
+    border-top-color: hsl(351, 85%, 56%);
+}
+
+.spinner:nth-child(2n) {
+    margin-top: 40px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 /*
