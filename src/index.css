@@ -17,7 +17,11 @@ Variables
 $yellow: hsl(39, 97%, 58%)
 $black: hsl(0, 0%, 0%)
 $green: hsl(149, 99%, 33%)
-$red: hsl(351, 85%, 56%) */
+$red: hsl(351, 85%, 56%)
+
+goldenrod: hsl(43, 74%, 49%)
+silver: hsl(240, 4%, 60%)
+bronze: hsl(27, 42%, 46%) */
 
 
 /* :root {
@@ -37,6 +41,7 @@ Global Styles
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -52,6 +57,10 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+body>* {
+    position: relative;
 }
 
 ul {
@@ -101,8 +110,53 @@ p {
 
 /*  Global classes */
 
+.bg-gold {
+    background-image: linear-gradient( to right top, #d9a520, #d6a424, #d3a228, #d0a12b, #cd9f2e);
+}
+
+.bg-silver {
+    background-image: linear-gradient( to right top, #95959d, #8c848a, #807475, #706661, #5c5a51);
+}
+
+.bg-bronze {
+    background-image: linear-gradient( to right top, #a77044, #9b6439, #8e592f, #824e25, #76431b);
+}
+
 
 /* section */
+
+
+/*
+=============== 
+Buttons
+===============
+*/
+
+.container-buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 24vw;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    height: 3.25rem;
+    line-height: 3.25rem;
+    text-align: center;
+    width: 15.5rem;
+    margin-bottom: 1rem;
+    border-radius: 3.25rem;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+}
 
 
 /*
@@ -113,6 +167,45 @@ Navbar
 
 .logo-gfg {
     width: 100%;
+}
+
+.container-landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10rem;
+}
+
+.container-landing>svg {
+    transform: scale(1.5);
+}
+
+.container-landing .all {
+    fill: none;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+    stroke: none;
+}
+
+#c1 {
+    clip-path: url(#m1);
+}
+
+#c2 {
+    clip-path: url(#m2);
+}
+
+#c3 {
+    clip-path: url(#m3);
+}
+
+#c4 {
+    clip-path: url(#m4);
+}
+
+#c5 {
+    clip-path: url(#m5);
 }
 
 

@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 
 // STEP 11 = Import app component(s)...
 import Landing from "./Landing";
+import Main from "./Main";
 import ErrorHandler from "./ErrorHandler";
 
 // STEP 12 = Implement Switch functionality with conditional component rendering (including an error-handler) inside the app's main return statement...
@@ -14,11 +15,14 @@ function App() {
       <Switch>
         <Route path='/' exact>
           <Landing />
-        </Route>{" "}
+        </Route>
+        <Route path='/medallists'>
+          <Main />
+        </Route>
         <Route path='*'>
           <ErrorHandler />
-        </Route>{" "}
-      </Switch>{" "}
+        </Route>
+      </Switch>
     </>
   );
 }

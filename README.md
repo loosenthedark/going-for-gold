@@ -24,7 +24,11 @@
 
 [Medal icon downloaded from Font Awesome](https://fontawesome.com/license)
 
-[Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' pen](https://codepen.io/CodeBoomer/pen/BzOPPz/)
+[Landing page Olympic rings SVG GSAP animation adapted from Steve Gardner's CodePen](https://codepen.io/ste-vg/details/kXzXYW)
+
+[Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen](https://codepen.io/CodeBoomer/pen/BzOPPz/)
+
+[ColorSpace's online colour gradient generator](https://mycolor.space/gradient) was used to apply a metallic shine effect to the gold-, silver- and bronze-coloured landing page buttons.
 
 ['How to sort an array of objects by multiple fields?'](https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields) (Stack Overflow)
 
