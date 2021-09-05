@@ -27,6 +27,14 @@ const useRequests = (urlParams) => {
               ...item,
               goldMedals: medallist.medals.gold,
               totalMedals: medallist.medals.total,
+              goldsPerMillion: (
+                (medallist.medals.gold / item.population) *
+                1000000
+              ).toFixed(2),
+              medalsPerMillion: (
+                (medallist.medals.total / item.population) *
+                1000000
+              ).toFixed(2),
             });
           }
         });
@@ -35,6 +43,11 @@ const useRequests = (urlParams) => {
       // STEP 20 = Check whether data returned from API is valid and usable, i.e. that there is a filtered array of countries...
       if (filteredArray.length > 0) {
         // STEP 21 = If an array has been returned, update the info state value accordingly and (re)set the error state value...
+        filteredArray.sort((a, b) => {
+          return b.goldsPerMillion === a.goldsPerMillion
+            ? b.medalsPerMillion - a.medalsPerMillion
+            : b.goldsPerMillion - a.goldsPerMillion;
+        });
         setInfo(filteredArray);
         setError(false);
       } else if (filteredArray.length < 1 || !filteredArray) {

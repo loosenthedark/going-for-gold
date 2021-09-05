@@ -28,7 +28,10 @@ const Medallists = () => {
           population,
           totalMedals,
           goldMedals,
+          goldsPerMillion,
+          medalsPerMillion,
         } = country;
+
         // STEP 30 = Link functionality here needs to be dynamic, so template literal syntax should be used...
         return (
           // <Link key={id} className='movie' to={`/movies/${id}`}>
@@ -40,18 +43,18 @@ const Medallists = () => {
               </div>
             </div>
             <div>
-              <h3>{name}</h3>
-              <h4>Population: {population}</h4>
-              <h4>Gold medals: {goldMedals}</h4>
-              <h4>Total medals: {totalMedals}</h4>
-              <h4>
+              <h2>{name}</h2>
+              <p>Population: {population}</p>
+              <p>Gold medals: {goldMedals}</p>
+              <p>Total medals: {totalMedals}</p>
+              <p>
                 Gold medals per million:
-                {((goldMedals / population) * 1000000).toFixed(2)}
-              </h4>
-              <h4>
+                {goldsPerMillion}
+              </p>
+              <p>
                 Total medals per million:
-                {((totalMedals / population) * 1000000).toFixed(2)}
-              </h4>
+                {medalsPerMillion}
+              </p>
             </div>
           </article>
           // </Link>
