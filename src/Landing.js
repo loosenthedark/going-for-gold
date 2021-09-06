@@ -2,17 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
+  // Landing page Olympic rings GSAP SVG animation adapted from Steve Gardner's CodePen: https://codepen.io/ste-vg/details/kXzXYW Some of his source code is refactored here to make it more ES6-compliant
   window.onload = function () {
-    var count = 5;
+    const count = 5;
 
-    var circles = [];
-    var lines = [];
-    var colors = ["#0084c7", "#f2c418", "#000", "#00a24a", "#e01e26"];
-    var reverse = [false, false, false, true, true];
+    let circles = [];
+    let lines = [];
+    const colors = ["#0084c7", "#f2c418", "#000", "#00a24a", "#e01e26"];
+    const reverse = [false, false, false, true, true];
 
-    for (var i = 1; i <= count; i++) {
-      var circle = document.getElementById("c" + i);
-      var circleLength = circle.getTotalLength();
+    for (let i = 1; i <= count; i++) {
+      let circle = document.getElementById("c" + i);
+      let circleLength = circle.getTotalLength();
       circle.style.strokeDasharray = circleLength + " " + circleLength;
       circle.style.stroke = colors[i - 1];
       circles.push({
@@ -20,8 +21,8 @@ const Landing = () => {
         length: circleLength,
       });
 
-      var path = document.getElementById("p" + i);
-      var pathLength = path.getTotalLength();
+      let path = document.getElementById("p" + i);
+      let pathLength = path.getTotalLength();
       path.style.strokeDasharray = circleLength + " " + pathLength;
       lines.push({
         node: path,
@@ -29,9 +30,9 @@ const Landing = () => {
       });
     }
 
-    var speed = 2.5;
-    var delay = speed - 0.12;
-    var delayStep = 0.2;
+    const speed = 2.5;
+    const delay = speed - 0.12;
+    const delayStep = 0.2;
 
     animate();
     document.onclick = animate;
@@ -39,9 +40,9 @@ const Landing = () => {
     function animate() {
       window.TweenMax.killAll();
 
-      for (var i = 0; i < count; i++) {
-        var path = lines[i].node;
-        var stagger = i * delayStep;
+      for (let i = 0; i < count; i++) {
+        let path = lines[i].node;
+        let stagger = i * delayStep;
 
         path.style.strokeDashoffset = lines[i].length;
         path.style.stroke = "#fff"; //colors[i];
@@ -56,7 +57,7 @@ const Landing = () => {
           ease: window.Power1.easeIn,
         });
 
-        var circle = circles[i].node;
+        let circle = circles[i].node;
         circle.style.strokeDashoffset = reverse[i]
           ? -circles[i].length
           : circles[i].length;
