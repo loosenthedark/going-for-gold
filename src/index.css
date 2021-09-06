@@ -21,7 +21,10 @@ $red: hsl(351, 85%, 56%)
 
 goldenrod: hsl(43, 74%, 49%)
 silver: hsl(240, 4%, 60%)
-bronze: hsl(27, 42%, 46%) */
+bronze: hsl(27, 42%, 46%)
+
+logo blue: hsl(229, 48%, 24%)
+*/
 
 
 /* :root {
@@ -41,11 +44,10 @@ Global Styles
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
-    font-family: Freeroad, "Helvetica Neue", sans-serif;
+    font-family: Raleway, sans-serif;
     /* background: var(--clr-grey-10);
     color: var(--clr-grey-1); */
     line-height: 1.5;
@@ -74,6 +76,14 @@ a {
 h1,
 h2,
 h3,
+h5,
+h6 {
+    font-family: Freeroad, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
 h4 {
     line-height: 1.25;
     margin-bottom: 0.75rem;
@@ -92,11 +102,6 @@ h3 {
     font-size: 1.25rem;
 }
 
-h4,
-p {
-    font-family: Raleway, sans-serif;
-}
-
 h4 {
     font-size: 0.875rem;
     font-weight: 500;
@@ -105,21 +110,22 @@ h4 {
 p {
     margin-bottom: 1rem;
     font-weight: 400;
+    font-size: 1rem;
 }
 
 
 /*  Global classes */
 
 .bg-gold {
-    background-image: linear-gradient( to right top, #d9a520, #d6a424, #d3a228, #d0a12b, #cd9f2e);
+    background-image: linear-gradient( to right top, hsl(43, 74%, 49%), hsl(43, 71%, 49%), hsl(43, 68%, 49%), hsl(43, 66%, 49%), hsl(43, 63%, 49%));
 }
 
 .bg-silver {
-    background-image: linear-gradient( to right top, #95959d, #8c848a, #807475, #706661, #5c5a51);
+    background-image: linear-gradient( to right top, hsl(240, 4%, 60%), hsl(315, 3%, 53%), hsl(355, 5%, 48%), hsl(20, 7%, 41%), hsl(49, 6%, 34%));
 }
 
 .bg-bronze {
-    background-image: linear-gradient( to right top, #a77044, #9b6439, #8e592f, #824e25, #76431b);
+    background-image: linear-gradient( to right top, hsl(27, 42%, 46%), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
 }
 
 
@@ -151,7 +157,7 @@ Buttons
     border-radius: 3.25rem;
     box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     display: inline-block;
     text-transform: uppercase;
@@ -295,13 +301,32 @@ Medallists
     width: 20rem;
     height: 20rem;
     position: relative;
-    background-image: url("./static/images/logos/logo-tokyo-2020.png");
     background-position: center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+article:nth-child(5n+1)>.flag-container {
+    background-image: url("./static/images/logos/logo-tokyo-2020-blue-light.png");
+}
+
+article:nth-child(5n+2)>.flag-container {
+    background-image: url("./static/images/logos/logo-tokyo-2020-black.png");
+}
+
+article:nth-child(5n+3)>.flag-container {
+    background-image: url("./static/images/logos/logo-tokyo-2020-red.png");
+}
+
+article:nth-child(5n+4)>.flag-container {
+    background-image: url("./static/images/logos/logo-tokyo-2020-yellow.png");
+}
+
+article:nth-child(5n+5)>.flag-container {
+    background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
 }
 
 .flag-wrapper {

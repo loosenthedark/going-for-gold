@@ -18,7 +18,7 @@ const Medallists = () => {
   // STEP 28 = Iterate over the medalCountries array, returning a standalone article element for each country...
   return (
     <>
-      <img src={logo} alt='Going for Gold logo' className='logo-gfg' />
+      {/* <img src={logo} alt='Going for Gold logo' className='logo-gfg' /> */}
       <Search />
       <section>
         {medalCountries.map((country) => {

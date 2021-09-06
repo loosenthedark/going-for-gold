@@ -12,7 +12,7 @@
 
 [Olympic flag image downloaded from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_flag.svg/640px-Olympic_flag.svg.png)
 
-[Chequered Tokyo 2020 logo downloaded from PNGKey](https://www.pngkey.com/maxpic/u2r5o0t4o0o0r5w7/)
+[Chequered Tokyo 2020 logo downloaded from Wikipedia and customised for use throughout the site](https://upload.wikimedia.org/wikipedia/sco/1/1d/2020_Summer_Olympics_logo_new.svg)
 
 ['3D Transforms and Animations'](https://www.the-art-of-web.com/css/3d-transforms/) (The Art of Web)
 
