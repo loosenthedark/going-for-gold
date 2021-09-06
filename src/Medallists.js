@@ -1,6 +1,5 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import logo from "./static/images/logos/logo-going-for-gold.png";
 import Loading from "./Loading";
 import Search from "./SearchInput";
 
@@ -18,7 +17,6 @@ const Medallists = () => {
   // STEP 28 = Iterate over the medalCountries array, returning a standalone article element for each country...
   return (
     <>
-      {/* <img src={logo} alt='Going for Gold logo' className='logo-gfg' /> */}
       <Search />
       <section>
         {medalCountries.map((country) => {
@@ -41,14 +39,19 @@ const Medallists = () => {
               <div className='flag-container'>
                 <div className='flag-wrapper flag-spin'>
                   <img className='flag' src={flag} alt={`${name} flag`} />
-                  <div className='flag-olympic'></div>
+                  <div className='flag-olympic'> </div>
                 </div>
               </div>
               <div>
                 <h2>{name}</h2>
                 <ul>
                   <li>
-                    Population: <span>{population}</span>
+                    Population:{" "}
+                    <span>
+                      {population
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    </span>
                   </li>
                   <li>
                     Gold medals: <span>{goldMedals}</span>
