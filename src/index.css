@@ -12,19 +12,25 @@ Variables
 ===============
 */
 
-
-/* $blue: hsl(201, 100%, 39%)
-$yellow: hsl(39, 97%, 58%)
-$black: hsl(0, 0%, 0%)
-$green: hsl(149, 99%, 33%)
-$red: hsl(351, 85%, 56%)
-
-goldenrod: hsl(43, 74%, 49%)
-silver: hsl(240, 4%, 60%)
-bronze: hsl(27, 42%, 46%)
-
-logo blue: hsl(229, 48%, 24%)
-*/
+:root {
+    /* Primary palette */
+    --clr-primary-white: hsl(0, 0%, 100%);
+    --bg-primary-gradient: linear-gradient( to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
+    /* Tokyo 2020 logo original */
+    --clr-tokyo-blue: hsl(229, 48%, 24%);
+    /* Olympic ring colours */
+    --clr-olympic-blue: hsl(201, 100%, 39%);
+    --clr-olympic-black: hsl(0, 0%, 0%);
+    --clr-olympic-red: hsl(351, 85%, 56%);
+    --clr-olympic-yellow: hsl(39, 97%, 58%);
+    --clr-olympic-green: hsl(149, 99%, 33%);
+    /* Olympic medal base colours */
+    --clr-medal-gold: hsl(43, 74%, 49%);
+    --clr-medal-silver: hsl(240, 4%, 60%);
+    --clr-medal-bronze: hsl(27, 42%, 46%);
+    /* Shadow */
+    --shadow-main: 0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.2);
+}
 
 
 /*
@@ -32,11 +38,6 @@ logo blue: hsl(229, 48%, 24%)
 Navbar
 ===============
 */
-
-
-/* :root {
-    
-} */
 
 
 /*
@@ -55,12 +56,10 @@ Global Styles
 }
 
 body {
-    /* background: var(--clr-grey-10);
-    color: var(--clr-grey-1); */
     line-height: 1.5;
     font-size: 0.875rem;
-    color: hsl(0, 0%, 0%);
-    background: linear-gradient(to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
+    color: var(--clr-olympic-black);
+    background: var(--bg-primary-gradient);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +104,7 @@ h2 {
     font-size: 2.25rem;
     margin-top: 0.75rem;
     margin-bottom: 0.5rem;
-    color: hsl(229, 48%, 24%);
+    color: var(--clr-tokyo-blue);
     text-align: center;
 }
 
@@ -151,18 +150,18 @@ article {
 /*  Global classes */
 
 .bg-gold {
-    background-image: linear-gradient( to right top, hsl(43, 74%, 49%), hsl(43, 71%, 49%), hsl(43, 68%, 49%), hsl(43, 66%, 49%), hsl(43, 63%, 49%));
-    animation-delay: 4.75s;
+    background-image: linear-gradient( to right top, var(--clr-medal-gold), hsl(43, 71%, 49%), hsl(43, 68%, 49%), hsl(43, 66%, 49%), hsl(43, 63%, 49%));
+    animation-delay: 4.25s;
 }
 
 .bg-silver {
-    background-image: linear-gradient( to right top, hsl(240, 4%, 60%), hsl(315, 3%, 53%), hsl(355, 5%, 48%), hsl(20, 7%, 41%), hsl(49, 6%, 34%));
-    animation-delay: 5.5s;
+    background-image: linear-gradient( to right top, var(--clr-medal-silver), hsl(315, 3%, 53%), hsl(355, 5%, 48%), hsl(20, 7%, 41%), hsl(49, 6%, 34%));
+    animation-delay: 5s;
 }
 
 .bg-bronze {
-    background-image: linear-gradient( to right top, hsl(27, 42%, 46%), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
-    animation-delay: 6.25s;
+    background-image: linear-gradient( to right top, var(--clr-medal-bronze), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
+    animation-delay: 5.75s;
 }
 
 
@@ -182,13 +181,13 @@ Buttons
     width: 15.5rem;
     margin-bottom: 1rem;
     border-radius: 3.25rem;
-    box-shadow: 0.625rem 0.625rem 0.875rem 0.065rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-main);
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
     display: inline-block;
     text-transform: uppercase;
-    color: hsl(0, 0%, 100%);
+    color: var(--clr-primary-white);
     animation-name: btn-fade-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -271,6 +270,80 @@ Landing
 
 /*
 =============== 
+Loading
+===============
+*/
+
+
+/* Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen: https://codepen.io/CodeBoomer/pen/BzOPPz/ */
+
+.spinner-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -5rem;
+}
+
+.spinner {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+    margin-left: -2.25rem;
+    background: none;
+    border-radius: 50%;
+    border: 0.375rem solid currentColor;
+    box-sizing: border-box;
+    animation-name: spin;
+    animation-duration: 1.2s;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spinner:first-child {
+    margin-left: 0;
+    color: hsla(201, 100%, 39%, 20%);
+    border-top-color: var(--clr-olympic-blue);
+}
+
+.spinner:nth-child(2) {
+    color: hsla(39, 97%, 58%, 20%);
+    border-top-color: var(--clr-olympic-yellow);
+}
+
+.spinner:nth-child(3) {
+    color: hsla(0, 0%, 0%, 20%);
+    border-top-color: var(--clr-olympic-black);
+}
+
+.spinner:nth-child(4) {
+    color: hsla(149, 99%, 33%, 20%);
+    border-top-color: var(--clr-olympic-green);
+}
+
+.spinner:nth-child(5) {
+    color: hsla(351, 85%, 56%, 20%);
+    border-top-color: var(--clr-olympic-red);
+}
+
+.spinner:nth-child(2n) {
+    margin-top: 2.5rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*
+=============== 
 Search
 ===============
 */
@@ -307,9 +380,9 @@ form>input {
     height: 3rem;
     outline: none;
     border: none;
-    background: hsl(0, 0%, 100%);
-    color: hsl(229, 48%, 24%);
-    box-shadow: 0.625rem 0.625rem 0.875rem 0.065rem rgba(0, 0, 0, 0.2);
+    background: var(--clr-primary-white);
+    color: var(--clr-tokyo-blue);
+    box-shadow: var(--shadow-main);
     padding: 0 5rem 0 1.25rem;
     border-radius: 1.875rem;
     transition: all 1s;
@@ -328,7 +401,7 @@ form>input:focus {
 
 form>input:focus~.search {
     right: -13.5rem;
-    background: hsl(229, 48%, 24%);
+    background: var(--clr-tokyo-blue);
     z-index: 6;
 }
 
@@ -342,7 +415,7 @@ form>input:focus~.search::after {
 form>input:focus~.search::after {
     height: 0.125rem;
     border: none;
-    background: hsl(0, 0%, 100%);
+    background: var(--clr-primary-white);
     border-radius: 0%;
     transform: rotate(-45deg);
 }
@@ -356,10 +429,10 @@ form>.search {
     bottom: 0;
     width: 4rem;
     height: 4rem;
-    background: hsl(229, 48%, 24%);
+    background: var(--clr-tokyo-blue);
     border-radius: 50%;
     transition: all 1s;
-    box-shadow: 0.625rem 0.625rem 0.875rem 0.065rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-main);
 }
 
 form>input:hover,
@@ -382,7 +455,7 @@ form>.search::before {
     left: 1.375rem;
     width: 0.75rem;
     height: 0.125rem;
-    background: hsl(0, 0%, 100%);
+    background: var(--clr-primary-white);
     transform: rotate(45deg);
 }
 
@@ -392,81 +465,7 @@ form>.search::after {
     width: 1.625rem;
     height: 1.625rem;
     border-radius: 50%;
-    border: 0.125rem solid hsl(0, 0%, 100%);
-}
-
-
-/*
-=============== 
-Loading
-===============
-*/
-
-
-/* Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen: https://codepen.io/CodeBoomer/pen/BzOPPz/ */
-
-.spinner-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: -5rem;
-}
-
-.spinner {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 5rem;
-    height: 5rem;
-    margin-left: -2.25rem;
-    background: none;
-    border-radius: 50%;
-    border: 0.375rem solid currentColor;
-    box-sizing: border-box;
-    animation-name: spin;
-    animation-duration: 1.2s;
-    animation-direction: alternate;
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.spinner:first-child {
-    margin-left: 0;
-    color: hsla(201, 100%, 39%, 20%);
-    border-top-color: hsl(201, 100%, 39%);
-}
-
-.spinner:nth-child(2) {
-    color: hsla(39, 97%, 58%, 20%);
-    border-top-color: hsl(39, 97%, 58%);
-}
-
-.spinner:nth-child(3) {
-    color: hsla(0, 0%, 0%, 20%);
-    border-top-color: hsl(0, 0%, 0%);
-}
-
-.spinner:nth-child(4) {
-    color: hsla(149, 99%, 33%, 20%);
-    border-top-color: hsl(149, 99%, 33%);
-}
-
-.spinner:nth-child(5) {
-    color: hsla(351, 85%, 56%, 20%);
-    border-top-color: hsl(351, 85%, 56%);
-}
-
-.spinner:nth-child(2n) {
-    margin-top: 2.5rem;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    border: 0.125rem solid var(--clr-primary-white);
 }
 
 
@@ -511,11 +510,11 @@ article:nth-child(5n+5)>.flag-container {
 
 .flag-container+div li {
     font-weight: 700;
-    color: hsl(229, 48%, 24%);
+    color: var(--clr-tokyo-blue);
 }
 
 .flag-container+div li>span {
-    color: hsl(0, 0%, 0%);
+    color: var(--clr-olympic-black);
     font-weight: 400;
 }
 
