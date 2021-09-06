@@ -94,8 +94,11 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
+    font-size: 2.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: hsl(229, 48%, 24%);
+    text-align: center;
 }
 
 h3 {
@@ -111,6 +114,21 @@ p {
     margin-bottom: 1rem;
     font-weight: 400;
     font-size: 1rem;
+}
+
+ul {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -298,8 +316,8 @@ Medallists
 */
 
 .flag-container {
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
     position: relative;
     background-position: center;
     background-size: cover;
@@ -329,8 +347,18 @@ article:nth-child(5n+5)>.flag-container {
     background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
 }
 
+.flag-container+div li {
+    font-weight: 700;
+    color: hsl(229, 48%, 24%);
+}
+
+.flag-container+div li>span {
+    color: hsl(0, 0%, 0%);
+    font-weight: 400;
+}
+
 .flag-wrapper {
-    width: 8rem;
+    width: 6.4rem;
     height: auto;
     position: relative;
 }
@@ -338,8 +366,8 @@ article:nth-child(5n+5)>.flag-container {
 .flag {
     width: 100%;
     backface-visibility: hidden;
-    max-height: 5rem;
-    min-height: 4rem;
+    max-height: 4rem;
+    min-height: 3.2rem;
 }
 
 .flag-olympic {

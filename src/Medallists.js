@@ -46,11 +46,23 @@ const Medallists = () => {
               </div>
               <div>
                 <h2>{name}</h2>
-                <p>Population: {population}</p>
-                <p>Gold medals: {goldMedals}</p>
-                <p>Total medals: {totalMedals}</p>
-                <p>Gold medals per million: {goldsPerMillion}</p>
-                <p>Total medals per million: {medalsPerMillion}</p>
+                <ul>
+                  <li>
+                    Population: <span>{population}</span>
+                  </li>
+                  <li>
+                    Gold medals: <span>{goldMedals}</span>
+                  </li>
+                  <li>
+                    Total medals: <span>{totalMedals}</span>
+                  </li>
+                  <li>
+                    Golds per million: <span>{goldsPerMillion}</span>
+                  </li>
+                  <li>
+                    Total per million: <span>{medalsPerMillion}</span>
+                  </li>
+                </ul>
               </div>
             </article>
             // </Link>
