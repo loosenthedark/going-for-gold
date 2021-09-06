@@ -27,6 +27,13 @@ logo blue: hsl(229, 48%, 24%)
 */
 
 
+/*
+=============== 
+Navbar
+===============
+*/
+
+
 /* :root {
     
 } */
@@ -145,14 +152,17 @@ article {
 
 .bg-gold {
     background-image: linear-gradient( to right top, hsl(43, 74%, 49%), hsl(43, 71%, 49%), hsl(43, 68%, 49%), hsl(43, 66%, 49%), hsl(43, 63%, 49%));
+    animation-delay: 4.75s;
 }
 
 .bg-silver {
     background-image: linear-gradient( to right top, hsl(240, 4%, 60%), hsl(315, 3%, 53%), hsl(355, 5%, 48%), hsl(20, 7%, 41%), hsl(49, 6%, 34%));
+    animation-delay: 5.5s;
 }
 
 .bg-bronze {
     background-image: linear-gradient( to right top, hsl(27, 42%, 46%), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
+    animation-delay: 6.25s;
 }
 
 
@@ -164,16 +174,6 @@ article {
 Buttons
 ===============
 */
-
-.container-buttons {
-    width: 100%;
-    position: absolute;
-    top: 55vh;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .btn {
     height: 3.25rem;
@@ -189,14 +189,38 @@ Buttons
     display: inline-block;
     text-transform: uppercase;
     color: hsl(0, 0%, 100%);
+    animation-name: btn-fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+@keyframes btn-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
 /*
 =============== 
-Navbar
+Landing
 ===============
 */
+
+.container-buttons {
+    width: 100%;
+    position: absolute;
+    top: 55vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 /* Landing page Olympic rings SVG GSAP animation adapted from Steve Gardner's CodePen: https://codepen.io/ste-vg/details/kXzXYW */
@@ -453,9 +477,10 @@ Medallists
 */
 
 .flag-container {
-    width: 70vw;
-    height: 70vw;
+    width: 73vw;
+    height: 73vw;
     position: relative;
+    top: -2vw;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
