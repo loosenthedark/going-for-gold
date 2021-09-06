@@ -2,6 +2,7 @@ import React from "react";
 import { useGlobalContext } from "./context";
 import Loading from "./Loading";
 import Search from "./SearchInput";
+import Nav from "./NavMenu";
 
 const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
@@ -18,6 +19,7 @@ const Medallists = () => {
   return (
     <>
       <Search />
+      <Nav />
       <section>
         {medalCountries.map((country) => {
           // STEP 29 = Destructure all relevant props from country object in fn arg, allocating more appropriate/simplified aliases where necessary...

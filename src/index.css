@@ -18,12 +18,18 @@ Variables
     --bg-primary-gradient: linear-gradient( to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
     /* Tokyo 2020 logo original */
     --clr-tokyo-blue: hsl(229, 48%, 24%);
+    --clr-tokyo-blue-muted-opaque: hsla(230, 47%, 80%, 0.95);
     /* Olympic ring colours */
     --clr-olympic-blue: hsl(201, 100%, 39%);
+    --clr-olympic-blue-opaque: hsla(201, 100%, 39%, 20%);
     --clr-olympic-black: hsl(0, 0%, 0%);
+    --clr-olympic-black-opaque: hsla(0, 0%, 0%, 20%);
     --clr-olympic-red: hsl(351, 85%, 56%);
+    --clr-olympic-red-opaque: hsla(351, 85%, 56%, 20%);
     --clr-olympic-yellow: hsl(39, 97%, 58%);
+    --clr-olympic-yellow-opaque: hsla(39, 97%, 58%, 20%);
     --clr-olympic-green: hsl(149, 99%, 33%);
+    --clr-olympic-green-opaque: hsla(149, 99%, 33%, 20%);
     /* Olympic medal base colours */
     --clr-medal-gold: hsl(43, 74%, 49%);
     --clr-medal-silver: hsl(240, 4%, 60%);
@@ -31,13 +37,6 @@ Variables
     /* Shadow */
     --shadow-main: 0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.2);
 }
-
-
-/*
-=============== 
-Navbar
-===============
-*/
 
 
 /*
@@ -136,11 +135,11 @@ li {
 main {
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 26vw;
+    margin-top: 20vw;
 }
 
 article {
-    height: 150vw;
+    height: 156vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,6 +161,63 @@ article {
 .bg-bronze {
     background-image: linear-gradient( to right top, var(--clr-medal-bronze), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
     animation-delay: 5.75s;
+}
+
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+nav,
+nav::before,
+nav::after {
+    position: absolute;
+}
+
+nav::before,
+nav::after {
+    content: "";
+    margin: auto;
+    top: 1.375rem;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+nav {
+    margin: auto;
+    top: calc(11vw - 2rem);
+    right: calc(11vw - 2rem);
+    width: 4rem;
+    height: 4rem;
+    background: var(--clr-tokyo-blue);
+    border-radius: 50%;
+    transition: all 1s;
+    box-shadow: var(--shadow-main);
+}
+
+nav::before {
+    top: 1.375rem;
+    left: 1.375rem;
+    width: 0.75rem;
+    height: 0.125rem;
+    background: var(--clr-primary-white);
+    transform: rotate(45deg);
+}
+
+nav::after {
+    top: -0.3125rem;
+    left: -0.3125rem;
+    width: 1.625rem;
+    height: 1.625rem;
+    border-radius: 50%;
+    border: 0.125rem solid var(--clr-primary-white);
+}
+
+nav:hover {
+    cursor: pointer;
 }
 
 
@@ -304,27 +360,27 @@ Loading
 
 .spinner:first-child {
     margin-left: 0;
-    color: hsla(201, 100%, 39%, 20%);
+    color: var(--clr-olympic-blue-opaque);
     border-top-color: var(--clr-olympic-blue);
 }
 
 .spinner:nth-child(2) {
-    color: hsla(39, 97%, 58%, 20%);
+    color: var(--clr-olympic-yellow-opaque);
     border-top-color: var(--clr-olympic-yellow);
 }
 
 .spinner:nth-child(3) {
-    color: hsla(0, 0%, 0%, 20%);
+    color: var(--clr-olympic-black-opaque);
     border-top-color: var(--clr-olympic-black);
 }
 
 .spinner:nth-child(4) {
-    color: hsla(149, 99%, 33%, 20%);
+    color: var(--clr-olympic-green-opaque);
     border-top-color: var(--clr-olympic-green);
 }
 
 .spinner:nth-child(5) {
-    color: hsla(351, 85%, 56%, 20%);
+    color: var(--clr-olympic-red-opaque);
     border-top-color: var(--clr-olympic-red);
 }
 
@@ -370,8 +426,9 @@ form>.search::after {
 form {
     position: fixed;
     width: 100%;
-    height: 28vw;
+    height: 22vw;
     z-index: 4;
+    /* background-color: var(--clr-tokyo-blue-muted-opaque); */
 }
 
 form>input {
@@ -479,7 +536,7 @@ Medallists
     width: 73vw;
     height: 73vw;
     position: relative;
-    top: -2vw;
+    top: 1vw;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
@@ -506,6 +563,11 @@ article:nth-child(5n+4)>.flag-container {
 
 article:nth-child(5n+5)>.flag-container {
     background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
+}
+
+.flag-container+div {
+    position: relative;
+    top: 3vw;
 }
 
 .flag-container+div li {
