@@ -96,8 +96,8 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
     color: hsl(229, 48%, 24%);
     text-align: center;
 }
@@ -124,17 +124,17 @@ ul {
 
 li {
     font-size: 1rem;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2.5vw;
 }
 
 main {
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 16vh;
+    margin-top: 26vw;
 }
 
 article {
-    height: 84vh;
+    height: 150vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -273,7 +273,7 @@ form>.search::after {
 form {
     position: fixed;
     width: 100%;
-    height: 16vh;
+    height: 28vw;
     z-index: 4;
 }
 
@@ -303,7 +303,7 @@ form>input:focus {
 }
 
 form>input:focus~.search {
-    right: -12rem;
+    right: -13.5rem;
     background: hsl(229, 48%, 24%);
     z-index: 6;
 }
@@ -312,7 +312,7 @@ form>input:focus~.search::before,
 form>input:focus~.search::after {
     top: 0;
     left: 0;
-    width: 1.5625rem;
+    width: 1.5rem;
 }
 
 form>input:focus~.search::after {
@@ -330,8 +330,8 @@ form>input::placeholder {
 
 form>.search {
     bottom: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     background: hsl(229, 48%, 24%);
     border-radius: 50%;
     transition: all 1s;
@@ -453,12 +453,12 @@ Medallists
 */
 
 .flag-container {
-    width: 40vh;
-    height: 40vh;
+    width: 70vw;
+    height: 70vw;
     position: relative;
     background-position: center;
     background-size: cover;
-    margin: 1.5vh auto 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;

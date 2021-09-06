@@ -38,6 +38,8 @@ The [JPG to PNG online editing tool](https://jpg2png.com/) was used to convert a
 
 [Guidance on additional configuration requirements to facilitate continuous deployment (via Netlify) from John Smilga](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/22778973#content)
 
+['How to print a number with commas as thousands separators in JavaScript'](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript) (Stack Overflow)
+
 Site logo design adapted from a [Canva base template](https://www.canva.com/design/DAEpKFB9Qs4/EgBNQWkP7pLS6kfjalAE4A/edit)
 
 Favicon generated using the [free online favicon.io tool](https://favicon.io/favicon-converter/)
