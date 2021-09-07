@@ -61,7 +61,7 @@ const Medallists = () => {
                   <li>
                     Total medals: <span>{totalMedals}</span>
                   </li>
-                  <li>
+                  <li className='underline-gold'>
                     Golds per million: <span>{goldsPerMillion}</span>
                   </li>
                   <li>

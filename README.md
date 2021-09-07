@@ -26,6 +26,8 @@
 
 [Landing page Olympic rings SVG GSAP animation adapted from Steve Gardner's CodePen](https://codepen.io/ste-vg/details/kXzXYW)
 
+[Hamburger icon SVG with CSS hover animation adapted from Cassie Evans' CodePen](https://codepen.io/cassie-codes/pen/ExgXNWY)
+
 [Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen](https://codepen.io/CodeBoomer/pen/BzOPPz/)
 
 [ColorSpace's online colour gradient generator](https://mycolor.space/gradient) was used to apply a metallic shine effect to the gold-, silver- and bronze-coloured landing page buttons.
