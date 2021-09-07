@@ -4,9 +4,9 @@ const SearchInput = () => {
   const [scrolled, setScrolled] = useState(false);
   const toggleSearchPos = () => {
     const scrollYAmount = document.documentElement.scrollTop;
-    if (scrollYAmount > 200) {
+    if (scrollYAmount > 300) {
       setScrolled(true);
-    } else if (scrollYAmount <= 200) {
+    } else if (scrollYAmount <= 300) {
       setScrolled(false);
     }
   };
@@ -19,7 +19,7 @@ const SearchInput = () => {
         className={scrolled && "search-corner"}
         placeholder='Search by country...'
       />
-      <div className={`search ${scrolled && "search-corner"}`}></div>
+      <div className={`search ${scrolled && "search-corner"}`}> </div>{" "}
     </form>
   );
 };

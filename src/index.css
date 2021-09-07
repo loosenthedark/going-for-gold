@@ -364,6 +364,16 @@ Buttons
     opacity: 0;
 }
 
+.btn-back-to-top {
+    position: fixed;
+    right: 1vw;
+    top: 90.5vh;
+    font-size: 15vw;
+    color: var(--clr-tokyo-blue);
+    background-color: transparent;
+    border: none;
+}
+
 @keyframes btn-fade-in {
     from {
         opacity: 0;
