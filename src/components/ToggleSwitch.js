@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../context";
 import { FaMedal } from "react-icons/fa";
 import { GiPodium } from "react-icons/gi";
@@ -10,13 +10,13 @@ const ToggleSwitch = () => {
     setToggle("golds");
     setTimeout(() => {
       setActiveBtn("golds");
-    }, 300);
+    }, 200);
   };
   const handleToggleTotal = () => {
     setToggle("total");
     setTimeout(() => {
       setActiveBtn("total");
-    }, 300);
+    }, 200);
   };
   return (
     <div className='container-toggle'>

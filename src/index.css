@@ -695,11 +695,28 @@ Medallists
     margin: 0 auto;
 }
 
-article:nth-child(5n+1)>.container-flag {
+.container-flag-Europe {
     background-image: url("./static/images/logos/logo-tokyo-2020-blue-light.png");
 }
 
-article:nth-child(5n+2)>.container-flag {
+.container-flag-Africa {
+    background-image: url("./static/images/logos/logo-tokyo-2020-black.png");
+}
+
+.container-flag-Americas {
+    background-image: url("./static/images/logos/logo-tokyo-2020-red.png");
+}
+
+.container-flag-Asia {
+    background-image: url("./static/images/logos/logo-tokyo-2020-yellow.png");
+}
+
+.container-flag-Oceania {
+    background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
+}
+
+
+/* article:nth-child(5n+2)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-black.png");
 }
 
@@ -713,7 +730,7 @@ article:nth-child(5n+4)>.container-flag {
 
 article:nth-child(5n+5)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
-}
+} */
 
 .container-flag+div {
     position: relative;

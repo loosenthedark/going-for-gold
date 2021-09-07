@@ -30,6 +30,7 @@ const Medallists = () => {
             name,
             flag,
             population,
+            region,
             totalMedals,
             goldMedals,
             goldsPerMillion,
@@ -40,7 +41,9 @@ const Medallists = () => {
           return (
             // <Link key={country.id} className='' to={`/country/${id}`}>
             <article className='flex-centre-j' key={id}>
-              <div className='container-flag flex-centre'>
+              <div
+                className={`container-flag container-flag-${region} flex-centre`}
+              >
                 <div className='wrapper-flag flag-spin'>
                   <img className='flag' src={flag} alt={`${name} flag`} />
                   <div className='flag-olympic trbl-0'> </div>
@@ -59,28 +62,28 @@ const Medallists = () => {
                   </li>
                   <li
                     className={
-                      activeBtn === "golds" && "underline underline-gold"
+                      activeBtn === "golds" ? "underline underline-gold" : null
                     }
                   >
                     Gold medals: <span> {goldMedals} </span>
                   </li>
                   <li
                     className={
-                      activeBtn === "total" && "underline underline-total"
+                      activeBtn === "total" ? "underline underline-total" : null
                     }
                   >
                     Total medals: <span> {totalMedals} </span>
                   </li>
                   <li
                     className={
-                      activeBtn === "golds" && "underline underline-gold"
+                      activeBtn === "golds" ? "underline underline-gold" : null
                     }
                   >
                     Golds per million: <span> {goldsPerMillion} </span>
                   </li>
                   <li
                     className={
-                      activeBtn === "total" && "underline underline-total"
+                      activeBtn === "total" ? "underline underline-total" : null
                     }
                   >
                     Total per million: <span> {medalsPerMillion} </span>

@@ -58,6 +58,7 @@ const useRequests = (urlParams) => {
           });
         }
         setInfo(filteredArray);
+        console.log(filteredArray[0]);
         setError(false);
       } else if (filteredArray.length < 1 || !filteredArray) {
         // STEP 22 = But, if no array has been returned, update the error state value to reflect this...
