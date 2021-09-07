@@ -8,7 +8,6 @@ import Nav from "./NavMenu";
 const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
   const { medalCountries, isLoading, activeBtn } = useGlobalContext();
-  // console.log(medalCountries, isLoading);
 
   // STEP 27 = Set up multiple conditional returns:
   // Condition 1: loading condition...

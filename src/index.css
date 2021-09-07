@@ -243,7 +243,7 @@ nav {
     height: 15vw;
     border-radius: 50%;
     transition: all 1s;
-    z-index: 3;
+    z-index: 7;
 }
 
 nav,
@@ -514,20 +514,21 @@ Toggle
 
 .container-toggle {
     width: 20vw;
-    height: 40vw;
+    height: 30vw;
     position: absolute;
-    top: -5vw;
+    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     z-index: 5;
+    position: fixed;
 }
 
 .container-toggle button {
     width: 20vw;
-    height: 20vw;
+    height: 15vw;
     color: var(--clr-tokyo-blue);
-    font-size: 10vw;
+    font-size: 12vw;
     border: none;
     background-color: transparent;
 }
@@ -576,16 +577,14 @@ form>.search::after {
 form {
     position: fixed;
     left: 0;
-    width: 80vw;
-    margin-right: auto;
+    width: 100vw;
     height: 20vw;
     z-index: 4;
-    /* background-color: var(--clr-blue-muted-opaque); */
 }
 
 form>input {
     bottom: 0;
-    left: 2.5vw;
+    left: 17.5vw;
     width: 15vw;
     height: 15vw;
     outline: none;
@@ -597,22 +596,22 @@ form>input {
     border-radius: 1.875rem;
     transition: all 0.95s;
     opacity: 0;
-    z-index: 5;
+    z-index: 8;
     font-weight: 700;
     letter-spacing: 0.05rem;
     font-size: 4.5vw;
 }
 
 form>input:focus {
-    width: 95vw;
+    width: 80vw;
     opacity: 1;
     cursor: text;
 }
 
 form>input:focus~.search {
-    right: -80vw;
+    right: -82.5vw;
     background: var(--clr-tokyo-blue);
-    z-index: 6;
+    z-index: 8;
 }
 
 form>input:focus~.search::before,
@@ -637,13 +636,24 @@ form>input::placeholder {
 
 form>.search {
     bottom: 0;
-    left: 20vw;
+    left: 0;
+    right: 0;
     width: 15vw;
     height: 15vw;
     background: var(--clr-tokyo-blue);
     border-radius: 50%;
     transition: all 1s;
     box-shadow: var(--shadow-main);
+}
+
+form>.search.search-corner {
+    right: -82.5vw;
+    z-index: 8;
+}
+
+form>input.search-corner {
+    opacity: 1;
+    width: 80vw;
 }
 
 form>input:hover,
@@ -714,23 +724,6 @@ Medallists
 .container-flag-Oceania {
     background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
 }
-
-
-/* article:nth-child(5n+2)>.container-flag {
-    background-image: url("./static/images/logos/logo-tokyo-2020-black.png");
-}
-
-article:nth-child(5n+3)>.container-flag {
-    background-image: url("./static/images/logos/logo-tokyo-2020-red.png");
-}
-
-article:nth-child(5n+4)>.container-flag {
-    background-image: url("./static/images/logos/logo-tokyo-2020-yellow.png");
-}
-
-article:nth-child(5n+5)>.container-flag {
-    background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
-} */
 
 .container-flag+div {
     position: relative;

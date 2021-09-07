@@ -10,13 +10,13 @@ const ToggleSwitch = () => {
     setToggle("golds");
     setTimeout(() => {
       setActiveBtn("golds");
-    }, 200);
+    }, 150);
   };
   const handleToggleTotal = () => {
     setToggle("total");
     setTimeout(() => {
       setActiveBtn("total");
-    }, 200);
+    }, 150);
   };
   return (
     <div className='container-toggle'>
@@ -28,8 +28,8 @@ const ToggleSwitch = () => {
           onClick={handleToggleGold}
         >
           <FaMedal className='icon-medal' />
-        </button>
-      </div>
+        </button>{" "}
+      </div>{" "}
       <div className='wrapper-icon'>
         <button
           className={`flex-centre-j ${
@@ -38,8 +38,8 @@ const ToggleSwitch = () => {
           onClick={handleToggleTotal}
         >
           <GiPodium className='icon-podium' />
-        </button>
-      </div>
+        </button>{" "}
+      </div>{" "}
     </div>
   );
 };
