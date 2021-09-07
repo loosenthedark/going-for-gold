@@ -2,11 +2,11 @@ import React from "react";
 
 const NavMenu = () => {
   return (
-    <nav>
+    <nav className='flex-centre'>
       {/* Hamburger icon SVG adapted from Cassie Evans' CodePen: https://codepen.io/cassie-codes/pen/ExgXNWY */}
       <svg className='hamburger Header__toggle-svg' viewBox='0 0 48 48'>
         <g
-          stroke='hsl(229, 48%, 24%)'
+          stroke='currentcolor'
           strokeWidth='3'
           strokeLinecap='round'
           strokeLinejoin='round'

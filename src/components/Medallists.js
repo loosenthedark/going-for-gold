@@ -37,15 +37,15 @@ const Medallists = () => {
           // STEP 30 = Link functionality here needs to be dynamic, so template literal syntax should be used...
           return (
             // <Link key={country.id} className='' to={`/country/${id}`}>
-            <article key={id}>
-              <div className='flag-container'>
+            <article className='flex-centre-j' key={id}>
+              <div className='flag-container flex-centre'>
                 <div className='flag-wrapper flag-spin'>
                   <img className='flag' src={flag} alt={`${name} flag`} />
-                  <div className='flag-olympic'> </div>
+                  <div className='flag-olympic trbl-0'> </div>
                 </div>
               </div>
               <div>
-                <h2>{name}</h2>
+                <h2> {name} </h2>
                 <ul>
                   <li>
                     Population:
@@ -56,16 +56,16 @@ const Medallists = () => {
                     </span>
                   </li>
                   <li>
-                    Gold medals: <span>{goldMedals}</span>
+                    Gold medals: <span> {goldMedals} </span>
                   </li>
                   <li>
-                    Total medals: <span>{totalMedals}</span>
+                    Total medals: <span> {totalMedals} </span>
                   </li>
                   <li className='underline-gold'>
-                    Golds per million: <span>{goldsPerMillion}</span>
+                    Golds per million: <span> {goldsPerMillion} </span>
                   </li>
                   <li>
-                    Total per million: <span>{medalsPerMillion}</span>
+                    Total per million: <span> {medalsPerMillion} </span>
                   </li>
                 </ul>
               </div>

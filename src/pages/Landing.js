@@ -71,7 +71,7 @@ const Landing = () => {
   };
   return (
     <>
-      <div className='container-landing'>
+      <div className='container-landing flex-centre'>
         <svg
           width='375'
           height='667'
@@ -221,13 +221,13 @@ const Landing = () => {
           </defs>
         </svg>
       </div>
-      <div className='container-buttons'>
+      <div className='container-buttons flex-centre-a'>
         <Link to='/medallists' className='btn btn-landing bg-gold'>
           Medallists
         </Link>
-        <a href='' className='btn btn-landing bg-silver'>
+        <Link to='/about' className='btn btn-landing bg-silver'>
           About
-        </a>
+        </Link>
         <a href='' className='btn btn-landing bg-bronze'>
           Contact
         </a>

@@ -15,10 +15,12 @@ Variables
 :root {
     /* Primary palette */
     --clr-primary-white: hsl(0, 0%, 100%);
+    --bg-primary: hsl(206, 16%, 80%);
     --bg-primary-gradient: linear-gradient( to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
     /* Tokyo 2020 logo original */
     --clr-tokyo-blue: hsl(229, 48%, 24%);
-    --clr-tokyo-blue-muted-opaque: hsla(230, 47%, 80%, 0.95);
+    --clr-tokyo-blue-muted-opaque: hsla(229, 48%, 24%, 0.85);
+    --clr-blue-muted-opaque: hsla(230, 47%, 80%, 0.95);
     /* Olympic ring colours */
     --clr-olympic-blue: hsl(201, 100%, 39%);
     --clr-olympic-blue-opaque: hsla(201, 100%, 39%, 20%);
@@ -60,9 +62,6 @@ body {
     font-size: 0.875rem;
     color: var(--clr-olympic-black);
     background: var(--bg-primary-gradient);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
@@ -93,11 +92,17 @@ h2,
 h3,
 h4 {
     line-height: 1.25;
+}
+
+h2,
+h3,
+h4 {
     margin-bottom: 0.75rem;
 }
 
 h1 {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -155,13 +160,11 @@ main {
 
 article {
     height: 156vw;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 
-/*  Global classes */
+/*  Global utility classes */
 
 .bg-gold {
     background-image: linear-gradient( to right top, var(--clr-medal-gold), hsl(43, 71%, 49%), hsl(43, 68%, 49%), hsl(43, 66%, 49%), hsl(43, 63%, 49%));
@@ -188,6 +191,30 @@ article {
     display: inline-block;
 }
 
+.flex-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-centre-j {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-centre-a {
+    display: flex;
+    align-items: center;
+}
+
+.trbl-0 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 
 /*
 =============== 
@@ -204,9 +231,6 @@ nav {
     border-radius: 50%;
     transition: all 1s;
     z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav,
@@ -227,6 +251,10 @@ nav:hover {
     height: 15vw;
     position: absolute;
     color: var(--clr-tokyo-blue);
+}
+
+.container-about .hamburger {
+    color: var(--clr-primary-white);
 }
 
 #top-line,
@@ -344,9 +372,7 @@ Landing
     position: absolute;
     top: 55vh;
     left: 0;
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -357,9 +383,6 @@ Landing
 }
 
 .container-landing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     top: -24vh;
 }
@@ -505,7 +528,7 @@ form {
     margin-right: auto;
     height: 20vw;
     z-index: 4;
-    /* background-color: var(--clr-tokyo-blue-muted-opaque); */
+    /* background-color: var(--clr-blue-muted-opaque); */
 }
 
 form>input {
@@ -618,9 +641,6 @@ Medallists
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 article:nth-child(5n+1)>.flag-container {
@@ -677,11 +697,6 @@ article:nth-child(5n+5)>.flag-container {
     background-size: cover;
     width: 100%;
     height: calc(100% - 0.3125rem);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
@@ -713,3 +728,50 @@ article:nth-child(5n+5)>.flag-container {
 Medallist
 ===============
 */
+
+
+/*
+=============== 
+About
+===============
+*/
+
+.container-about {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: var(--bg-primary);
+    background-image: url("./static/images/logos/logo-tokyo-2020-complete-white.png");
+    background-size: 90vw auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay-about {
+    background: var(--clr-tokyo-blue-muted-opaque);
+    mix-blend-mode: darken;
+    color: var(--clr-primary-white);
+}
+
+.overlay-about-text {
+    color: var(--clr-primary-white);
+    flex-direction: column;
+    margin: 10vw 7.5vw;
+}
+
+
+/* Media Query */
+
+
+/* small mobile */
+
+@media screen and (max-width: 360px) {
+    .overlay-about-text {
+        margin-top: 20vw;
+    }
+}
+
+.overlay-about-text>h1,
+.overlay-about-text span {
+    color: var(--clr-medal-gold);
+}
