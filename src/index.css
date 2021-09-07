@@ -34,9 +34,11 @@ Variables
     --clr-olympic-green-opaque: hsla(149, 99%, 33%, 20%);
     /* Olympic medal base colours */
     --clr-medal-gold: hsl(43, 74%, 49%);
-    --clr-medal-gold-opaque: hsla(43, 74%, 49%, 0.4);
+    --clr-medal-gold-opaque: hsla(43, 74%, 49%, 0.6);
     --clr-medal-silver: hsl(240, 4%, 60%);
+    --clr-medal-silver-opaque: hsl(240, 4%, 60%, 0.7);
     --clr-medal-bronze: hsl(27, 42%, 46%);
+    --clr-medal-bronze-opaque: hsl(27, 42%, 46%, 0.7);
     /* Shadow */
     --shadow-main: 0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.2);
 }
@@ -152,6 +154,10 @@ li {
     margin-bottom: 2.5vw;
 }
 
+button {
+    cursor: pointer;
+}
+
 main {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -181,14 +187,21 @@ article {
     animation-delay: 5.75s;
 }
 
-.underline-gold {
+.underline {
+    display: inline-block;
     background-position: bottom;
     background-size: 100% 30%;
     background-repeat: no-repeat;
     padding-left: 0.33rem;
     padding-right: 0.33rem;
+}
+
+.underline-gold {
     background-image: linear-gradient( 90deg, var(--clr-medal-gold-opaque), var(--clr-medal-gold-opaque));
-    display: inline-block;
+}
+
+.underline-total {
+    background-image: linear-gradient( to right, var(--clr-medal-gold-opaque), var(--clr-medal-silver-opaque), var(--clr-medal-bronze-opaque));
 }
 
 .flex-centre {
@@ -321,9 +334,6 @@ nav:hover {
 }
 
 
-/* section */
-
-
 /*
 =============== 
 Buttons
@@ -431,7 +441,7 @@ Loading
 
 /* Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen: https://codepen.io/CodeBoomer/pen/BzOPPz/ */
 
-.spinner-container {
+.container-spinner {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -493,6 +503,45 @@ Loading
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/*
+=============== 
+Toggle
+===============
+*/
+
+.container-toggle {
+    width: 20vw;
+    height: 40vw;
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.container-toggle button {
+    width: 20vw;
+    height: 20vw;
+    color: var(--clr-tokyo-blue);
+    font-size: 10vw;
+    border: none;
+    background-color: transparent;
+}
+
+.wrapper-icon:first-of-type>button {
+    align-items: flex-end;
+}
+
+.wrapper-icon:nth-of-type(2)>button {
+    align-items: flex-start;
+}
+
+.btn-active>* {
+    color: var(--clr-medal-gold-opaque);
 }
 
 
@@ -637,7 +686,7 @@ Medallists
 ===============
 */
 
-.flag-container {
+.container-flag {
     width: 75vw;
     height: 75vw;
     position: relative;
@@ -646,42 +695,42 @@ Medallists
     margin: 0 auto;
 }
 
-article:nth-child(5n+1)>.flag-container {
+article:nth-child(5n+1)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-blue-light.png");
 }
 
-article:nth-child(5n+2)>.flag-container {
+article:nth-child(5n+2)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-black.png");
 }
 
-article:nth-child(5n+3)>.flag-container {
+article:nth-child(5n+3)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-red.png");
 }
 
-article:nth-child(5n+4)>.flag-container {
+article:nth-child(5n+4)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-yellow.png");
 }
 
-article:nth-child(5n+5)>.flag-container {
+article:nth-child(5n+5)>.container-flag {
     background-image: url("./static/images/logos/logo-tokyo-2020-green.png");
 }
 
-.flag-container+div {
+.container-flag+div {
     position: relative;
     top: 3vw;
 }
 
-.flag-container+div li {
+.container-flag+div li {
     font-weight: 700;
     color: var(--clr-tokyo-blue);
 }
 
-.flag-container+div li>span {
+.container-flag+div li>span {
     color: var(--clr-olympic-black);
     font-weight: 400;
 }
 
-.flag-wrapper {
+.wrapper-flag {
     width: 6.4rem;
     height: auto;
     position: relative;

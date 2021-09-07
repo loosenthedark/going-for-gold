@@ -1,12 +1,13 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 import Loading from "./Loading";
+import Toggle from "./ToggleSwitch";
 import Search from "./SearchInput";
 import Nav from "./NavMenu";
 
 const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
-  const { medalCountries, isLoading } = useGlobalContext();
+  const { medalCountries, isLoading, activeBtn } = useGlobalContext();
   // console.log(medalCountries, isLoading);
 
   // STEP 27 = Set up multiple conditional returns:
@@ -18,6 +19,7 @@ const Medallists = () => {
   // STEP 28 = Iterate over the medalCountries array, returning a standalone article element for each country...
   return (
     <>
+      <Toggle />
       <Search />
       <Nav />
       <section>
@@ -38,8 +40,8 @@ const Medallists = () => {
           return (
             // <Link key={country.id} className='' to={`/country/${id}`}>
             <article className='flex-centre-j' key={id}>
-              <div className='flag-container flex-centre'>
-                <div className='flag-wrapper flag-spin'>
+              <div className='container-flag flex-centre'>
+                <div className='wrapper-flag flag-spin'>
                   <img className='flag' src={flag} alt={`${name} flag`} />
                   <div className='flag-olympic trbl-0'> </div>
                 </div>
@@ -55,16 +57,32 @@ const Medallists = () => {
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                     </span>
                   </li>
-                  <li>
+                  <li
+                    className={
+                      activeBtn === "golds" && "underline underline-gold"
+                    }
+                  >
                     Gold medals: <span> {goldMedals} </span>
                   </li>
-                  <li>
+                  <li
+                    className={
+                      activeBtn === "total" && "underline underline-total"
+                    }
+                  >
                     Total medals: <span> {totalMedals} </span>
                   </li>
-                  <li className='underline-gold'>
+                  <li
+                    className={
+                      activeBtn === "golds" && "underline underline-gold"
+                    }
+                  >
                     Golds per million: <span> {goldsPerMillion} </span>
                   </li>
-                  <li>
+                  <li
+                    className={
+                      activeBtn === "total" && "underline underline-total"
+                    }
+                  >
                     Total per million: <span> {medalsPerMillion} </span>
                   </li>
                 </ul>

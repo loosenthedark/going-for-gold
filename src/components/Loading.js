@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className='spinner-container'>
+    <div className='container-spinner'>
       <div className='spinner'></div>
       <div className='spinner'></div>
       <div className='spinner'></div>
