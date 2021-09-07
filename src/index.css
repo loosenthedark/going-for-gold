@@ -344,6 +344,9 @@ Buttons
     display: inline-block;
     text-transform: uppercase;
     color: var(--clr-primary-white);
+}
+
+.container-buttons>.btn {
     animation-name: btn-fade-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -769,9 +772,19 @@ About
     .overlay-about-text {
         margin-top: 20vw;
     }
+    .overlay-about-text h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+    .overlay-about-text p {
+        font-size: 0.9rem;
+    }
 }
 
-.overlay-about-text>h1,
-.overlay-about-text span {
+.overlay-about-text a:not(.btn) {
     color: var(--clr-medal-gold);
+}
+
+.overlay-about-text .btn {
+    margin-top: 0.5rem;
 }
