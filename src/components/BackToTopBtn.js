@@ -26,7 +26,7 @@ const BackToTopBtn = () => {
     <FaChevronCircleUp
       className='btn-back-to-top'
       onClick={scrollToTop}
-      style={{ display: visible ? "inline" : "none" }}
+      style={{ opacity: visible ? "1" : "0" }}
     />
   );
 };
