@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [activeBtn, setActiveBtn] = useState("golds");
+  const [searchQuery, setSearchQuery] = useState("");
   const {
     isLoading,
     error,
@@ -25,6 +26,8 @@ const AppProvider = ({ children }) => {
         medalCountries,
         toggle,
         setToggle,
+        searchQuery,
+        setSearchQuery,
       }}
     >
       {children}

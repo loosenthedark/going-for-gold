@@ -52,7 +52,7 @@ const Medallists = () => {
                 <h2> {name} </h2>
                 <ul>
                   <li>
-                    Population:
+                    Population:{" "}
                     <span>
                       {population
                         .toString()
