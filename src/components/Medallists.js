@@ -1,5 +1,5 @@
 import React from "react";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../context";
 import Loading from "./Loading";
 import Search from "./SearchInput";
 import Nav from "./NavMenu";
