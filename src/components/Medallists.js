@@ -1,4 +1,5 @@
 import React from "react";
+import { FaAward } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 import Loading from "./Loading";
 import Toggle from "./ToggleSwitch";
@@ -54,6 +55,14 @@ const Medallists = () => {
                     alt={`${
                       name === "Russian Federation"
                         ? "ROC"
+                        : name === "United States of America"
+                        ? "USA"
+                        : name === "Syrian Arab Republic"
+                        ? "Syria"
+                        : name === "Moldova (Republic of)"
+                        ? "Moldova"
+                        : name === "Iran (Islamic Republic of)"
+                        ? "Iran"
                         : name === "Macedonia (the former Yugoslav Republic of)"
                         ? "North Macedonia"
                         : name === "Venezuela (Bolivarian Republic of)"
@@ -74,6 +83,14 @@ const Medallists = () => {
                   {" "}
                   {name === "Russian Federation"
                     ? "ROC"
+                    : name === "United States of America"
+                    ? "USA"
+                    : name === "Syrian Arab Republic"
+                    ? "Syria"
+                    : name === "Moldova (Republic of)"
+                    ? "Moldova"
+                    : name === "Iran (Islamic Republic of)"
+                    ? "Iran"
                     : name === "Macedonia (the former Yugoslav Republic of)"
                     ? "North Macedonia"
                     : name === "Venezuela (Bolivarian Republic of)"
@@ -123,7 +140,10 @@ const Medallists = () => {
                     Total per million: <span> {medalsPerMillion} </span>
                   </li>
                   <li>
-                    Rank: <span> {index + 1} </span>
+                    <div className='wrapper-rank'>
+                      <FaAward className='icon-award-golds' />{" "}
+                      <span>{index + 1}</span>
+                    </div>{" "}
                   </li>
                 </ul>
               </div>

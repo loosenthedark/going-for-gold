@@ -109,7 +109,7 @@ h1 {
 
 h2 {
     font-size: 2.4rem;
-    margin-top: 1rem;
+    margin-top: 15vw;
     margin-bottom: 0.75rem;
     color: var(--clr-tokyo-blue);
     text-align: center;
@@ -163,6 +163,7 @@ main {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 20vw;
+    width: calc(100vw - 2rem);
 }
 
 article {
@@ -238,8 +239,8 @@ Navbar
 
 nav {
     margin: auto;
-    top: 2.5vw;
-    right: 2.5vw;
+    top: 0;
+    right: 0;
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
@@ -525,10 +526,10 @@ Toggle
 */
 
 .container-toggle {
-    width: 20vw;
-    height: 30vw;
+    width: 15vw;
+    height: 20vw;
     position: absolute;
-    top: 0;
+    top: 2.5vw;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -537,10 +538,10 @@ Toggle
 }
 
 .container-toggle button {
-    width: 20vw;
-    height: 15vw;
+    width: 15vw;
+    height: 10vw;
     color: var(--clr-tokyo-blue);
-    font-size: 12vw;
+    font-size: 10vw;
     border: none;
     background-color: transparent;
 }
@@ -747,9 +748,36 @@ Medallists
     color: var(--clr-tokyo-blue);
 }
 
-.container-flag+div li>span {
+.container-flag+div li:last-of-type {
+    position: absolute;
+    top: -5vw;
+    left: 35vw;
+    font-size: 17.5vw;
+    width: 20vw;
+    height: 20vw;
+    margin-bottom: 0;
+}
+
+.wrapper-rank {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container-flag+div li span {
     color: var(--clr-olympic-black);
     font-weight: 400;
+}
+
+.container-flag+div li:last-of-type span {
+    font-size: 4vw;
+    color: var(--clr-tokyo-blue);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2.25vw;
+    line-height: 20vw;
 }
 
 .wrapper-flag {
@@ -785,6 +813,10 @@ Medallists
 
 .flag-spin:hover {
     animation-play-state: paused;
+}
+
+.icon-award-golds {
+    color: var(--clr-medal-gold-opaque);
 }
 
 @keyframes rotation {
