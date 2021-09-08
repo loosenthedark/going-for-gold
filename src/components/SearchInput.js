@@ -15,7 +15,12 @@ const SearchInput = () => {
   };
   window.addEventListener("scroll", toggleSearchPos);
 
-  // console.log(medalCountries);
+  console.log(
+    medalCountries.filter((country) => {
+      const regex = new RegExp("land", "gi");
+      return country.name.match(regex);
+    })
+  );
 
   useEffect(() => {
     console.log(searchQuery);

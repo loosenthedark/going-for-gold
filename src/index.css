@@ -567,6 +567,7 @@ Toggle
     height: 50%;
     margin: 0;
     text-align: center;
+    color: var(--clr-tokyo-blue);
 }
 
 .switch label:first-of-type {
@@ -654,15 +655,15 @@ form {
 
 form>input {
     bottom: 0;
-    left: 17.5vw;
-    width: 15vw;
-    height: 15vw;
+    left: 16.5vw;
+    width: 25vw;
+    height: 12vw;
     outline: none;
     border: none;
     background: var(--clr-primary-white);
     color: var(--clr-tokyo-blue);
     box-shadow: var(--shadow-main);
-    padding: 0 25vw 0 6.25vw;
+    padding: 0 15vw 0 6.25vw;
     border-radius: 1.875rem;
     transition: all 0.95s;
     opacity: 0;
@@ -673,7 +674,7 @@ form>input {
 }
 
 form>input:focus {
-    width: 80vw;
+    width: 70vw;
     opacity: 1;
     cursor: text;
 }
@@ -723,7 +724,7 @@ form>.search.search-corner {
 
 form>input.search-corner {
     opacity: 1;
-    width: 80vw;
+    width: 70vw;
 }
 
 form>input:hover,
