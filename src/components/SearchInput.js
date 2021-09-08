@@ -15,7 +15,7 @@ const SearchInput = () => {
   };
   window.addEventListener("scroll", toggleSearchPos);
 
-  console.log(medalCountries);
+  // console.log(medalCountries);
 
   useEffect(() => {
     console.log(searchQuery);

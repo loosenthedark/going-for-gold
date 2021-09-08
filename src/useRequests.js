@@ -11,6 +11,7 @@ const useRequests = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [info, setInfo] = useState([]);
+  const [toggledIcon, setToggledIcon] = useState(false);
   const [toggle, setToggle] = useState("golds");
 
   // STEP 16 = Set up async fetchMedallists fn with try/catch logic and error handling...
@@ -80,7 +81,15 @@ const useRequests = (urlParams) => {
     //   }
   }, [urlParams, toggle]);
 
-  return { isLoading, error, info, toggle, setToggle };
+  return {
+    isLoading,
+    error,
+    info,
+    toggle,
+    setToggle,
+    toggledIcon,
+    setToggledIcon,
+  };
 };
 
 export default useRequests;

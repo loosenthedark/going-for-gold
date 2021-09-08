@@ -1,6 +1,7 @@
 import React from "react";
 import { FaAward } from "react-icons/fa";
 import { useGlobalContext } from "../context";
+import flagROC from "../static/images/logos/flag-roc.png";
 import Loading from "./Loading";
 import Toggle from "./ToggleSwitch";
 import Search from "./SearchInput";
@@ -8,7 +9,7 @@ import Nav from "./NavMenu";
 
 const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
-  const { medalCountries, isLoading, activeBtn } = useGlobalContext();
+  const { medalCountries, isLoading, toggledIcon } = useGlobalContext();
 
   // STEP 27 = Set up multiple conditional returns:
   // Condition 1: loading condition...
@@ -23,6 +24,7 @@ const Medallists = () => {
       <Search />
       <Nav />
       <section>
+        {" "}
         {medalCountries.map((country, index) => {
           // STEP 29 = Destructure all relevant props from country object in fn arg, allocating more appropriate/simplified aliases where necessary...
           const {
@@ -47,11 +49,7 @@ const Medallists = () => {
                 <div className='wrapper-flag flag-spin'>
                   <img
                     className='flag'
-                    src={
-                      name === "Russian Federation"
-                        ? "https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/ROC.png"
-                        : flag
-                    }
+                    src={name === "Russian Federation" ? { flagROC } : flag}
                     alt={`${
                       name === "Russian Federation"
                         ? "ROC"
@@ -74,10 +72,10 @@ const Medallists = () => {
                         ? "Great Britain"
                         : name
                     } flag`}
-                  />
-                  <div className='flag-olympic trbl-0'> </div>
-                </div>
-              </div>
+                  />{" "}
+                  <div className='flag-olympic trbl-0'> </div>{" "}
+                </div>{" "}
+              </div>{" "}
               <div>
                 <h2>
                   {" "}
@@ -101,57 +99,50 @@ const Medallists = () => {
                       "United Kingdom of Great Britain and Northern Ireland"
                     ? "Great Britain"
                     : name}{" "}
-                </h2>
+                </h2>{" "}
                 <ul>
                   <li>
                     Population:{" "}
                     <span>
+                      {" "}
                       {population
                         .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                    </span>
-                  </li>
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                    </span>{" "}
+                  </li>{" "}
                   <li
-                    className={
-                      activeBtn === "golds" ? "underline underline-gold" : null
-                    }
+                    className={!toggledIcon ? "underline underline-gold" : null}
                   >
-                    Gold medals: <span> {goldMedals} </span>
-                  </li>
+                    Gold medals: <span> {goldMedals} </span>{" "}
+                  </li>{" "}
                   <li
-                    className={
-                      activeBtn === "total" ? "underline underline-total" : null
-                    }
+                    className={toggledIcon ? "underline underline-gold" : null}
                   >
-                    Total medals: <span> {totalMedals} </span>
-                  </li>
+                    Total medals: <span> {totalMedals} </span>{" "}
+                  </li>{" "}
                   <li
-                    className={
-                      activeBtn === "golds" ? "underline underline-gold" : null
-                    }
+                    className={!toggledIcon ? "underline underline-gold" : null}
                   >
-                    Golds per million: <span> {goldsPerMillion} </span>
-                  </li>
+                    Golds per million: <span> {goldsPerMillion} </span>{" "}
+                  </li>{" "}
                   <li
-                    className={
-                      activeBtn === "total" ? "underline underline-total" : null
-                    }
+                    className={toggledIcon ? "underline underline-gold" : null}
                   >
-                    Total per million: <span> {medalsPerMillion} </span>
-                  </li>
+                    Total per million: <span> {medalsPerMillion} </span>{" "}
+                  </li>{" "}
                   <li>
                     <div className='wrapper-rank'>
                       <FaAward className='icon-award-golds' />{" "}
-                      <span>{index + 1}</span>
+                      <span> {index + 1} </span>{" "}
                     </div>{" "}
-                  </li>
-                </ul>
-              </div>
+                  </li>{" "}
+                </ul>{" "}
+              </div>{" "}
             </article>
             // </Link>
           );
-        })}
-      </section>
+        })}{" "}
+      </section>{" "}
     </>
   );
 };
