@@ -22,7 +22,7 @@ const Medallists = () => {
       <Search />
       <Nav />
       <section>
-        {medalCountries.map((country) => {
+        {medalCountries.map((country, index) => {
           // STEP 29 = Destructure all relevant props from country object in fn arg, allocating more appropriate/simplified aliases where necessary...
           const {
             alpha3Code: id,
@@ -51,13 +51,40 @@ const Medallists = () => {
                         ? "https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/ROC.png"
                         : flag
                     }
-                    alt={`${name} flag`}
+                    alt={`${
+                      name === "Russian Federation"
+                        ? "ROC"
+                        : name === "Macedonia (the former Yugoslav Republic of)"
+                        ? "North Macedonia"
+                        : name === "Venezuela (Bolivarian Republic of)"
+                        ? "Venezuela"
+                        : name === "Republic of Kosovo"
+                        ? "Kosovo"
+                        : name ===
+                          "United Kingdom of Great Britain and Northern Ireland"
+                        ? "Great Britain"
+                        : name
+                    } flag`}
                   />
                   <div className='flag-olympic trbl-0'> </div>
                 </div>
               </div>
               <div>
-                <h2> {name === "Russian Federation" ? "ROC" : name} </h2>
+                <h2>
+                  {" "}
+                  {name === "Russian Federation"
+                    ? "ROC"
+                    : name === "Macedonia (the former Yugoslav Republic of)"
+                    ? "North Macedonia"
+                    : name === "Venezuela (Bolivarian Republic of)"
+                    ? "Venezuela"
+                    : name === "Republic of Kosovo"
+                    ? "Kosovo"
+                    : name ===
+                      "United Kingdom of Great Britain and Northern Ireland"
+                    ? "Great Britain"
+                    : name}{" "}
+                </h2>
                 <ul>
                   <li>
                     Population:{" "}
@@ -94,6 +121,9 @@ const Medallists = () => {
                     }
                   >
                     Total per million: <span> {medalsPerMillion} </span>
+                  </li>
+                  <li>
+                    Rank: <span> {index + 1} </span>
                   </li>
                 </ul>
               </div>

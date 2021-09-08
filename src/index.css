@@ -108,9 +108,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--clr-tokyo-blue);
     text-align: center;
     line-height: 1.1;
@@ -124,8 +124,9 @@ h2 {
 
 @media screen and (max-width: 360px) {
     h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
         line-height: 1;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -349,7 +350,7 @@ Buttons
     border-radius: 3.25rem;
     box-shadow: var(--shadow-main);
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.1rem;
     display: inline-block;
     text-transform: uppercase;
@@ -851,10 +852,18 @@ About
     }
 }
 
-.overlay-about-text a:not(.btn) {
+.overlay-about-text a {
     color: var(--clr-medal-gold);
+    font-weight: 700;
 }
 
 .overlay-about-text .btn {
     margin-top: 0.5rem;
+    color: var(--clr-primary-white);
+    font-weight: 500;
+}
+
+.overlay-about-text .link-external {
+    color: unset;
+    font-weight: 700;
 }
