@@ -761,7 +761,7 @@ Medallists
     width: 100%;
     backface-visibility: hidden;
     max-height: 4rem;
-    min-height: 3.2rem;
+    min-height: 3.5rem;
 }
 
 .flag-olympic {
@@ -815,7 +815,7 @@ About
     position: relative;
     background-color: var(--bg-primary);
     background-image: url("./static/images/logos/logo-tokyo-2020-complete-white.png");
-    background-size: 90vw auto;
+    background-size: 90vw 86vh;
     background-position: center;
     background-repeat: no-repeat;
 }

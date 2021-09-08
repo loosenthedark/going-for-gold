@@ -7,9 +7,9 @@ const SearchInput = () => {
   const [scrolled, setScrolled] = useState(false);
   const toggleSearchPos = () => {
     const scrollYAmount = document.documentElement.scrollTop;
-    if (scrollYAmount > 300) {
+    if (scrollYAmount > 100) {
       setScrolled(true);
-    } else if (scrollYAmount <= 300) {
+    } else if (scrollYAmount <= 100) {
       setScrolled(false);
     }
   };

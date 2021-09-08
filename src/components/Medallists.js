@@ -44,12 +44,20 @@ const Medallists = () => {
                 className={`container-flag container-flag-${region} flex-centre`}
               >
                 <div className='wrapper-flag flag-spin'>
-                  <img className='flag' src={flag} alt={`${name} flag`} />
+                  <img
+                    className='flag'
+                    src={
+                      name === "Russian Federation"
+                        ? "https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/ROC.png"
+                        : flag
+                    }
+                    alt={`${name} flag`}
+                  />
                   <div className='flag-olympic trbl-0'> </div>
                 </div>
               </div>
               <div>
-                <h2> {name} </h2>
+                <h2> {name === "Russian Federation" ? "ROC" : name} </h2>
                 <ul>
                   <li>
                     Population:{" "}
