@@ -23,8 +23,13 @@ const SearchInput = () => {
         placeholder='Search by country...'
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      <div className={`search ${scrolled && "search-corner"}`}> </div>{" "}
+      />{" "}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`search ${scrolled && "search-corner"}`}
+      >
+        {" "}
+      </div>{" "}
     </form>
   );
 };
