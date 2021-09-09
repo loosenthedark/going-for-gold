@@ -6,7 +6,6 @@ const SideNav = () => {
   const { isSideNavOpen, closeSideNav } = useGlobalContext();
 
   const { id } = useParams();
-  console.log(id);
 
   return (
     <nav className={`flex-centre sidenav ${isSideNavOpen && "show-sidenav"}`}>

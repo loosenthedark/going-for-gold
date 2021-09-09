@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Main from "./pages/Main";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import SideNav from "./components/SideNav";
 import ErrorHandler from "./pages/ErrorHandler";
 import BackToTopBtn from "./components/BackToTopBtn";
@@ -17,21 +18,24 @@ function App() {
     <>
       <Route path='/:id'>
         <SideNav />
-      </Route>
+      </Route>{" "}
       <Switch>
         <Route path='/' exact>
           <Landing />
-        </Route>
+        </Route>{" "}
         <Route path='/medallists'>
           <Main />
-        </Route>
+        </Route>{" "}
         <Route path='/about'>
           <About />
-        </Route>
+        </Route>{" "}
+        <Route path='/contact'>
+          <Contact />
+        </Route>{" "}
         <Route path='*'>
           <ErrorHandler />
-        </Route>
-      </Switch>
+        </Route>{" "}
+      </Switch>{" "}
       <BackToTopBtn />
     </>
   );

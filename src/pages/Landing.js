@@ -228,9 +228,9 @@ const Landing = () => {
         <Link to='/about' className='btn btn-landing bg-silver'>
           About
         </Link>
-        <a href='' className='btn btn-landing bg-bronze'>
+        <Link to='/contact' className='btn btn-landing bg-bronze'>
           Contact
-        </a>
+        </Link>
       </div>
     </>
   );
