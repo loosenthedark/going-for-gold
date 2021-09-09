@@ -85,8 +85,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: Freeroad, "Helvetica Neue", sans-serif;
 }
 
@@ -140,6 +139,13 @@ h4 {
     font-weight: 500;
 }
 
+h6 {
+    line-height: 1.4;
+    font-size: 4.5vw;
+    font-weight: 400;
+    color: #809099;
+}
+
 p {
     margin-bottom: 1rem;
     font-weight: 400;
@@ -172,6 +178,13 @@ main {
 article {
     height: 156vw;
     flex-direction: column;
+}
+
+textarea {
+    padding: 0.8rem;
+    color: #464a4c;
+    border-radius: 0.3rem;
+    font-size: 1rem;
 }
 
 
@@ -210,6 +223,10 @@ article {
 
 .bg-green {
     background-image: linear-gradient( to right top, #01a751, #04964b, #088545, #0d743f, #106438);
+}
+
+.bg-blue-tokyo {
+    background-image: linear-gradient( to right top, #202b5b, #1b275b, #17245c, #12205c, #0c1c5c);
 }
 
 .underline {
@@ -940,10 +957,14 @@ About
 ===============
 */
 
-.container-about {
+.container-about,
+.container-contact {
     width: 100vw;
     height: 100vh;
     position: relative;
+}
+
+.container-about {
     background-color: var(--bg-primary);
     background-image: url("./static/images/logos/logo-tokyo-2020-complete-white.png");
     background-size: 90vw 86vh;
@@ -1004,4 +1025,76 @@ About
 .overlay-about-text .link-external {
     color: unset;
     font-weight: 700;
+}
+
+
+/*
+=============== 
+Contact
+===============
+*/
+
+.form-contact {
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ecf0f3;
+}
+
+.form-contact>* {
+    width: 76vw;
+    text-align: center;
+}
+
+.form-contact>.form-logo {
+    width: 30vw;
+    height: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    background-image: url("./static/images/logos/logo-tokyo-2020-blue-tokyo.png");
+    margin-bottom: 3vw;
+}
+
+.form-contact>h6 {
+    width: 80vw;
+}
+
+.form-group {
+    margin-bottom: 5vw;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 7.5vw;
+}
+
+.form-group>* {
+    width: 100%;
+}
+
+textarea,
+.form-contact .form-control {
+    background-color: #ecf0f3;
+    border: none;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.form-contact .form-control {
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    background-color: #ecf0f3;
+    border: none;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+textarea::placeholder,
+.form-contact .form-control::placeholder {
+    color: #9da9b0;
+}
+
+textarea:focus,
+.form-contact .form-control:focus {
+    color: #464a4c;
+    background-color: #fff;
+    outline: none;
 }
