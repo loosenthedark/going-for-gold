@@ -20,7 +20,7 @@ Variables
     /* Tokyo 2020 logo original */
     --clr-tokyo-blue: hsl(229, 48%, 24%);
     --clr-tokyo-blue-muted-opaque: hsla(229, 48%, 24%, 0.85);
-    --clr-blue-muted-opaque: hsla(230, 47%, 80%, 0.95);
+    --clr-blue-muted-opaque: hsla(230, 47%, 80%, 0.97);
     /* Olympic ring colours */
     --clr-olympic-blue: hsl(201, 100%, 39%);
     --clr-olympic-blue-opaque: hsla(201, 100%, 39%, 20%);
@@ -41,6 +41,7 @@ Variables
     --clr-medal-bronze-opaque: hsl(27, 42%, 46%, 0.7);
     /* Shadow */
     --shadow-main: 0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.2);
+    --shadow-darker: 0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.3);
 }
 
 
@@ -157,6 +158,8 @@ li {
 
 button {
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 main {
@@ -187,6 +190,26 @@ article {
 .bg-bronze {
     background-image: linear-gradient( to right top, var(--clr-medal-bronze), hsl(26, 46%, 42%), hsl(27, 50%, 37%), hsl(26, 56%, 33%), hsl(26, 63%, 28%));
     animation-delay: 5.75s;
+}
+
+.bg-blue-olympic {
+    background-image: linear-gradient( to right top, #0081c7, #0079b9, #0170ac, #02689f, #046092);
+}
+
+.bg-black {
+    background-image: linear-gradient( to right top, #2a2626, #211e1e, #191717, #0f0d0e, #000000);
+}
+
+.bg-red {
+    background-image: linear-gradient( to right top, #ee2f4c, #dd2843, #cd213a, #bc1a32, #ac132a);
+}
+
+.bg-yellow {
+    background-image: linear-gradient( to right top, #fcb32c, #e8a325, #d4941f, #c08518, #ad7611);
+}
+
+.bg-green {
+    background-image: linear-gradient( to right top, #01a751, #04964b, #088545, #0d743f, #106438);
 }
 
 .underline {
@@ -233,11 +256,70 @@ article {
 
 /*
 =============== 
-Navbar
+SideNav
 ===============
 */
 
-nav {
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--clr-primary-white);
+    background: var(--clr-blue-muted-opaque);
+    transition: all 0.3s linear;
+    transform: translate(100%);
+    z-index: 10;
+}
+
+.show-sidenav {
+    transform: translate(0);
+}
+
+
+/*
+=============== 
+Buttons
+===============
+*/
+
+.btn {
+    height: 3.25rem;
+    line-height: 3.25rem;
+    text-align: center;
+    width: 15.5rem;
+    margin-bottom: 1rem;
+    border-radius: 3.25rem;
+    box-shadow: var(--shadow-main);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--clr-primary-white);
+}
+
+.container-buttons .btn {
+    animation-name: btn-fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    right: 1vw;
+    top: 90.5vh;
+    font-size: 15vw;
+    color: var(--clr-tokyo-blue);
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-nav {
     margin: auto;
     top: 0;
     right: 0;
@@ -248,14 +330,10 @@ nav {
     z-index: 7;
 }
 
-nav,
-nav::before,
-nav::after {
+.button-nav,
+.button-nav::before,
+.button-nav::after {
     position: absolute;
-}
-
-nav:hover {
-    cursor: pointer;
 }
 
 
@@ -335,48 +413,6 @@ nav:hover {
     }
 }
 
-
-/*
-=============== 
-Buttons
-===============
-*/
-
-.btn {
-    height: 3.25rem;
-    line-height: 3.25rem;
-    text-align: center;
-    width: 15.5rem;
-    margin-bottom: 1rem;
-    border-radius: 3.25rem;
-    box-shadow: var(--shadow-main);
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    display: inline-block;
-    text-transform: uppercase;
-    color: var(--clr-primary-white);
-}
-
-.container-buttons>.btn {
-    animation-name: btn-fade-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    opacity: 0;
-}
-
-.btn-back-to-top {
-    position: fixed;
-    right: 1vw;
-    top: 90.5vh;
-    font-size: 15vw;
-    color: var(--clr-tokyo-blue);
-    background-color: transparent;
-    border: none;
-    transition: all 0.5s ease-in-out;
-}
-
 @keyframes btn-fade-in {
     from {
         opacity: 0;
@@ -393,12 +429,16 @@ Landing
 ===============
 */
 
-.container-buttons {
+.container-buttons,
+.container-buttons-nav {
     width: 100%;
     position: absolute;
-    top: 55vh;
     left: 0;
     flex-direction: column;
+}
+
+.container-buttons {
+    top: 55vh;
 }
 
 

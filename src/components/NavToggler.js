@@ -1,8 +1,11 @@
 import React from "react";
+import { useGlobalContext } from "../context";
 
-const NavMenu = () => {
+const NavToggler = () => {
+  const { openSideNav } = useGlobalContext();
+
   return (
-    <nav className='flex-centre'>
+    <button className='button-nav flex-centre' onClick={openSideNav}>
       {/* Hamburger icon SVG adapted from Cassie Evans' CodePen: https://codepen.io/cassie-codes/pen/ExgXNWY */}
       <svg className='hamburger Header__toggle-svg' viewBox='0 0 48 48'>
         <g
@@ -16,8 +19,8 @@ const NavMenu = () => {
           <path id='bottom-line' d='M12,32 L36,32 Z'></path>
         </g>
       </svg>
-    </nav>
+    </button>
   );
 };
 
-export default NavMenu;
+export default NavToggler;

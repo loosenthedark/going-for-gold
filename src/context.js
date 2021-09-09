@@ -6,6 +6,14 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+  const openSideNav = () => {
+    setIsSideNavOpen(true);
+  };
+  const closeSideNav = () => {
+    setIsSideNavOpen(false);
+  };
   const {
     isLoading,
     error,
@@ -31,9 +39,12 @@ const AppProvider = ({ children }) => {
         setToggle,
         searchQuery,
         setSearchQuery,
+        isSideNavOpen,
+        openSideNav,
+        closeSideNav,
       }}
     >
-      {children}
+      {children}{" "}
     </AppContext.Provider>
   );
 };

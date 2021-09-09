@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Main from "./pages/Main";
 import About from "./pages/About";
+import SideNav from "./components/SideNav";
 import ErrorHandler from "./pages/ErrorHandler";
 import BackToTopBtn from "./components/BackToTopBtn";
 
@@ -14,6 +15,9 @@ import BackToTopBtn from "./components/BackToTopBtn";
 function App() {
   return (
     <>
+      <Route path='/:id'>
+        <SideNav />
+      </Route>
       <Switch>
         <Route path='/' exact>
           <Landing />

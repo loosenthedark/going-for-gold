@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "../components/NavMenu";
+import NavToggler from "../components/NavToggler";
 
 const About = () => {
   return (
     <>
       <div className='container-about'>
-        <Nav />
+        <NavToggler />
         <div className='overlay-about flex-centre trbl-0'> </div>{" "}
         <div className='overlay-about-text flex-centre trbl-0'>
           <h1>

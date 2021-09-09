@@ -38,6 +38,10 @@ The [JPG to PNG online editing tool](https://jpg2png.com/) was used to convert a
 
 ['How to sort an array of objects by multiple fields?'](https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields) (Stack Overflow)
 
+['URL Parameters (`Params`)'](https://reactrouter.com/web/example/url-params) (React Router Docs)
+
+['Ternary operator on style with React Js Es 6'](https://stackoverflow.com/questions/41092677/ternary-operator-on-style-with-react-js-es-6) (Stack Overflow)
+
 [Summary of the situation surrounding Russian (ROC) athletes' participation at the Tokyo Games](https://en.wikipedia.org/wiki/Russian_Olympic_Committee_athletes_at_the_2020_Summer_Olympics) (Wikipedia)
 
 I had to intercept the data being returned from the REST Countries API for Russia: changing the name from ['Russian Federation'](https://restcountries.eu/rest/v2/name/russia) to 'ROC' and the flag image's `src` value to [a URL found on the official Olympics.com website](https://olympics.com/tokyo-2020/olympic-games/resCOMMON/img/flags/ROC.png).
@@ -55,6 +59,8 @@ Inspiration for applying dynamic colour styles to the `.container-flag` elements
 ['How to print a number with commas as thousands separators in JavaScript'](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript) (Stack Overflow)
 
 Site logo design adapted from a [Canva base template](https://www.canva.com/design/DAEpKFB9Qs4/EgBNQWkP7pLS6kfjalAE4A/edit)
+
+[Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
 
 CSS toggle-switch functionality adapted (for integration with React state values) [from Nick Bottomley's CodePen](https://codepen.io/nickbottomley/pen/uhfmn)
 

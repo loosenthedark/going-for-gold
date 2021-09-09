@@ -5,7 +5,7 @@ import flagROC from "../static/images/logos/flag-roc.png";
 import Loading from "./Loading";
 import Toggle from "./ToggleSwitch";
 import Search from "./SearchInput";
-import Nav from "./NavMenu";
+import NavToggler from "./NavToggler";
 
 const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
@@ -23,7 +23,7 @@ const Medallists = () => {
     <>
       <Toggle />
       <Search />
-      <Nav />
+      <NavToggler />
       <section>
         {" "}
         {medalCountries
