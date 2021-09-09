@@ -1,10 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import useRequests from "./useRequests";
 
 // STEP 1 = Set up the app's global context via the React Context API...
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [pressed, setPressed] = useState(false);
+  useEffect(() => {
+    window.onpopstate = (e) => {
+      setPressed(true);
+    };
+    console.log(pressed);
+  });
   const [searchQuery, setSearchQuery] = useState("");
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
@@ -42,6 +49,8 @@ const AppProvider = ({ children }) => {
         isSideNavOpen,
         openSideNav,
         closeSideNav,
+        pressed,
+        setPressed,
       }}
     >
       {children}{" "}

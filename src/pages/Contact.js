@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavToggler from "../components/NavToggler";
 
 const Contact = () => {
