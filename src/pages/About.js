@@ -23,7 +23,7 @@ const About = () => {
           </p>{" "}
           <p>
             By offering an alternative medals breakdown - ranking countries in
-            relative(per capita) rather than absolute terms - we hope to
+            relative (per capita) rather than absolute terms - we hope to
             challenge people 's attitudes and{" "}
             <a
               href='https://yourbias.is/the-framing-effect'

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const SideNav = () => {
@@ -12,7 +13,13 @@ const SideNav = () => {
       onClick={closeSideNav}
       className={`flex-centre sidenav ${isSideNavOpen && "show-sidenav"}`}
     >
-      <div className='sidenav-header'> </div>{" "}
+      <button
+        className='button-nav flex-centre button-close'
+        onClick={closeSideNav}
+      >
+        {" "}
+        <FaTimes />{" "}
+      </button>{" "}
       <ul className='container-buttons-nav flex-centre-a'>
         <li>
           <Link
@@ -88,16 +95,16 @@ const SideNav = () => {
         </li>{" "}
       </ul>{" "}
       {/* <ul className='social-icons'>
-                    {social.map((link) => {
-                      return (
-                        <li key={link.id}>
-                          <a target='_blank' rel='noopener noreferrer' href={link.url}>
-                            {link.icon}
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul> */}{" "}
+                                {social.map((link) => {
+                                  return (
+                                    <li key={link.id}>
+                                      <a target='_blank' rel='noopener noreferrer' href={link.url}>
+                                        {link.icon}
+                                      </a>
+                                    </li>
+                                  );
+                                })}
+                              </ul> */}{" "}
     </nav>
   );
 };

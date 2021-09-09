@@ -355,6 +355,11 @@ Buttons
     position: absolute;
 }
 
+.button-close {
+    font-size: 2rem;
+    color: var(--clr-tokyo-blue);
+}
+
 .hamburger {
     width: 15vw;
     height: 15vw;

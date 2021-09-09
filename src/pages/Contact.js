@@ -6,12 +6,7 @@ const Contact = () => {
     <>
       <div className='container-contact'>
         <NavToggler />
-        <form
-          role='form'
-          className='flex-centre form-contact'
-          method='POST'
-          novalidate=''
-        >
+        <form className='flex-centre form-contact' method='POST' noValidate=''>
           <div className='form-logo p-3 mb-xl-4 fas fa-laptop-code laptop-circle d-lg-flex align-items-center justify-content-center mx-auto'></div>
           <h6 className='text-white mx-auto mb-4 mt-md-4 mb-md-4_5 mb-xl-0 d-xl-none'>
             Whether it's to report a bug or suggest a new feature, feel free to

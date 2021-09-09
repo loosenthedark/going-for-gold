@@ -10,7 +10,6 @@ const AppProvider = ({ children }) => {
     window.onpopstate = (e) => {
       setPressed(true);
     };
-    console.log(pressed);
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
