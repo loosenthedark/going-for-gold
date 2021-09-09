@@ -452,7 +452,7 @@ Loading
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: -5rem;
+    top: calc(50vh - 11.5rem);
 }
 
 .spinner {
