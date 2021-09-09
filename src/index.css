@@ -142,7 +142,7 @@ h4 {
 
 h6 {
     line-height: 1.25;
-    font-size: 4vw;
+    font-size: 1rem;
     font-weight: 400;
     color: #809099;
 }
@@ -173,6 +173,7 @@ main {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 20vw;
+    min-height: 100vh;
     width: calc(100vw - 2rem);
 }
 

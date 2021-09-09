@@ -40,6 +40,8 @@ The [JPG to PNG online editing tool](https://jpg2png.com/) was used to convert a
 
 ['URL Parameters (`Params`)'](https://reactrouter.com/web/example/url-params) (React Router Docs)
 
+['Detect click on back button using React useEffect and useState'](https://egghead.io/lessons/egghead-detect-click-on-back-button-using-react-useeffect-y-usestate) (egghead.io)
+
 ['Ternary operator on style with React Js Es 6'](https://stackoverflow.com/questions/41092677/ternary-operator-on-style-with-react-js-es-6) (Stack Overflow)
 
 [Summary of the situation surrounding Russian (ROC) athletes' participation at the Tokyo Games](https://en.wikipedia.org/wiki/Russian_Olympic_Committee_athletes_at_the_2020_Summer_Olympics) (Wikipedia)
@@ -77,5 +79,7 @@ The official Tokyo 2020 font was developed by [Morisawa](https://olympics.com/to
 - Expand the scope of the project to also incorporate the Tokyo 2020 Paralympic Games
 
 - The flag images returned from the REST Countries API are not of uniform dimensions, which presents challenges in terms of layout. This is something that could be addressed more thoroughly further down the line (for the time being, some basic contingency CSS has been put in place), e.g. by applying dynamic styling to the `.flag-wrapper` elements and their contents to ensure standardised width/height for each double-sided flag.
+
+- Links to social media channels
 
 [Project title is of course a respectful nod to the greatest TV game show of all time](https://www.youtube.com/watch?v=lTjVNwYRCNk)

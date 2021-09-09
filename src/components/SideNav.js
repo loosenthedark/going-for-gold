@@ -8,8 +8,11 @@ const SideNav = () => {
   const { id } = useParams();
 
   return (
-    <nav className={`flex-centre sidenav ${isSideNavOpen && "show-sidenav"}`}>
-      <div className='sidenav-header'></div>
+    <nav
+      onClick={closeSideNav}
+      className={`flex-centre sidenav ${isSideNavOpen && "show-sidenav"}`}
+    >
+      <div className='sidenav-header'> </div>{" "}
       <ul className='container-buttons-nav flex-centre-a'>
         <li>
           <Link
@@ -17,18 +20,18 @@ const SideNav = () => {
             className='btn btn-landing bg-blue-olympic'
             style={{ opacity: 0.4 }}
           >
-            Home
-          </Link>
-        </li>
+            Home{" "}
+          </Link>{" "}
+        </li>{" "}
         <li>
           <Link
             to='/'
             className='btn btn-landing bg-black'
             style={{ opacity: 0.4 }}
           >
-            Dark Mode
-          </Link>
-        </li>
+            Dark Mode{" "}
+          </Link>{" "}
+        </li>{" "}
         <li>
           <Link
             to='/medallists'
@@ -44,9 +47,9 @@ const SideNav = () => {
                 : { opacity: 0.4 }
             }
           >
-            Medallists
-          </Link>
-        </li>
+            Medallists{" "}
+          </Link>{" "}
+        </li>{" "}
         <li>
           <Link
             to='/about'
@@ -62,9 +65,9 @@ const SideNav = () => {
                 : { opacity: 0.4 }
             }
           >
-            About
-          </Link>
-        </li>
+            About{" "}
+          </Link>{" "}
+        </li>{" "}
         <li>
           <Link
             to='/contact'
@@ -80,21 +83,21 @@ const SideNav = () => {
                 : { opacity: 0.4 }
             }
           >
-            Contact
-          </Link>
-        </li>
-      </ul>
+            Contact{" "}
+          </Link>{" "}
+        </li>{" "}
+      </ul>{" "}
       {/* <ul className='social-icons'>
-        {social.map((link) => {
-          return (
-            <li key={link.id}>
-              <a target='_blank' rel='noopener noreferrer' href={link.url}>
-                {link.icon}
-              </a>
-            </li>
-          );
-        })}
-      </ul> */}
+                    {social.map((link) => {
+                      return (
+                        <li key={link.id}>
+                          <a target='_blank' rel='noopener noreferrer' href={link.url}>
+                            {link.icon}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul> */}{" "}
     </nav>
   );
 };
