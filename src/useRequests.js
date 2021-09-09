@@ -85,6 +85,7 @@ const useRequests = (urlParams) => {
     isLoading,
     error,
     info,
+    setInfo,
     toggle,
     setToggle,
     toggledIcon,

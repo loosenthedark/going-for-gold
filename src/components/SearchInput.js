@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "../context";
 
 const SearchInput = () => {
-  const { searchQuery, setSearchQuery, medalCountries, error } =
-    useGlobalContext();
+  const { searchQuery, setSearchQuery, error } = useGlobalContext();
   const [scrolled, setScrolled] = useState(false);
   const toggleSearchPos = () => {
     const scrollYAmount = document.documentElement.scrollTop;
@@ -15,16 +14,6 @@ const SearchInput = () => {
   };
   window.addEventListener("scroll", toggleSearchPos);
 
-  console.log(
-    medalCountries.filter((country) => {
-      const regex = new RegExp("land", "gi");
-      return country.name.match(regex);
-    })
-  );
-
-  useEffect(() => {
-    console.log(searchQuery);
-  }, [searchQuery]);
   // STEP 31 = Use the preventDefault method on the form submit event object to prevent the page from refreshing if the user presses the Enter key...
   return (
     <form onSubmit={(e) => e.preventDefault()}>
