@@ -9,32 +9,13 @@ const SideNav = () => {
 
   return (
     <nav className={`flex-centre sidenav ${isSideNavOpen && "show-sidenav"}`}>
-      <div className='sidenav-header'>
-        {/* <img src={logo} alt='Coding Addict logo' className='logo' /> */}
-        {/* <button className='close-btn' onClick={closeSideNav}>
-          <FaTimes />
-        </button> */}
-      </div>
-      {/* <ul className='links'>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li> */}
-      {/* {links.map((link) => {
-          return (
-            <li key={link.id}>
-              <a href={link.url}>
-                {link.icon} {link.text}
-              </a>
-            </li>
-          );
-        })} */}
-      {/* </ul> */}
+      <div className='sidenav-header'></div>
       <ul className='container-buttons-nav flex-centre-a'>
         <li>
           <Link
             to='/'
             className='btn btn-landing bg-blue-olympic'
-            style={{ opacity: 0.5 }}
+            style={{ opacity: 0.4 }}
           >
             Home
           </Link>
@@ -43,7 +24,7 @@ const SideNav = () => {
           <Link
             to='/'
             className='btn btn-landing bg-black'
-            style={{ opacity: 0.5 }}
+            style={{ opacity: 0.4 }}
           >
             Dark Mode
           </Link>
@@ -58,9 +39,9 @@ const SideNav = () => {
                     opacity: 1,
                     fontWeight: 600,
                     boxShadow:
-                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.3)",
+                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(32, 43, 91, 0.5)",
                   }
-                : { opacity: 0.5 }
+                : { opacity: 0.4 }
             }
           >
             Medallists
@@ -76,9 +57,9 @@ const SideNav = () => {
                     opacity: 1,
                     fontWeight: 600,
                     boxShadow:
-                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.3)",
+                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(32, 43, 91, 0.5)",
                   }
-                : { opacity: 0.5 }
+                : { opacity: 0.4 }
             }
           >
             About
@@ -94,9 +75,9 @@ const SideNav = () => {
                     opacity: 1,
                     fontWeight: 600,
                     boxShadow:
-                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(0, 0, 0, 0.3)",
+                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(32, 43, 91, 0.5)",
                   }
-                : { opacity: 0.5 }
+                : { opacity: 0.4 }
             }
           >
             Contact
