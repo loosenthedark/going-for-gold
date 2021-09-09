@@ -22,8 +22,8 @@ const Medallists = () => {
   return (
     <>
       <Toggle />
-      <NavToggler />
       <Search />
+      <NavToggler />
       <section>
         {" "}
         {medalCountries
