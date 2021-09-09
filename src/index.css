@@ -863,7 +863,7 @@ Medallists
 .flag-spin {
     animation-name: rotation;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
     animation-duration: 3.5s;
     transform-style: preserve-3d;
 }

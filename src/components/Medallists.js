@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { FaAward } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 import flagROC from "../static/images/logos/flag-roc.png";
@@ -11,6 +12,24 @@ const Medallists = () => {
   // STEP 26 = Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
   const { medalCountries, isLoading, toggledIcon, searchQuery } =
     useGlobalContext();
+
+  // const isScrolledIntoView = (el) => {
+  //   const rect = el.getBoundingClientRect();
+  //   const elemTop = rect.top;
+  //   const elemBottom = rect.bottom;
+
+  //   // Only completely visible elements return true:
+  //   const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+  //   // Partially visible elements return true:
+  //   //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  //   console.log(isVisible);
+  //   return isVisible;
+  // };
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    console.log(currPos.x);
+    console.log(currPos.y);
+  });
 
   // STEP 27 = Set up multiple conditional returns:
   // Condition 1: loading condition...
