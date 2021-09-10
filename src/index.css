@@ -71,7 +71,7 @@ body {
 
 body>* {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     min-width: 100%;
 }
 
@@ -183,6 +183,24 @@ article {
     min-height: 39rem;
     padding-top: 20vw;
     flex-direction: column;
+}
+
+
+/* Media Query */
+
+
+/* large mobile */
+
+@media screen and (min-width: 576px) {
+    article {
+        min-height: 42rem;
+    }
+    h2 {
+        margin-top: 5rem;
+    }
+    li {
+        margin-bottom: 0.75rem;
+    }
 }
 
 textarea {
@@ -333,8 +351,8 @@ Buttons
 .btn-back-to-top {
     position: fixed;
     right: 1vw;
-    top: 90.5vh;
-    font-size: 15vw;
+    top: 89%;
+    font-size: 3.75rem;
     color: var(--clr-tokyo-blue);
     background-color: transparent;
     border: none;
@@ -346,7 +364,9 @@ Buttons
     top: 0;
     right: 0;
     width: 15vw;
+    max-width: 3.5rem;
     height: 15vw;
+    max-height: 3.5rem;
     border-radius: 50%;
     transition: all 1s;
     z-index: 7;
@@ -365,6 +385,8 @@ Buttons
 
 .hamburger {
     width: 15vw;
+    max-width: 3.5rem;
+    max-height: 3.5rem;
     height: 15vw;
     position: absolute;
     color: var(--clr-tokyo-blue);
@@ -720,27 +742,28 @@ form {
     left: 0;
     width: 80vw;
     height: 20vw;
+    max-height: 4.75rem;
     z-index: 8;
 }
 
 form>input {
     bottom: 0;
-    left: 21.5vw;
+    left: 22.5vw;
     width: 25vw;
-    height: 12vw;
+    height: 2.75rem;
     outline: none;
     border: none;
     background: var(--clr-primary-white);
     color: var(--clr-tokyo-blue);
     box-shadow: var(--shadow-main);
-    padding: 0 15vw 0 6.25vw;
+    padding: 0 3.5rem 0 1.45rem;
     border-radius: 1.875rem;
     transition: all 0.95s;
     opacity: 0;
     z-index: 8;
     font-weight: 700;
     letter-spacing: 0.05rem;
-    font-size: 4.5vw;
+    font-size: 1.1rem;
 }
 
 form>input:focus {
@@ -759,11 +782,11 @@ form>input:focus~.search::before,
 form>input:focus~.search::after {
     top: 0;
     left: 0;
-    width: 7.5vw;
+    width: 1.75rem;
 }
 
 form>input:focus~.search::after {
-    height: 0.625vw;
+    height: 0.145rem;
     border: none;
     background: var(--clr-primary-white);
     border-radius: 0%;
@@ -780,6 +803,8 @@ form>.search {
     left: 20vw;
     right: 0;
     width: 15vw;
+    max-width: 3.5rem;
+    max-height: 3.5rem;
     height: 15vw;
     background: var(--clr-tokyo-blue);
     border-radius: 50%;
@@ -813,21 +838,21 @@ form>.search::after {
 }
 
 form>.search::before {
-    top: 5.5vw;
-    left: 4vw;
-    width: 3vw;
-    height: 0.625vw;
+    top: 1.2rem;
+    left: 1.1rem;
+    width: 0.6rem;
+    height: 0.15rem;
     background: var(--clr-primary-white);
     transform: rotate(45deg);
 }
 
 form>.search::after {
-    top: -1.5625vw;
-    left: -1.5625vw;
-    width: 6.5vw;
-    height: 6.5vw;
+    top: -0.365rem;
+    left: -0.365rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
-    border: 0.625vw solid var(--clr-primary-white);
+    border: 0.15rem solid var(--clr-primary-white);
 }
 
 
@@ -839,15 +864,14 @@ Medallists
 
 .container-flag {
     width: 75vw;
+    min-height: 16rem;
+    min-width: 16rem;
     height: 75vw;
     position: relative;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     margin: 0 auto;
-}
-
-.container-flag+div>div {
-    min-height: 23.5vh;
 }
 
 .container-flag-Europe {
@@ -991,6 +1015,60 @@ Medallists
     to {
         transform: rotateY(-360deg);
     }
+}
+
+
+/* Media Query */
+
+
+/* large mobile */
+
+@media screen and (min-width: 576px) {
+    .container-flag {
+        min-height: 18rem;
+        min-width: 18rem;
+    }
+    .container-flag+div li:last-of-type span {
+        font-size: 1.5rem;
+        top: 0.65rem;
+        line-height: 3rem;
+    }
+    .container-flag+div li:last-of-type {
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        font-size: 5rem;
+        width: 100%;
+        height: 6rem;
+        margin-bottom: 0;
+    }
+    form>input {
+        height: 3rem;
+    }
+    .switch {
+        width: 6rem;
+        height: 5.5rem;
+    }
+    .switch label {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        display: block;
+        width: 4.5rem;
+        height: 50%;
+        margin: 0;
+        text-align: center;
+        color: var(--clr-tokyo-blue);
+    }
+    .switch input~input.switch-toggled~.toggle-outside .toggle-inside {
+        top: 2.85rem;
+    }
+    .switch input~.toggle-outside .toggle-inside {
+        top: 0.1rem;
+    }
+}
+
+.container-flag+div>div {
+    min-height: 23.5vh;
 }
 
 
