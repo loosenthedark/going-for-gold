@@ -1124,6 +1124,28 @@ About
 /* Media Query */
 
 
+/* large mobile */
+
+@media screen and (min-width: 576px) {
+    .container-about {
+        background-size: 25rem 35.5rem;
+    }
+    .overlay-about-text {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+    .overlay-about-text h1 {
+        margin-bottom: 2.5rem;
+    }
+    .overlay-about-text>p:last-of-type {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* Media Query */
+
+
 /* small mobile */
 
 @media screen and (max-width: 360px) {
