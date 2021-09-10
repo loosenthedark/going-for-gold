@@ -77,8 +77,8 @@ const Animation = () => {
   return (
     <div className='container-landing flex-centre'>
       <svg
-        width='375'
-        height='667'
+        width='400'
+        height='400'
         id='Layer_1'
         data-name='Layer 1'
         xmlns='http://www.w3.org/2000/svg'

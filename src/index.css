@@ -434,6 +434,14 @@ Landing
 ===============
 */
 
+.outer-landing {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .container-buttons,
 .container-buttons-nav {
     width: 100%;
@@ -451,19 +459,16 @@ Landing
 }
 
 .container-buttons {
-    top: 100vw;
+    top: 55%;
 }
 
 
 /* Landing page Olympic rings GSAP SVG animation adapted from Steve Gardner's CodePen: https://codepen.io/ste-vg/details/kXzXYW */
 
-.logo-gfg {
-    width: 100%;
-}
-
 .container-landing {
     position: relative;
-    top: -42vw;
+    top: -5vw;
+    width: 100%;
 }
 
 .container-landing>svg {
@@ -495,6 +500,18 @@ Landing
 
 #c5 {
     clip-path: url(#m5);
+}
+
+
+/* Media Query */
+
+
+/* large mobile */
+
+@media screen and (min-width: 576px) {
+    .container-buttons {
+        top: 60%;
+    }
 }
 
 
