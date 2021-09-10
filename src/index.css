@@ -180,7 +180,7 @@ main {
 
 article {
     height: 100vh;
-    min-height: 38rem;
+    min-height: 39rem;
     padding-top: 20vw;
     flex-direction: column;
 }
@@ -442,8 +442,16 @@ Landing
     flex-direction: column;
 }
 
+.container-buttons-nav {
+    margin-bottom: 0;
+}
+
+.container-buttons-nav>li:last-of-type>.btn {
+    margin-bottom: 0;
+}
+
 .container-buttons {
-    top: 55vh;
+    top: 100vw;
 }
 
 
@@ -455,7 +463,7 @@ Landing
 
 .container-landing {
     position: relative;
-    top: -24vh;
+    top: -42vw;
 }
 
 .container-landing>svg {
@@ -1061,10 +1069,12 @@ Contact
 
 .form-contact {
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 40rem;
     width: unset;
     z-index: unset;
     background-color: #ecf0f3;
+    padding: 3vw;
 }
 
 .form-contact>* {
@@ -1079,11 +1089,11 @@ Contact
     background-size: cover;
     margin: 0 auto;
     background-image: url("./static/images/logos/logo-tokyo-2020-blue-tokyo.png");
-    margin-bottom: 3vw;
 }
 
 .form-contact>h6 {
     width: 80vw;
+    padding-top: 3vw;
 }
 
 .form-group {
@@ -1092,7 +1102,6 @@ Contact
 
 h6+.form-group {
     margin-bottom: 2.5vw;
-    margin-top: 2.5vw;
 }
 
 .form-group:nth-of-type(5) {
