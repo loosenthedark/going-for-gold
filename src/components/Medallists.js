@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { FaAward } from "react-icons/fa";
 import { useGlobalContext } from "../context";
@@ -13,23 +13,28 @@ const Medallists = () => {
   const { medalCountries, isLoading, toggledIcon, searchQuery } =
     useGlobalContext();
 
-  // const isScrolledIntoView = (el) => {
-  //   const rect = el.getBoundingClientRect();
-  //   const elemTop = rect.top;
-  //   const elemBottom = rect.bottom;
+  const isScrolledIntoView = (el) => {
+    const rect = el.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
 
-  //   // Only completely visible elements return true:
-  //   const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
-  //   // Partially visible elements return true:
-  //   //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-  //   console.log(isVisible);
-  //   return isVisible;
-  // };
+    // Only completely visible elements return true:
+    // const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+    // Partially visible elements return true:
+    const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible;
+  };
 
-  useScrollPosition(({ prevPos, currPos }) => {
-    console.log(currPos.x);
-    console.log(currPos.y);
-  });
+  window.onload = function () {
+    setTimeout(() => {
+      document.addEventListener("scroll", function (e) {
+        const articleArray = [...document.querySelectorAll(".wrapper-flag")];
+        articleArray.forEach((article, index) => {
+          isScrolledIntoView(article) && article.classList.add("flag-spin");
+        });
+      });
+    }, 3000);
+  };
 
   // STEP 27 = Set up multiple conditional returns:
   // Condition 1: loading condition...
@@ -72,7 +77,7 @@ const Medallists = () => {
                 <div
                   className={`container-flag container-flag-${region} flex-centre`}
                 >
-                  <div className='wrapper-flag flag-spin'>
+                  <div className='wrapper-flag'>
                     <img
                       className='flag'
                       src={name === "Russian Federation" ? { flagROC } : flag}

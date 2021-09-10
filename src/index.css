@@ -172,13 +172,14 @@ button {
 main {
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 20vw;
+    margin-top: 0;
     min-height: 100vh;
     width: calc(100vw - 2rem);
 }
 
 article {
-    height: 156vw;
+    height: 100vh;
+    padding-top: 20vw;
     flex-direction: column;
 }
 
@@ -458,7 +459,7 @@ Loading
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: calc(50vh - 11.5rem);
+    top: calc(50vh - 25vw);
 }
 
 .spinner {
@@ -863,7 +864,7 @@ Medallists
 .flag-spin {
     animation-name: rotation;
     animation-timing-function: linear;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-duration: 3.5s;
     transform-style: preserve-3d;
 }

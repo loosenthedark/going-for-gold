@@ -82,6 +82,8 @@ The official Tokyo 2020 font was developed by [Morisawa](https://olympics.com/to
 
 - Links to social media channels
 
+- "Infinite scroll" and/or pagination
+
 - Make the 'rank icons' beneath each medallist's flag/logo UI _less_ dynamic, i.e. so that they aren't bound by array index values when a user searches for and locates their country/countries of choice
 
 [Project title is of course a respectful nod to the greatest TV game show of all time](https://www.youtube.com/watch?v=lTjVNwYRCNk)
