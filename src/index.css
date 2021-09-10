@@ -538,6 +538,18 @@ Landing
 }
 
 
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .container-landing>svg {
+        transform: scale(1.75);
+    }
+    .container-landing {
+        top: 5vh;
+    }
+}
+
+
 /*
 =============== 
 Loading
