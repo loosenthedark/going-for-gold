@@ -34,15 +34,12 @@ const Medallists = () => {
 
   window.onload = function () {
     setTimeout(() => {
-      const secondScrollEvent = document.addEventListener(
-        "scroll",
-        function (e) {
-          const articleArray = [...document.querySelectorAll(".wrapper-flag")];
-          articleArray.forEach((article, index) => {
-            isScrolledIntoView(article) && article.classList.add("flag-spin");
-          });
-        }
-      );
+      document.addEventListener("scroll", function (e) {
+        const articleArray = [...document.querySelectorAll(".wrapper-flag")];
+        articleArray.forEach((article, index) => {
+          isScrolledIntoView(article) && article.classList.add("flag-spin");
+        });
+      });
     }, 3000);
   };
 
@@ -58,7 +55,7 @@ const Medallists = () => {
     <>
       <Toggle />
       <Search />
-      <NavToggler />
+      <NavToggler />{" "}
       {document.readyState === "complete" &&
         filteredMedalCountries.length === 0 && (
           <section>
@@ -66,12 +63,12 @@ const Medallists = () => {
               <div
                 className={`container-flag container-flag-Americas container-flag-error flex-centre`}
               >
-                <div className='wrapper-flag'></div>{" "}
+                <div className='wrapper-flag'> </div>{" "}
               </div>{" "}
               <div>
-                <h3>No medallists found!</h3>{" "}
+                <h3> No medallists found! </h3>{" "}
                 <div>
-                  <h5>Please try another search...</h5>
+                  <h5> Please try another search... </h5>{" "}
                   <ul>
                     <li>
                       <div className='wrapper-rank'>
@@ -81,9 +78,9 @@ const Medallists = () => {
                   </ul>{" "}
                 </div>{" "}
               </div>{" "}
-            </article>
+            </article>{" "}
           </section>
-        )}
+        )}{" "}
       <section>
         {" "}
         {filteredMedalCountries.map((country, index) => {
