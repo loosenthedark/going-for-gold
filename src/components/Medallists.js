@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaAward } from "react-icons/fa";
 import { ImWarning } from "react-icons/im";
 import { useGlobalContext } from "../context";
@@ -34,56 +34,24 @@ const Medallists = () => {
 
   window.onload = function () {
     setTimeout(() => {
-      document.addEventListener("scroll", function (e) {
-        const articleArray = [...document.querySelectorAll(".wrapper-flag")];
-        articleArray.forEach((article, index) => {
-          isScrolledIntoView(article) && article.classList.add("flag-spin");
-        });
-      });
+      const secondScrollEvent = document.addEventListener(
+        "scroll",
+        function (e) {
+          const articleArray = [...document.querySelectorAll(".wrapper-flag")];
+          articleArray.forEach((article, index) => {
+            isScrolledIntoView(article) && article.classList.add("flag-spin");
+          });
+        }
+      );
     }, 3000);
   };
 
   // Set up multiple conditional returns:
-  // Condition 1: No medallists found based on user search criteria...
-  if (
-    document.readyState === "complete" &&
-    filteredMedalCountries.length === 0
-  ) {
-    return (
-      <>
-        <Toggle />
-        <Search />
-        <NavToggler />
-        <section>
-          <article className='flex-centre-j article-error'>
-            <div
-              className={`container-flag container-flag-Americas container-flag-error flex-centre`}
-            >
-              <div className='wrapper-flag'></div>{" "}
-            </div>{" "}
-            <div>
-              <h3>No medallists found!</h3>{" "}
-              <div>
-                <h5>Please try another search...</h5>
-                <ul>
-                  <li>
-                    <div className='wrapper-rank'>
-                      <ImWarning className='icon-warning' />
-                    </div>{" "}
-                  </li>{" "}
-                </ul>{" "}
-              </div>{" "}
-            </div>{" "}
-          </article>
-        </section>{" "}
-      </>
-    );
-  }
-
-  // Condition 2: loading condition...
+  // Condition 1: loading condition...
   if (isLoading) {
     return <Loading />;
   }
+  // Condition 1: No medallists found based on user search criteria...
   // Condition 3 (default): "true return" condition...
   // Iterate over the medalCountries array, returning a standalone article element for each country...
   return (
@@ -91,6 +59,31 @@ const Medallists = () => {
       <Toggle />
       <Search />
       <NavToggler />
+      {document.readyState === "complete" &&
+        filteredMedalCountries.length === 0 && (
+          <section>
+            <article className='flex-centre-j article-error'>
+              <div
+                className={`container-flag container-flag-Americas container-flag-error flex-centre`}
+              >
+                <div className='wrapper-flag'></div>{" "}
+              </div>{" "}
+              <div>
+                <h3>No medallists found!</h3>{" "}
+                <div>
+                  <h5>Please try another search...</h5>
+                  <ul>
+                    <li>
+                      <div className='wrapper-rank'>
+                        <ImWarning className='icon-warning' />
+                      </div>{" "}
+                    </li>{" "}
+                  </ul>{" "}
+                </div>{" "}
+              </div>{" "}
+            </article>
+          </section>
+        )}
       <section>
         {" "}
         {filteredMedalCountries.map((country, index) => {

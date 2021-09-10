@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronCircleUp } from "react-icons/fa";
 
 const BackToTopBtn = () => {
@@ -20,7 +20,14 @@ const BackToTopBtn = () => {
     });
   };
 
-  window.addEventListener("scroll", toggleVisible);
+  // window.addEventListener("scroll", toggleVisible);
+
+  // The useEffect hook here listens for a scroll event...
+  useEffect(() => {
+    const scrollEvent = window.addEventListener("scroll", toggleVisible);
+    // CLEANUP FN!
+    return () => window.removeEventListener("scroll", scrollEvent);
+  }, []);
 
   return (
     <FaChevronCircleUp

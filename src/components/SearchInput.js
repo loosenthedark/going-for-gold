@@ -12,7 +12,28 @@ const SearchInput = () => {
       setScrolled(false);
     }
   };
-  window.addEventListener("scroll", toggleSearchPos);
+  // The useEffect hook here listens for a scroll event...
+  useEffect(() => {
+    const scrollEvent = window.addEventListener("scroll", toggleSearchPos);
+    // CLEANUP FN!
+    return () => window.removeEventListener("scroll", scrollEvent);
+  }, []);
+  // if (
+  // add loading conditional logic here to prevent constant fetching (while app is also loading) when user scrolls to end...
+  //     !loading &&
+  //     window.innerHeight + window.scrollY >= document.body.scrollHeight - 2
+  //   ) {
+  //     setPage((banana) => {
+  //       return banana + 1;
+  //     });
+  //   }
+  // });
+  // const scrollYAmount = document.documentElement.scrollTop;
+  // if (scrollYAmount > 100) {
+  //   setScrolled(true);
+  // } else if (scrollYAmount <= 100) {
+  //   setScrolled(false);
+  // }
 
   // Use the preventDefault method on the form submit event object to prevent the page from refreshing if the user presses the Enter key...
   return (
@@ -24,12 +45,7 @@ const SearchInput = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />{" "}
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className={`search ${scrolled && "search-corner"}`}
-      >
-        {" "}
-      </div>{" "}
+      <div className={`search ${scrolled && "search-corner"}`}> </div>{" "}
     </form>
   );
 };
