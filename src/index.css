@@ -73,6 +73,7 @@ body>* {
     position: relative;
     overflow: hidden;
     min-width: 100%;
+    min-height: 100vh;
 }
 
 ul {
@@ -142,7 +143,7 @@ h4 {
 }
 
 h6 {
-    line-height: 1.25;
+    line-height: 1.15;
     font-size: 1rem;
     font-weight: 400;
     color: #809099;
@@ -1085,9 +1086,7 @@ About
 ===============
 */
 
-.container-about,
-.container-contact {
-    width: 100vw;
+.container-about {
     height: 100vh;
     position: relative;
 }
@@ -1184,24 +1183,32 @@ Contact
 ===============
 */
 
+.container-contact {
+    height: 100%;
+}
+
 .form-contact {
     flex-direction: column;
     height: 100vh;
-    min-height: 40rem;
+    min-height: 43rem;
     width: unset;
     z-index: unset;
     background-color: #ecf0f3;
     padding: 3vw;
+    position: unset;
 }
 
 .form-contact>* {
     width: 76vw;
+    max-width: 26rem;
     text-align: center;
 }
 
 .form-contact>.form-logo {
     width: 30vw;
     height: 30vw;
+    max-width: 8rem;
+    max-height: 8rem;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
@@ -1210,11 +1217,13 @@ Contact
 
 .form-contact>h6 {
     width: 80vw;
-    padding-top: 3vw;
+    max-width: 22rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .form-group {
-    margin-bottom: 5vw;
+    margin-bottom: 1rem;
 }
 
 h6+.form-group {
@@ -1255,6 +1264,15 @@ textarea:focus,
     color: #464a4c;
     background-color: #fff;
     outline: none;
+}
+
+@media screen and (min-width: 576px) {
+    .alert {
+        padding: 0.75rem 1.5rem;
+    }
+    .form-group:nth-of-type(5) {
+        margin-bottom: 2.8rem;
+    }
 }
 
 
