@@ -1085,6 +1085,45 @@ Medallists
 }
 
 
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .container-flag {
+        height: unset;
+        width: 65%;
+    }
+    .container-flag+div {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    article {
+        flex-direction: row;
+        height: 30rem;
+        padding-top: 5rem;
+        min-height: unset;
+    }
+    article>* {
+        width: 50%;
+    }
+    section {
+        padding-top: 2rem;
+    }
+    h2 {
+        position: relative;
+        left: -142%;
+        top: 5%;
+        font-size: 2.2rem;
+        width: 100%;
+    }
+    .container-flag+div li:last-of-type {
+        top: 5%;
+        left: -15%;
+    }
+}
+
+
 /*
 =============== 
 Medallist
