@@ -3,7 +3,6 @@ import { FaAward } from "react-icons/fa";
 import { ImWarning } from "react-icons/im";
 import { useGlobalContext } from "../context";
 import flagROC from "../static/images/logos/flag-roc.png";
-import flagOlympic from "../static/images/logos/flag-olympic.png";
 import Loading from "./Loading";
 import Toggle from "./ToggleSwitch";
 import Search from "./SearchInput";
@@ -58,17 +57,14 @@ const Medallists = () => {
         <section>
           <article className='flex-centre-j article-error'>
             <div
-              className={`container-flag container-flag-Americas flex-centre`}
+              className={`container-flag container-flag-Americas container-flag-error flex-centre`}
             >
-              <div className='wrapper-flag'>
-                <img className='flag' src={flagOlympic} alt='' />{" "}
-                <div className='flag-olympic trbl-0'> </div>{" "}
-              </div>{" "}
+              <div className='wrapper-flag'></div>{" "}
             </div>{" "}
             <div>
               <h3>No medallists found!</h3>{" "}
               <div>
-                <p>Please try another search...</p>
+                <h5>Please try another search...</h5>
                 <ul>
                   <li>
                     <div className='wrapper-rank'>
@@ -88,7 +84,7 @@ const Medallists = () => {
   if (isLoading) {
     return <Loading />;
   }
-  // Condition 2 (default): "true return" condition...
+  // Condition 3 (default): "true return" condition...
   // Iterate over the medalCountries array, returning a standalone article element for each country...
   return (
     <>

@@ -821,20 +821,24 @@ Medallists
 }
 
 .article-error h3,
-.article-error p {
+.article-error h5 {
     margin-bottom: 3vw;
     color: var(--clr-tokyo-blue);
     text-align: center;
-    line-height: 1.1;
+    line-height: 1;
 }
 
 .article-error h3 {
-    font-size: 2rem;
-    margin-top: 20vw;
+    font-size: 1.9rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3vw;
 }
 
-.article-error p {
-    font-size: 1rem;
+.article-error h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: Raleway, sans-serif;
 }
 
 .wrapper-rank {
@@ -900,6 +904,10 @@ Medallists
 
 .icon-warning {
     color: var(--clr-olympic-red);
+}
+
+.icon-question {
+    color: var(--clr-olympic-yellow);
 }
 
 @keyframes rotation {
@@ -1067,4 +1075,19 @@ textarea:focus,
     color: #464a4c;
     background-color: #fff;
     outline: none;
+}
+
+
+/*
+=============== 
+ErrorHandler
+===============
+*/
+
+.container-flag-error+div li:last-of-type {
+    top: -52vw;
+}
+
+.container-button-error {
+    top: 25vw;
 }

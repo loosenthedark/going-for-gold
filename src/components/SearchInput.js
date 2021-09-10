@@ -14,7 +14,7 @@ const SearchInput = () => {
   };
   window.addEventListener("scroll", toggleSearchPos);
 
-  // STEP 31 = Use the preventDefault method on the form submit event object to prevent the page from refreshing if the user presses the Enter key...
+  // Use the preventDefault method on the form submit event object to prevent the page from refreshing if the user presses the Enter key...
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input
