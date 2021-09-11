@@ -212,7 +212,7 @@ const Contact = () => {
       {success && (
         <>
           <NavToggler />
-          <section>
+          <section className='section-success'>
             <article className='flex-centre-j article-error'>
               <div
                 className={`container-flag container-flag-error container-flag-Oceania flex-centre`}

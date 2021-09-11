@@ -1496,6 +1496,37 @@ textarea:focus,
 }
 
 
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    .form-contact {
+        width: 68vw;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    textarea {
+        height: 8rem;
+    }
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    .form-group:nth-of-type(5) {
+        margin-bottom: 2rem;
+    }
+    .form-contact>h6 {
+        padding-top: 1rem;
+        padding-bottom: 0.25rem;
+        line-height: 1;
+        font-size: 1rem;
+        max-width: 24rem;
+    }
+    .form-contact>.form-logo {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+
 /*
 =============== 
 ErrorHandler
@@ -1554,10 +1585,15 @@ ErrorHandler
     .container-flag-error+div {
         top: 24.25rem;
     }
-    .section-error {
+    .section-error,
+    .section-success {
         width: calc(68vw - 2rem);
     }
-    .section-error>.article-error {
+    .section-error>.article-error,
+    .section-success>.article-error {
         padding-top: 0;
+    }
+    .section-success .wrapper-rank {
+        top: 55%;
     }
 }
