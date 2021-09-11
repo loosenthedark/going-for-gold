@@ -19,7 +19,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const isName = (name) => {
-      const regex = /^[a-zA-Z\s]*$/;
+      const regex = /^[a-zA-Z]+(?:(?:['  -])[a-zA-Z]+)*$/;
       return regex.test(name);
     };
     const isEmail = (email) => {
