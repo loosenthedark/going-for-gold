@@ -395,6 +395,10 @@ Buttons
     transition: all 0.5s ease-in-out;
 }
 
+.dark-mode+.btn-back-to-top {
+    color: var(--clr-medal-gold-opaque);
+}
+
 .button-nav {
     margin: auto;
     top: 0;
@@ -455,6 +459,9 @@ Buttons
 @media screen and (min-width: 992px) {
     .button-nav {
         display: none;
+    }
+    .btn-back-to-top {
+        right: 31.5vw;
     }
 }
 
@@ -846,7 +853,6 @@ form>input {
     opacity: 0;
     z-index: 8;
     font-weight: 700;
-    letter-spacing: 0.05rem;
     font-size: 1.2rem;
 }
 
@@ -887,7 +893,7 @@ form>input:focus~.search::after {
 
 form>input::placeholder {
     opacity: 0.5;
-    font-weight: bolder;
+    font-weight: normal;
     padding-top: 0.2rem;
 }
 

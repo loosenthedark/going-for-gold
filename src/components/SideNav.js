@@ -4,8 +4,14 @@ import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const SideNav = () => {
-  const { isSideNavOpen, closeSideNav, dark, setDark, setToggledIcon } =
-    useGlobalContext();
+  const {
+    isSideNavOpen,
+    closeSideNav,
+    dark,
+    setDark,
+    setToggledIcon,
+    setToggle,
+  } = useGlobalContext();
 
   const handleDark = () => {
     setDark(!dark);
@@ -16,6 +22,7 @@ const SideNav = () => {
 
   useEffect(() => {
     id !== "medallists" && setToggledIcon(false);
+    id !== "medallists" && setToggle("golds");
   }, [id]);
 
   return (
