@@ -9,7 +9,6 @@ const API_ENDPOINT = "https://restcountries.eu/rest/v2/";
 const useRequests = (urlParams) => {
   // Set up primary state values...
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
   const [info, setInfo] = useState([]);
   const [toggledIcon, setToggledIcon] = useState(false);
   const [toggle, setToggle] = useState("golds");
@@ -59,12 +58,8 @@ const useRequests = (urlParams) => {
           });
         }
         setInfo(filteredArray);
-        setError(false);
-      } else if (filteredArray.length < 1 || !filteredArray) {
-        // But, if no array has been returned, update the error state value to reflect this...
-        setError(true);
       }
-      // Either way, toggle isLoading to false once API request has been completed...
+      // Toggle isLoading to false once API request has been completed...
       setIsLoading(false);
     } catch (error) {
       // Handle misfiring attempt(s) at making an API request, as well as disabling loading in the state value...
@@ -83,7 +78,6 @@ const useRequests = (urlParams) => {
 
   return {
     isLoading,
-    error,
     info,
     setInfo,
     toggle,

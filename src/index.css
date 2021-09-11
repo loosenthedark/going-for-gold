@@ -921,8 +921,50 @@ form>.search::after {
     border: 0.15rem solid var(--clr-primary-white);
 }
 
+.input-error {
+    position: relative;
+    top: 1rem;
+    width: 70vw;
+    left: 30vw;
+    z-index: 20;
+}
+
+.input-error>h6 {
+    color: var(--clr-olympic-blue);
+    font-weight: 600;
+    font-size: 0.75rem;
+    font-family: Raleway, sans-serif;
+    animation-name: text-fade-in;
+    animation-duration: 2.5s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+@keyframes text-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* Media Query */
+
+
+/* tablet */
+
+@media screen and (max-width: 360px) {
+    form>input {
+        font-size: 0.9rem;
+    }
+    .input-error>h6 {
+        font-size: 0.65rem;
+    }
+}
 
 
 /* tablet */

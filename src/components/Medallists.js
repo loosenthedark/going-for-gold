@@ -10,8 +10,15 @@ import NavToggler from "./NavToggler";
 
 const Medallists = () => {
   // Invoke custom useGlobalContext hook and access movies array as well as isLoading state value...
-  const { medalCountries, isLoading, toggledIcon, searchQuery } =
+  const { medalCountries, isLoading, toggledIcon, searchQuery, setError } =
     useGlobalContext();
+
+  // useEffect hook can check search input to ensure it is at least three characters in length and toggle error state value accordingly to relay feedback to user...
+  useEffect(() => {
+    searchQuery.length > 0 && searchQuery.length < 3
+      ? setError(true)
+      : setError(false);
+  }, [searchQuery]);
 
   const filteredMedalCountries = medalCountries.filter((country) => {
     return searchQuery === "" || searchQuery.length < 3
