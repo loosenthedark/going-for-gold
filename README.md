@@ -4,11 +4,17 @@
 
 # Going for Gold!
 
-![Going for Gold! landing page animation for desktop](docs/images/screenshots/going-for-gold-landing-animation-desktop.gif)
+![Going for Gold! landing page animation for desktop](docs/images/screenshots/gfg-landing-animation-desktop.gif)
 
 #### [Live link to deployed project](https://going-for-gold.netlify.app/)
 
 [Going for Gold](https://going-for-gold.netlify.app/) offers a fairer, more measured look at the Tokyo 2020 Olympic medal count. Countries are ranked in relative (per capita) instead of absolute medal-winning terms. Site visitors can toggle between two different ranking breakdowns, as well as search for countries, contact the site owner and enable dark mode. Fully interactive and boasting a robust and coherent mobile-first design, Going for Gold makes clever use of the React ecosystem to give users a richly dynamic UI. The application leverages the REST Countries API as well as a local JSON Olympic dataset to render lightning-fast statistical analyses. React Context API and EmailJS integration - the latter bolstered by custom form validation and error handling - round out a distinctly memorable user experience.
+
+![Going for Gold responsive landing page device mockups](docs/images/screenshots/mockups/gfg-landing-responsive-mockups.png)
+
+## User Experience (UX)
+
+It is imperative in today's on-the-move, remote-working consumer landscape that an interactive frontend site such as Going for Gold be fully-responsive across a wide range of devices. This overarching principle, coupled with a desire to create something sleek and modern-looking, informed my work from the first design sketch right through to the full production build. In terms of conceptual inspiration, the initial 'Eureka moment' came when the developer chanced upon [this thought-provoking Olympic-themed LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/). Added to the fact that the Tokyo Games themselves had just concluded, this sent me down a rabbit hole of Olympics-related data, blog posts and visualisations of various kinds until a clear theme for the site began to emerge. [React](https://reactjs.org/), together with a selection of its tributary libraries and dependencies, was chosen to power things under the hood, as its speed and versatility when it comes to rendering (and rerendering) user interfaces is second to none. The developer chose to go it alone in terms of design/styling, so no frameworks like Bootstrap or Tailwind CSS were used in the application's stylesheet.
 
 A truly level playing field...
 
@@ -73,6 +79,8 @@ Site logo design adapted from a [Canva base template](https://www.canva.com/desi
 CSS toggle-switch functionality adapted (for integration with React state values) [from Nick Bottomley's CodePen](https://codepen.io/nickbottomley/pen/uhfmn)
 
 Favicon generated using the [free online favicon.io tool](https://favicon.io/favicon-converter/)
+
+Responsive.ly app
 
 The site's [neumorphic Contact `form`](https://going-for-gold.netlify.app/contact/) is loosely based on the aesthetic of the developer's own [portfolio site Contact page](https://loosenthedark.tech/contact.html) - which in turn took inspiration from [this CSS-Tricks deep dive](https://css-tricks.com/neumorphism-and-css/) on the design trend
 
