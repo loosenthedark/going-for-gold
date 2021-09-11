@@ -172,11 +172,13 @@ button {
 }
 
 main {
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-top: 0;
     min-height: 100vh;
-    width: calc(100vw - 2rem);
+    width: 100%;
+}
+
+main.dark-mode {
+    background-color: var(--clr-tokyo-blue);
 }
 
 
@@ -272,6 +274,10 @@ textarea {
     background-repeat: no-repeat;
     padding-left: 0.33rem;
     padding-right: 0.33rem;
+}
+
+.dark-mode .underline {
+    background-size: 100% 24%;
 }
 
 .underline-gold {
@@ -420,6 +426,10 @@ Buttons
     height: 15vw;
     position: absolute;
     color: var(--clr-tokyo-blue);
+}
+
+.dark-mode .hamburger {
+    color: hsl(0, 0%, 90%);
 }
 
 .container-about .hamburger {
@@ -728,6 +738,10 @@ Toggle
     color: var(--clr-tokyo-blue);
 }
 
+.dark-mode .switch label {
+    color: hsl(0, 0%, 94%);
+}
+
 .switch label:first-of-type {
     display: flex;
     align-items: flex-start;
@@ -749,6 +763,10 @@ Toggle
     height: 80%;
     right: 0;
     top: 10%;
+}
+
+.dark-mode .switch .toggle-outside {
+    background: hsl(0, 0%, 90%);
 }
 
 .switch .toggle-inside {
@@ -822,14 +840,14 @@ form>input {
     background: var(--clr-primary-white);
     color: var(--clr-tokyo-blue);
     box-shadow: var(--shadow-main);
-    padding: 0 3.5rem 0 1.45rem;
+    padding: 0.125rem 3.5rem 0 1.45rem;
     border-radius: 1.875rem;
     transition: all 0.95s;
     opacity: 0;
     z-index: 8;
     font-weight: 700;
     letter-spacing: 0.05rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 form>input:focus {
@@ -842,6 +860,10 @@ form>input:focus~.search {
     right: -82.5vw;
     background: var(--clr-tokyo-blue);
     z-index: 8;
+}
+
+.dark-mode form>input:focus~.search {
+    background: var(--clr-blue-muted-opaque);
 }
 
 form>input:focus~.search::before,
@@ -859,9 +881,14 @@ form>input:focus~.search::after {
     transform: rotate(-45deg);
 }
 
+.dark-mode form>input:focus~.search::after {
+    background: var(--clr-tokyo-blue);
+}
+
 form>input::placeholder {
     opacity: 0.5;
     font-weight: bolder;
+    padding-top: 0.2rem;
 }
 
 form>.search {
@@ -878,9 +905,17 @@ form>.search {
     box-shadow: var(--shadow-main);
 }
 
+.dark-mode form>.search {
+    background: var(--clr-medal-gold-opaque);
+}
+
 form>.search.search-corner {
     right: -82.5vw;
     z-index: 8;
+}
+
+.dark-mode form>.search.search-corner {
+    background: var(--clr-blue-muted-opaque);
 }
 
 form>input.search-corner {
@@ -921,18 +956,26 @@ form>.search::after {
     border: 0.15rem solid var(--clr-primary-white);
 }
 
+.dark-mode form>.search::before {
+    background: var(--clr-tokyo-blue);
+}
+
+.dark-mode form>.search::after {
+    border-color: var(--clr-tokyo-blue);
+}
+
 .input-error {
     position: relative;
-    top: 1rem;
+    top: 1.125rem;
     width: 70vw;
-    left: 30vw;
+    left: 29vw;
     z-index: 20;
 }
 
 .input-error>h6 {
     color: var(--clr-olympic-blue);
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-family: Raleway, sans-serif;
     animation-name: text-fade-in;
     animation-duration: 2.5s;
@@ -940,6 +983,10 @@ form>.search::after {
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     opacity: 0;
+}
+
+.container-toggle+form>input {
+    font-family: Freeroad, "Helvetica Neue", sans-serif;
 }
 
 @keyframes text-fade-in {
@@ -1062,6 +1109,14 @@ Medallists
     line-height: 1;
 }
 
+.dark-mode .article-error h3 {
+    color: var(--clr-olympic-red);
+}
+
+.dark-mode .article-error h5 {
+    color: hsl(0, 0%, 90%);
+}
+
 .article-error h3 {
     font-size: 1.9rem;
     margin-left: 5vw;
@@ -1146,6 +1201,36 @@ Medallists
 
 .icon-smile {
     color: var(--clr-olympic-green);
+}
+
+.dark-mode .container-flag {
+    opacity: 0.8;
+}
+
+.dark-mode .container-flag+div h2,
+.dark-mode .container-flag+div li:last-of-type span {
+    color: hsl(0, 0%, 95%);
+}
+
+.dark-mode .container-flag+div li,
+.dark-mode .container-flag+div li span {
+    color: hsl(0, 0%, 90%);
+}
+
+.dark-mode .container-flag+div h2 {
+    font-weight: 300;
+}
+
+.dark-mode .container-flag+div li:last-of-type span {
+    font-weight: 600;
+}
+
+.dark-mode .container-flag+div li {
+    font-weight: 400;
+}
+
+.dark-mode .container-flag+div li span {
+    font-weight: 300;
 }
 
 @keyframes rotation {

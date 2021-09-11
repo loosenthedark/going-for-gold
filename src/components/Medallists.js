@@ -119,7 +119,7 @@ const Medallists = () => {
                 <div className='wrapper-flag'>
                   <img
                     className='flag'
-                    src={name === "Russian Federation" ? { flagROC } : flag}
+                    src={name === "Russian Federation" ? flagROC : flag}
                     alt={`${
                       name === "Russian Federation"
                         ? "ROC"

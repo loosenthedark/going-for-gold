@@ -7,7 +7,7 @@ const NavToggler = () => {
   return (
     <button className='button-nav flex-centre' onClick={openSideNav}>
       {/* Hamburger icon SVG adapted from Cassie Evans' CodePen: https://codepen.io/cassie-codes/pen/ExgXNWY */}
-      <svg className='hamburger Header__toggle-svg' viewBox='0 0 48 48'>
+      <svg className='hamburger' viewBox='0 0 48 48'>
         <g
           stroke='currentcolor'
           strokeWidth='3'

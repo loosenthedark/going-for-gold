@@ -4,9 +4,16 @@ import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const SideNav = () => {
-  const { isSideNavOpen, closeSideNav } = useGlobalContext();
+  const { isSideNavOpen, closeSideNav, dark, setDark } = useGlobalContext();
+
+  const handleDark = () => {
+    setDark(!dark);
+    closeSideNav();
+  };
 
   const { id } = useParams();
+
+  console.log(dark);
 
   return (
     <nav
@@ -31,13 +38,13 @@ const SideNav = () => {
           </Link>{" "}
         </li>{" "}
         <li>
-          <Link
-            to='/'
+          <button
             className='btn btn-landing bg-black'
+            onClick={handleDark}
             style={{ opacity: 0.4 }}
           >
             Dark Mode{" "}
-          </Link>{" "}
+          </button>{" "}
         </li>{" "}
         <li>
           <Link

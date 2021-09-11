@@ -7,6 +7,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [pressed, setPressed] = useState(false);
   const [error, setError] = useState(false);
+  const [dark, setDark] = useState(false);
   useEffect(() => {
     window.onpopstate = (e) => {
       setPressed(true);
@@ -40,6 +41,8 @@ const AppProvider = ({ children }) => {
         isLoading,
         error,
         setError,
+        dark,
+        setDark,
         medalCountries,
         setInfo,
         toggle,
