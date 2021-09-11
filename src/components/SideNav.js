@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
 const SideNav = () => {
-  const { isSideNavOpen, closeSideNav, dark, setDark } = useGlobalContext();
+  const { isSideNavOpen, closeSideNav, dark, setDark, setToggledIcon } =
+    useGlobalContext();
 
   const handleDark = () => {
     setDark(!dark);
@@ -12,6 +13,10 @@ const SideNav = () => {
   };
 
   const { id } = useParams();
+
+  useEffect(() => {
+    id !== "medallists" && setToggledIcon(false);
+  }, [id]);
 
   return (
     <nav
