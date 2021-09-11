@@ -1781,22 +1781,26 @@ ErrorHandler
     }
     .article-error>* {
         position: absolute;
-        width: 30rem;
-        height: 25rem;
+        width: 24rem;
+        height: 20rem;
+        top: 7.5rem;
     }
     .container-flag-error+div {
-        top: 25rem;
-        width: 30rem;
         align-items: center;
+        width: 100%;
+        left: unset;
+        top: 22.5rem;
     }
     .container-flag-error+div li:last-of-type {
-        top: -23.5rem;
+        top: -20.5rem;
     }
     .article-error h3 {
         margin-bottom: 1rem;
+        margin-top: 0;
     }
-    .container-flag-error.container-flag-Asia+div li:last-of-type {
-        top: -22rem;
+    .container-flag-error.container-flag-Asia+div li:last-of-type,
+    .container-flag-error.container-flag-Oceania+div li:last-of-type {
+        top: -17rem;
     }
     .container-button-error {
         top: unset;
