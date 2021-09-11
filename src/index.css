@@ -189,7 +189,7 @@ main.dark-mode {
 
 @media screen and (min-width: 992px) {
     main {
-        width: calc(68vw - 2rem);
+        width: 68vw;
     }
 }
 
@@ -840,7 +840,7 @@ form>input {
     background: var(--clr-primary-white);
     color: var(--clr-tokyo-blue);
     box-shadow: var(--shadow-main);
-    padding: 0.125rem 3.5rem 0 1.45rem;
+    padding: 0.125rem 1.5rem 0 1.45rem;
     border-radius: 1.875rem;
     transition: all 0.95s;
     opacity: 0;
@@ -1723,7 +1723,7 @@ ErrorHandler
     }
     .section-error,
     .section-success {
-        width: calc(68vw - 2rem);
+        width: 68vw;
     }
     .section-error>.article-error,
     .section-success>.article-error {
