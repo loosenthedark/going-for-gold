@@ -7,21 +7,21 @@ const ErrorHandler = () => {
   return (
     <>
       <NavToggler />
-      <section>
+      <section className='section-error'>
         <article className='flex-centre-j article-error'>
           <div
             className={`container-flag container-flag-error container-flag-Asia flex-centre`}
           >
-            <div className='wrapper-flag'></div>{" "}
+            <div className='wrapper-flag'> </div>{" "}
           </div>{" "}
           <div>
-            <h3>Oops! You seem to have lost your way...</h3>
+            <h3> Oops! You seem to have lost your way... </h3>{" "}
             <div>
               <div className='container-buttons-nav container-button-error flex-centre-a'>
                 <Link to='/' className='btn btn-landing bg-blue-olympic'>
                   Return Home{" "}
                 </Link>{" "}
-              </div>
+              </div>{" "}
               <ul>
                 <li>
                   <div className='wrapper-rank'>
@@ -31,7 +31,7 @@ const ErrorHandler = () => {
               </ul>{" "}
             </div>{" "}
           </div>{" "}
-        </article>
+        </article>{" "}
       </section>{" "}
     </>
   );

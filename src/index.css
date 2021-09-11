@@ -179,6 +179,18 @@ main {
     width: calc(100vw - 2rem);
 }
 
+
+/* Media Query */
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    main {
+        width: calc(68vw - 2rem);
+    }
+}
+
 article {
     height: 100vh;
     min-height: 39rem;
@@ -319,6 +331,23 @@ SideNav
 }
 
 
+/* Media Query */
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    .sidenav {
+        left: 68vw;
+        width: 32vw;
+        transform: unset;
+    }
+    .container-buttons-nav {
+        width: 25vw;
+    }
+}
+
+
 /*
 =============== 
 Buttons
@@ -404,6 +433,18 @@ Buttons
     }
     to {
         opacity: 1;
+    }
+}
+
+
+/* Media Query */
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    .button-nav {
+        display: none;
     }
 }
 
@@ -621,6 +662,18 @@ Loading
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+/* Media Query */
+
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .container-spinner {
+        top: 35vh;
     }
 }
 
@@ -882,6 +935,21 @@ form>.search::after {
     form>input:focus~.search,
     form>.search.search-corner {
         right: -24rem;
+    }
+}
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    form {
+        width: 68vw;
+    }
+    form>.search {
+        left: 0vw;
+    }
+    form>input {
+        left: 2.5vw;
     }
 }
 
@@ -1457,5 +1525,23 @@ ErrorHandler
     }
     .container-button-error {
         top: unset;
+    }
+}
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    .article-error>* {
+        width: 65%;
+    }
+    .container-flag-error+div {
+        top: 24.25rem;
+    }
+    .section-error {
+        width: calc(68vw - 2rem);
+    }
+    .section-error>.article-error {
+        padding-top: 0;
     }
 }
