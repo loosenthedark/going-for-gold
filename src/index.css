@@ -869,6 +869,23 @@ form>.search::after {
 }
 
 
+/* Media Query */
+
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    form>input:focus,
+    form>input.search-corner {
+        width: 24rem;
+    }
+    form>input:focus~.search,
+    form>.search.search-corner {
+        right: -24rem;
+    }
+}
+
+
 /*
 =============== 
 Medallists
@@ -1030,6 +1047,10 @@ Medallists
     }
 }
 
+.container-flag+div>div {
+    min-height: 23.5vh;
+}
+
 
 /* Media Query */
 
@@ -1080,10 +1101,6 @@ Medallists
     }
 }
 
-.container-flag+div>div {
-    min-height: 23.5vh;
-}
-
 
 /* tablet */
 
@@ -1117,10 +1134,6 @@ Medallists
         font-size: 2.2rem;
         width: 100%;
     }
-    .container-flag+div li:last-of-type {
-        top: 5%;
-        left: -15%;
-    }
     .container-flag.even {
         order: 2;
     }
@@ -1130,8 +1143,14 @@ Medallists
     .container-flag.even+div h2 {
         left: 142%;
     }
-    .container-flag.even+div li:last-of-type {
+    .container-flag+div li:last-of-type {
         left: 15%;
+        position: relative;
+        top: -100%;
+        left: 0;
+    }
+    .container-flag-error+div li:last-of-type {
+        top: 0;
     }
 }
 
@@ -1351,4 +1370,38 @@ ErrorHandler
 
 .container-button-error {
     top: 25vw;
+}
+
+
+/* Media Query */
+
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .container-flag-error+div li:last-of-type {
+        top: 0;
+    }
+    .article-error>* {
+        position: absolute;
+        width: 30rem;
+        height: 25rem;
+    }
+    .container-flag-error+div {
+        top: 25rem;
+        width: 30rem;
+        align-items: center;
+    }
+    .container-flag-error+div li:last-of-type {
+        top: -23.5rem;
+    }
+    .article-error h3 {
+        margin-bottom: 1rem;
+    }
+    .container-flag-error.container-flag-Asia+div li:last-of-type {
+        top: -22rem;
+    }
+    .container-button-error {
+        top: unset;
+    }
 }
