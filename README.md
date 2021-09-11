@@ -16,6 +16,43 @@
 
 It is imperative in today's on-the-move, remote-working consumer landscape that an interactive frontend site such as Going for Gold be fully-responsive across a wide range of devices. This overarching principle, coupled with a desire to create something sleek and modern-looking, informed my work from the first design sketch right through to the full production build. In terms of conceptual inspiration, the initial 'Eureka moment' came when the developer chanced upon [this thought-provoking Olympic-themed LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/). Added to the fact that the Tokyo Games themselves had just concluded, this sent me down a rabbit hole of Olympics-related data, blog posts and visualisations of various kinds until a clear theme for the site began to emerge. [React](https://reactjs.org/), together with a selection of its tributary libraries and dependencies, was chosen to power things under the hood, as its speed and versatility when it comes to rendering (and rerendering) user interfaces is second to none. The developer chose to go it alone in terms of design/styling, so no frameworks like Bootstrap or Tailwind CSS were used in the application's stylesheet.
 
+## Project design
+
+### Colour scheme:
+
+<details>
+  <summary>
+  <b>click to view</b>
+  </summary>
+
+In some respects, the choices for the site's colour scheme were somewhat ready-made, as I decided from the off to incorporate the five instantly-recognisable colours found in the [Olympic rings logo](https://en.wikipedia.org/wiki/Olympic_symbols#Rings), as well as an approximate shade to represent each medal colour (gold, silver and bronze). Similarly, the navy blue colour used extensively as a background/secondary colour throughout the site is taken from the ['Harmonised chequered emblem'](https://olympics.com/tokyo-2020/en/games/emblem/) designed by Japanese artist Asao Tokolo and chosen as the Games' official logo.
+
+![Going for Gold colour scheme (Coolors palette) screenshot](docs/images/screenshots/gfg-colour-scheme.png)
+
+</details>
+
+### Typography:
+
+<details>
+  <summary>
+  <b>click to view</b>
+  </summary>
+
+The official Tokyo 2020 font was developed by [Morisawa](https://olympics.com/tokyo-2020/en/news/morisawa-official-font-tokyo-2020), a Japanese type foundry, and appears to be unavailable for public use. After a bit of digging, I therefore decided to use the [Freeroad Regular font](https://webfonts.ffonts.net/Freeroad-Regular.font), which is a close approximation of the ["industrial `sans serif`"](https://fontmeme.com/images/TOKYO-2020-NEW.gif) seen in the Games' [(redesigned)](https://www.theguardian.com/sport/2016/apr/25/tokyo-2020-organisers-unveil-new-logo-olympic-plagiarism-allegations) [logo](https://fontmeme.com/images/TOKYO-2020-NEW.gif), for all primary headings across the site. To complement this, I chose [Raleway](https://fonts.google.com/specimen/Raleway?query=raleway), a popular `sans serif` font available via Google Fonts, as the default `body` font.
+
+</details>
+
+### Wireframes:
+
+<details>
+  <summary>
+  <b>click to view</b>
+  </summary>
+
+Initial design inspiration for the project's layout and aesthetic came from [this Frontend Mentor challenge spec](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef)
+
+</details>
+
 A truly level playing field...
 
 [Site concept partly inspired by this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/)
@@ -93,8 +130,6 @@ The site's [neumorphic Contact `form`](https://going-for-gold.netlify.app/contac
 ['Trigger 'resize' event on component?'](https://stackoverflow.com/questions/37775020/trigger-resize-event-on-component) (Stack Overflow) led me to...
 
 ...[react-resize-detector](https://www.npmjs.com/package/react-resize-detector): _"Handle element resizes like it's 2021!"_ was imported and used to check for the search input box changing size in order to dismiss the error message when it's not required | [live demo](http://maslianok.github.io/react-resize-detector/)
-
-The official Tokyo 2020 font was developed by [Morisawa](https://olympics.com/tokyo-2020/en/news/morisawa-official-font-tokyo-2020), a Japanese type foundry, and appears to be unavailable for public use. After a bit of digging, I therefore decided to use the [Freeroad Regular font](https://webfonts.ffonts.net/Freeroad-Regular.font), which is a close approximation of the ["industrial `sans serif`"](https://fontmeme.com/images/TOKYO-2020-NEW.gif) seen in the Games' [(redesigned)](https://www.theguardian.com/sport/2016/apr/25/tokyo-2020-organisers-unveil-new-logo-olympic-plagiarism-allegations) [logo](https://fontmeme.com/images/TOKYO-2020-NEW.gif), for all primary headings across the site. To complement this, I chose [Raleway](https://fonts.google.com/specimen/Raleway?query=raleway), a popular `sans serif` font available via Google Fonts, as the default `body` font.
 
 ## Features
 
