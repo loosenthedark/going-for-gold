@@ -1121,6 +1121,18 @@ Medallists
         top: 5%;
         left: -15%;
     }
+    .container-flag.even {
+        order: 2;
+    }
+    .container-flag.even+div {
+        align-items: flex-end;
+    }
+    .container-flag.even+div h2 {
+        left: 142%;
+    }
+    .container-flag.even+div li:last-of-type {
+        left: 15%;
+    }
 }
 
 

@@ -100,9 +100,14 @@ const Medallists = () => {
           // Link functionality here needs to be dynamic, so template literal syntax should be used...
           return (
             // <Link key={country.id} className='' to={`/country/${id}`}>
-            <article className='flex-centre-j' key={id}>
+            <article
+              className={`flex-centre-j ${index % 2 !== 0 && "even"}`}
+              key={id}
+            >
               <div
-                className={`container-flag container-flag-${region} flex-centre`}
+                className={`container-flag container-flag-${region} flex-centre ${
+                  index % 2 !== 0 && "even"
+                }`}
               >
                 <div className='wrapper-flag'>
                   <img
