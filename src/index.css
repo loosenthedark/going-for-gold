@@ -1624,7 +1624,7 @@ Contact
 .form-contact {
     flex-direction: column;
     height: 100vh;
-    min-height: 43rem;
+    min-height: 100%;
     width: unset;
     z-index: unset;
     background-color: #ecf0f3;

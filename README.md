@@ -14,7 +14,7 @@
 
 ## User Experience (UX)
 
-It is imperative in today's on-the-move, remote-working consumer landscape that an interactive frontend site such as Going for Gold be fully-responsive across a wide range of devices. This overarching principle, coupled with a desire to create something sleek and modern-looking, informed my work from the first design sketch right through to the full production build. In terms of conceptual inspiration, the initial 'Eureka moment' came when the developer chanced upon [this thought-provoking Olympic-themed LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/). Added to the fact that the Tokyo Games themselves had just concluded, this sent me down a rabbit hole of Olympics-related data, blog posts and visualisations of various kinds until a clear theme for the site began to emerge. [React](https://reactjs.org/), together with a selection of its tributary libraries and dependencies, was chosen to power things under the hood, as its speed and versatility when it comes to rendering (and rerendering) user interfaces is second to none. The developer chose to go it alone in terms of design/styling, so no frameworks like Bootstrap or Tailwind CSS were used in the application's stylesheet.
+It is imperative in today's on-the-move, remote-working consumer landscape that an interactive frontend site such as Going for Gold be fully-responsive across a wide range of devices and screen sizes. This overarching principle, coupled with a desire to create something sleek and modern-looking, informed my work from the first design sketch right through to the full production build. In terms of conceptual inspiration, my initial 'Eureka moment' arrived after coming across [this thought-provoking Olympic-themed LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/). Added to the fact that the Tokyo Games themselves had just concluded, this sent me down a rabbit hole of Olympics-related data, blog posts and visualisations of various kinds until a clear theme for the site began to emerge. [React](https://reactjs.org/), together with a selection of its tributary libraries and dependencies, was chosen to power things under the hood, as its speed and versatility when it comes to rendering (and rerendering) user interfaces is second to none. I chose to go it alone in terms of design/styling, so no frameworks like Bootstrap or Tailwind CSS were used anywhere in the application's stylesheet. The project's title, meanwhile, is of course a respectful nod to [the greatest TV game show of all time](https://www.youtube.com/watch?v=lTjVNwYRCNk)
 
 ## Project design
 
@@ -54,8 +54,6 @@ Initial design inspiration for the project's layout and aesthetic came from [thi
 </details>
 
 A truly level playing field...
-
-[Site concept partly inspired by this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/)
 
 [Official Tokyo 2020 Olympic Medal Count](https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm)
 
@@ -109,8 +107,6 @@ Inspiration for applying dynamic colour styles to the `.container-flag` elements
 
 ['How to print a number with commas as thousands separators in JavaScript'](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript) (Stack Overflow)
 
-Site logo design adapted from a [Canva base template](https://www.canva.com/design/DAEpKFB9Qs4/EgBNQWkP7pLS6kfjalAE4A/edit)
-
 [Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
 
 CSS toggle-switch functionality adapted (for integration with React state values) [from Nick Bottomley's CodePen](https://codepen.io/nickbottomley/pen/uhfmn)
@@ -145,4 +141,6 @@ The site's [neumorphic Contact `form`](https://going-for-gold.netlify.app/contac
 
 - Make the 'rank icons' beneath each medallist's flag/logo UI _less_ dynamic, i.e. so that they aren't bound by array index values when a user searches for and locates their country/countries of choice
 
-[Project title is of course a respectful nod to the greatest TV game show of all time](https://www.youtube.com/watch?v=lTjVNwYRCNk)
+- Breakout pages for each country
+
+- Aggregate the data to compile relative medal-winning stats for each of the five continents represented by the Olympic rings
