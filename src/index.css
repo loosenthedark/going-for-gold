@@ -977,24 +977,33 @@ form>.search::after {
     font-weight: 600;
     font-size: 0.8rem;
     font-family: Raleway, sans-serif;
-    animation-name: text-fade-in;
-    animation-duration: 2.5s;
+    animation-name: text-flicker;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
     animation-delay: 0.75s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
     opacity: 0;
 }
 
 .container-toggle+form>input {
     font-family: Freeroad, "Helvetica Neue", sans-serif;
+    font-size: 1.25rem;
+    padding-top: 0.35rem;
 }
 
-@keyframes text-fade-in {
-    from {
+@keyframes text-flicker {
+    0% {
         opacity: 0;
     }
-    to {
+    50% {
         opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
