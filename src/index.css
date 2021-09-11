@@ -19,6 +19,7 @@ Variables
     --bg-primary-gradient: linear-gradient( to left, hsl(206, 16%, 80%), hsl(192, 17%, 94%));
     /* Tokyo 2020 logo original */
     --clr-tokyo-blue: hsl(229, 48%, 24%);
+    --clr-tokyo-blue-muted-semi-opaque: hsla(229, 48%, 24%, 0.97);
     --clr-tokyo-blue-muted-opaque: hsla(229, 48%, 24%, 0.85);
     --clr-blue-muted-opaque: hsla(230, 47%, 80%, 0.97);
     /* Olympic ring colours */
@@ -180,7 +181,7 @@ main {
 }
 
 main.dark-mode {
-    background-color: var(--clr-tokyo-blue);
+    background-color: var(--clr-tokyo-blue-muted-semi-opaque);
 }
 
 
@@ -454,6 +455,16 @@ Buttons
 
 
 /* Media Query */
+
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .btn-back-to-top {
+        right: 2vw;
+        top: 92%;
+    }
+}
 
 
 /* small laptop */
@@ -1326,34 +1337,43 @@ Medallists
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        top: 0;
     }
     article {
         flex-direction: row;
-        height: 30rem;
-        padding-top: 5rem;
+        height: 22rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         min-height: unset;
     }
     article>* {
         width: 50%;
     }
     section {
-        padding-top: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     h2 {
         position: relative;
-        left: -142%;
-        top: 5%;
-        font-size: 2.2rem;
+        left: calc(5rem - 142%);
+        top: 8.25%;
+        font-size: 1.8rem;
         width: 100%;
     }
     .container-flag.even {
         order: 2;
     }
+    .container-flag+div {
+        position: relative;
+        left: -5rem;
+    }
     .container-flag.even+div {
         align-items: flex-end;
+        position: relative;
+        left: 5rem;
     }
     .container-flag.even+div h2 {
-        left: 142%;
+        left: calc(142% - 5rem);
     }
     .container-flag+div li:last-of-type {
         left: 15%;
@@ -1524,7 +1544,17 @@ About
 }
 
 
-/* Media Query */
+/* medium laptop */
+
+@media screen and (min-width: 1200px) {
+    .container-about {
+        background-size: 26rem 37rem;
+    }
+    .overlay-about-text {
+        margin-left: 17vh;
+        margin-right: 17vh;
+    }
+}
 
 
 /* small mobile */
