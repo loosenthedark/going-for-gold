@@ -475,6 +475,7 @@ Buttons
     }
     .btn-back-to-top {
         right: 31.5vw;
+        top: 89%;
     }
 }
 
@@ -1387,6 +1388,32 @@ Medallists
 }
 
 
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    h2 {
+        left: calc(4rem - 142%);
+        top: 5%;
+    }
+    .container-flag+div {
+        left: -4rem;
+    }
+    .container-flag.even+div {
+        left: 4rem;
+    }
+    .container-flag.even+div h2 {
+        left: calc(142% - 4rem);
+    }
+    article {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    section {
+        padding-right: 1.5rem;
+    }
+}
+
+
 /*
 =============== 
 Medallist
@@ -1815,7 +1842,14 @@ ErrorHandler
         width: 65%;
     }
     .container-flag-error+div {
-        top: 24.25rem;
+        top: 21.25rem;
+    }
+    .container-flag-error.container-flag-Asia+div,
+    .container-flag-error.container-flag-Oceania+div {
+        top: 22.5rem;
+    }
+    .container-flag-error.container-flag-Oceania+div li:last-of-type {
+        top: -20rem;
     }
     .section-error,
     .section-success {
@@ -1827,5 +1861,17 @@ ErrorHandler
     }
     .section-success .wrapper-rank {
         top: 55%;
+    }
+    .container-flag-error+div li:last-of-type {
+        top: -20.5rem;
+    }
+}
+
+
+/* medium laptop */
+
+@media screen and (min-width: 1200px) {
+    .container-flag-error+div li:last-of-type {
+        top: -21.25rem;
     }
 }
