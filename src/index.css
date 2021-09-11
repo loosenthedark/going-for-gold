@@ -1239,9 +1239,6 @@ About
 .container-about {
     height: 100vh;
     position: relative;
-}
-
-.container-about {
     background-color: var(--bg-primary);
     background-image: url("./static/images/logos/logo-tokyo-2020-complete-white.png");
     background-size: 90vw 86vh;
@@ -1307,6 +1304,25 @@ About
     }
     .overlay-about-text>p:last-of-type {
         margin-bottom: 2rem;
+    }
+}
+
+
+/* small laptop */
+
+@media screen and (min-width: 992px) {
+    .container-about {
+        width: 68vw;
+        background-position: center;
+        background-size: 24rem 33rem;
+    }
+    .overlay-about-text {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .overlay-about-text>* {
+        position: relative;
+        /* top: 1.5vw; */
     }
 }
 

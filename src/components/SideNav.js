@@ -41,26 +41,8 @@ const SideNav = () => {
         </li>{" "}
         <li>
           <Link
-            to='/medallists'
-            className='btn btn-landing bg-red'
-            style={
-              id === "medallists"
-                ? {
-                    opacity: 1,
-                    fontWeight: 600,
-                    boxShadow:
-                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(32, 43, 91, 0.5)",
-                  }
-                : { opacity: 0.4 }
-            }
-          >
-            Medallists{" "}
-          </Link>{" "}
-        </li>{" "}
-        <li>
-          <Link
             to='/about'
-            className='btn btn-landing bg-yellow'
+            className='btn btn-landing bg-red'
             style={
               id === "about"
                 ? {
@@ -73,6 +55,24 @@ const SideNav = () => {
             }
           >
             About{" "}
+          </Link>{" "}
+        </li>{" "}
+        <li>
+          <Link
+            to='/medallists'
+            className='btn btn-landing bg-yellow'
+            style={
+              id === "medallists"
+                ? {
+                    opacity: 1,
+                    fontWeight: 600,
+                    boxShadow:
+                      "0.65rem 0.65rem 0.9rem 0.065rem rgba(32, 43, 91, 0.5)",
+                  }
+                : { opacity: 0.4 }
+            }
+          >
+            Medallists{" "}
           </Link>{" "}
         </li>{" "}
         <li>
