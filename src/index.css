@@ -1224,6 +1224,25 @@ About
 }
 
 
+/* tablet */
+
+@media screen and (min-width: 768px) {
+    .container-about {
+        background-position: 50% 10%;
+        background-size: 22rem 30rem;
+    }
+    .overlay-about-text {
+        justify-content: flex-end;
+    }
+    .overlay-about-text h1 {
+        margin-bottom: 1.5rem;
+    }
+    .overlay-about-text>p:last-of-type {
+        margin-bottom: 2rem;
+    }
+}
+
+
 /* Media Query */
 
 
