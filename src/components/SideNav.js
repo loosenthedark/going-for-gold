@@ -13,8 +13,6 @@ const SideNav = () => {
 
   const { id } = useParams();
 
-  console.log(dark);
-
   return (
     <nav
       onClick={closeSideNav}

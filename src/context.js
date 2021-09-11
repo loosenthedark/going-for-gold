@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
   const [pressed, setPressed] = useState(false);
   const [error, setError] = useState(false);
   const [dark, setDark] = useState(false);
+
   useEffect(() => {
     window.onpopstate = (e) => {
       setPressed(true);
@@ -22,6 +23,7 @@ const AppProvider = ({ children }) => {
   const closeSideNav = () => {
     setIsSideNavOpen(false);
   };
+
   const {
     isLoading,
     info: medalCountries,
