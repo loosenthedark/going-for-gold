@@ -4,6 +4,12 @@
 
 # Going for Gold!
 
+![Going for Gold! landing page animation for desktop](docs/images/screenshots/going-for-gold-landing-animation-desktop.gif)
+
+#### [Live link to deployed project](https://going-for-gold.netlify.app/)
+
+[Going for Gold](https://going-for-gold.netlify.app/) offers a fairer, more measured look at the Tokyo 2020 Olympic medal count. Countries are ranked in relative (per capita) instead of absolute medal-winning terms. Site visitors can toggle between two different ranking breakdowns, as well as search for countries, contact the site owner and enable dark mode. Fully interactive and boasting a robust and coherent mobile-first design, Going for Gold makes clever use of the React ecosystem to give users a richly dynamic UI. The application leverages the REST Countries API as well as a local JSON Olympic dataset to render lightning-fast statistical analyses. React Context API and EmailJS integration - the latter bolstered by custom form validation and error handling - round out a distinctly memorable user experience.
+
 A truly level playing field...
 
 [Site concept partly inspired by this LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:6830398833353117697/)
