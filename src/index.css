@@ -27,8 +27,10 @@ Variables
     --clr-olympic-black: hsl(0, 0%, 0%);
     --clr-olympic-black-opaque: hsla(0, 0%, 0%, 20%);
     --clr-olympic-red: hsl(351, 85%, 56%);
+    --clr-olympic-red-semi-opaque: hsla(351, 85%, 56%, 50%);
     --clr-olympic-red-opaque: hsla(351, 85%, 56%, 20%);
     --clr-olympic-yellow: hsl(39, 97%, 58%);
+    --clr-olympic-yellow-semi-opaque: hsla(39, 97%, 58%, 60%);
     --clr-olympic-yellow-opaque: hsla(39, 97%, 58%, 20%);
     --clr-olympic-green: hsl(149, 99%, 33%);
     --clr-olympic-green-opaque: hsla(149, 99%, 33%, 20%);
@@ -481,7 +483,7 @@ Alerts
     position: relative;
     text-align: center;
     border: 0.025rem solid #809099;
-    border-radius: 1vw;
+    border-radius: 0.3rem;
 }
 
 .alert h6 {
@@ -492,7 +494,7 @@ Alerts
 }
 
 .alert-warning {
-    background-color: #e4d836;
+    background-color: var(--clr-olympic-yellow-semi-opaque);
 }
 
 .alert-danger {
@@ -1408,6 +1410,22 @@ About
     margin-bottom: 10vw;
 }
 
+.overlay-about-text a {
+    color: var(--clr-medal-gold);
+    font-weight: 700;
+}
+
+.overlay-about-text .btn {
+    margin-top: 0.5rem;
+    color: var(--clr-primary-white);
+    font-weight: 500;
+}
+
+.overlay-about-text .link-external {
+    color: unset;
+    font-weight: 700;
+}
+
 
 /* Media Query */
 
@@ -1436,16 +1454,34 @@ About
 @media screen and (min-width: 768px) {
     .container-about {
         background-position: 50% 10%;
-        background-size: 22rem 30rem;
+        background-size: 28rem 35rem;
     }
     .overlay-about-text {
-        justify-content: flex-end;
+        justify-content: flex-start;
+        margin: 3rem 7rem;
+        text-align: center;
     }
     .overlay-about-text h1 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 40vh;
+        margin-top: 13.333vh;
+        font-size: 1.5rem;
+        animation-name: gfg-fade-in;
+        animation-duration: 1.2s;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        opacity: 0;
     }
     .overlay-about-text>p:last-of-type {
         margin-bottom: 2rem;
+    }
+    .overlay-about-text .btn {
+        animation-name: btn-fade-in;
+        animation-delay: 3s;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
     }
 }
 
@@ -1456,15 +1492,34 @@ About
     .container-about {
         width: 68vw;
         background-position: center;
-        background-size: 24rem 33rem;
+        background-size: 62vh 85vh;
     }
     .overlay-about-text {
-        margin-left: 10vw;
-        margin-right: 10vw;
+        margin-left: 10vh;
+        margin-right: 10vh;
     }
     .overlay-about-text>* {
         position: relative;
         /* top: 1.5vw; */
+    }
+    .overlay-about-text h1 {
+        margin-bottom: 5vh;
+        margin-top: 20vh;
+        animation-delay: 1.4s;
+    }
+    .overlay-about-text p {
+        animation-name: btn-fade-in;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        opacity: 0;
+    }
+    .overlay-about-text>p:last-of-type {
+        margin-bottom: 1.5rem;
+    }
+    .overlay-about-text .btn {
+        animation-delay: 4.5s;
     }
 }
 
@@ -1487,20 +1542,15 @@ About
     }
 }
 
-.overlay-about-text a {
-    color: var(--clr-medal-gold);
-    font-weight: 700;
-}
-
-.overlay-about-text .btn {
-    margin-top: 0.5rem;
-    color: var(--clr-primary-white);
-    font-weight: 500;
-}
-
-.overlay-about-text .link-external {
-    color: unset;
-    font-weight: 700;
+@keyframes gfg-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(2);
+    }
 }
 
 
@@ -1647,7 +1697,7 @@ textarea:focus,
         padding-bottom: 0;
     }
     textarea {
-        height: 8rem;
+        height: 20vh;
     }
     .form-group {
         margin-bottom: 1rem;
@@ -1658,13 +1708,19 @@ textarea:focus,
     .form-contact>h6 {
         padding-top: 1rem;
         padding-bottom: 0.25rem;
-        line-height: 1;
+        line-height: 1.2;
         font-size: 1rem;
         max-width: 24rem;
     }
     .form-contact>.form-logo {
         width: 7rem;
         height: 7rem;
+    }
+    h6+.form-group {
+        margin-bottom: 1rem;
+    }
+    .alert {
+        padding: 0.5rem 1.5rem;
     }
 }
 
