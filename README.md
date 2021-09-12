@@ -231,28 +231,11 @@ As showcased in the [images above](#going-for-gold), the first thing the user se
 
 ## Testing
 
-### Validation:
+Full application testing details can be found [here](testing.md)
 
-<details>
-  <summary>
-    <b>click to view</b>
-  </summary>
+## Notice
 
-- [W3C](https://www.w3.org/)'s [Markup Validation Service](https://validator.w3.org/) was used to test the validity of all HTML used in this project. The code was [validated by direct input](https://validator.w3.org/#validate_by_input), and all suggested corrections were then made. As a result, all of the site's HTML source code now returns a "Document checking completed. No errors or warnings to show." message upon being passed through this validator, as is reflected in the following screenshot:
-
-  - [index.html validation](docs/images/validation/html-validation.png)
-
-- Likewise, the website's custom CSS stylesheet was checked for errors using [W3C](https://www.w3.org/)'s [CSS Validation Service](https://jigsaw.w3.org/css-validator/). Once again, [validation by direct input](https://jigsaw.w3.org/css-validator/#validate_by_input) was the preferred method selected, and all necessary changes were subsequently carried out. Consequently, the stylesheet now returns a "Congratulations! No error found." message upon being passed through this validator, as the following screenshot indicates:
-  - [static/css/style.css validation](docs/images/validation/css-validation.png)
-- The issue surrounding the incompatibility of `backdrop-filter` with the W3C validator appears to be [a well documented one](https://github.com/w3c/css-validator/issues/289). However, given that this property is present in the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) and [endorsed by CSS-Tricks](https://css-tricks.com/almanac/properties/b/backdrop-filter/), it has been used in this project in spite of the validator's error messages. Its [patchy browser support](https://caniuse.com/css-backdrop-filter) necessitated the use of a `@supports` query on [line 698](static/css/style.css) of the project's stylesheet (with a reasonable fallback option of an opaque background), as suggested in [this CSS-Tricks article](https://css-tricks.com/almanac/properties/b/backdrop-filter/)
-
-- In a similar manner, all of the site's custom JavaScript/JSX files were validated against [JSHint](https://jshint.com/)'s error-detection tool, which is available both as an online linter and an IDE extension for real-time JS problem-solving. After heeding various warning and error messages, at the time of deployment each of these .js documents passed JSHint validation with just a handful of warnings detected.
-
-|                                                                                                                                        |                                                                                                                                       |                                                                                                                                      |
-| :------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
-| ![](https://raw.githubusercontent.com/loosenthedark/brew-barberista-landing-page/main/docs/images/validation/html-validation-icon.png) | ![](https://raw.githubusercontent.com/loosenthedark/brew-barberista-landing-page/main/docs/images/validation/css-validation-icon.png) | ![](https://raw.githubusercontent.com/loosenthedark/brew-barberista-landing-page/main/docs/images/validation/js-validation-icon.png) |
-
-</details>
+This site has been created for development purposes only.
 
 A truly level playing field...
 
