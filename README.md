@@ -170,6 +170,65 @@ As showcased in the [images above](#going-for-gold), the first thing the user se
   At present, the user is only able to toggle dark mode on or off while browsing the main Medallists page. Ideally, this feature should be available throughout the application to give a more coherent and complete feel. However, it's worth noting that the site's [About page](https://going-for-gold.netlify.app/about) has been styled with a 'dark mode-like' background colour by default, and that the neumorphic styling that's been applied to the [Contact form](https://going-for-gold.netlify.app/contact) would also likely be affected by dark mode being enabled there.
   </details>
 
+## Technologies Used
+
+### Languages:
+
+<details>
+  <summary>
+    <b>click to view</b>
+  </summary>
+
+- [HTML5:](https://en.wikipedia.org/wiki/HTML5) used for structuring the site
+- [CSS3:](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) used for styling the site
+- [JavaScript:](https://en.wikipedia.org/wiki/JavaScript) used for site logic and web page behaviour
+- [JSX](<https://en.wikipedia.org/wiki/JSX_(JavaScript)>) used to structure React component rendering throughout the application
+</details>
+
+### Frameworks/Libraries, APIs, , Projects, Programmes and Tools:
+
+<details>
+  <summary>
+    <b>click to view</b>
+  </summary>
+
+- ES6 imports:
+
+  - [React v16.13.1:](https://reactjs.org/) used as a base to create dynamic user interfaces by building and customising modular components, as well as handling state management and rendering that state to the DOM
+  - [ReactDOM v16.13.1:](https://reactjs.org/docs/react-dom.html) used to give the app access to various top-level DOM-specific methods
+  - [React Icons v4.2.0:](https://react-icons.github.io/react-icons/) used to include individual bespoke icons where needed within the project
+  - [react-resize-detector v6.7.6:](https://www.npmjs.com/package/react-resize-detector) used to leverage native browser resize handling to manage element resize events within the app's components
+  - [React Router v5.2.0:](https://reactrouter.com/) used to provide declarative routing for the application
+  - [Create React App v3.4.3:](https://create-react-app.dev/) used to get application development off the ground by overseeing configuration of build tools, bundle optimisation, directory structure etc.
+
+- [Google Fonts:](https://fonts.google.com/) used to import the Raleway font into the project's stylesheet
+- [Visual Studio Code:](https://code.visualstudio.com/) used as the online IDE for the project
+- [Git:](https://git-scm.com/) used for version control by utilising the Gitpod terminal to commit frequently to Git and push all commits to GitHub
+- [GitHub:](https://github.com/) used to compile and remotely store the project's codebase following successive local commits initiated from the command line
+- [Netlify:](https://www.netlify.com/) used to deploy the site and aid workflow in line with serverless continuous deployment best practices
+- [Fetch API:](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) used to make API requests and retrieve resources and/or responses returned by them
+- [(React) Context API:](https://reactjs.org/docs/context.html) used to pass data through the app's component tree without having to pass props down manually at every level
+- [REST Countries API:](https://restcountries.eu/) used to collect population data and flag images corresponding to each of the 93 countries featured in the list(s) of Olympic medal-winners
+- [EmailJS v3.2.0:](https://t.co/L61tIINT0d?amp=1) used to route messages submitted via the site's [Contact form](https://going-for-gold.netlify.app/contact) to the site owner/developer's email address
+- [GSAP (GreenSock Animation Platform) v3.7.1:](https://greensock.com/gsap/) imported and used to implement the site's marquee [landing page animation](https://going-for-gold.netlify.app/contact)
+- [Ezgif image converter:](https://ezgif.com/webp-to-jpg) used to convert several of the project image source files from `.svg` to `png/jp(e)g` formats
+- [Neumorphism.io:](Neumorphism.io) Open-source 'Soft UI' CSS shadow generator used when styling the site's [Contact form](https://going-for-gold.netlify.app/contact)
+- [ColorSpace's online colour gradient generator](https://mycolor.space/gradient) was used to apply a metallic shine effect to the gold-, silver- and bronze-coloured landing page buttons, and to create the linear gradients found elsewhere
+- [Box Shadow CSS Generator:](https://cssgenerator.org/box-shadow-css-generator.html) Used to add subtle shadow styling to most clickable elements across the site
+- The project's favicon was generated using the [free online favicon.io tool](https://favicon.io/favicon-converter/)
+- The [JPG to PNG online editing tool](https://jpg2png.com/) was used to convert a `.jpeg` version of the Tokyo 2020 logo to `.png` format
+- [TinyJPG:](https://tinyjpg.com/) used for image compression
+- [PicResize:](https://picresize.com/) used to crop and resize images
+- [Brackets](http://brackets.io/) (desktop app version): used to make colouration edits to SVG files
+- [Kapwing:](https://www.kapwing.com/) used as the project's go-to content editing resource, e.g. to create the [animated](#going-for-gold) [screenshots](#about-page) featured in this README
+- [W3Schools HTML Color Picker:](https://www.w3schools.com/colors/colors_picker.asp) used for generating on-the-fly colour pairings and modifications (lightening, darkening etc. of core project colours)
+- [Responsively App:](https://responsively.app/) Used to frequently test and inspect responsive layout and component rendering as the project took shape
+- [WebAIM (contrast checker):](https://webaim.org/resources/contrastchecker/) / [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) used to ensure site foreground and background colour contrasts meet [WCAG 2 accessibility requirements](https://webaim.org/articles/contrast/)
+- [Can I Use:](https://caniuse.com/) browser compatibility tables used to cross-reference the viability of implementing certain HTML5 elements, CSS3 properties, file formats and more
+- [Editor.md:](https://pandao.github.io/editor.md/en.html) used to format project Markdown in line with best practices
+
+</details>
+
 A truly level playing field...
 
 [Official Tokyo 2020 Olympic Medal Count](https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm)
@@ -182,10 +241,6 @@ A truly level playing field...
 
 ['3D Transforms and Animations'](https://www.the-art-of-web.com/css/3d-transforms/) (The Art of Web)
 
-['Fetch API'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) (MDN Web Docs)
-
-[REST Countries API](https://restcountries.eu/)
-
 [Problematic API endpoint for Kosovo: `"cioc":null`](https://restcountries.eu/rest/v2/alpha/xk)
 
 [Dynamic pure CSS search bar refactored and customised from Jove Angelevski's template](https://codepen.io/AlbertFeynman/pen/BPvzWZ)
@@ -193,10 +248,6 @@ A truly level playing field...
 [Landing page Olympic rings SVG GSAP animation adapted from Steve Gardner's CodePen](https://codepen.io/ste-vg/details/kXzXYW)
 
 [Animated loading component adapted from @CodeBoomer's 'Olympics CSS Spinner' CodePen](https://codepen.io/CodeBoomer/pen/BzOPPz/)
-
-[ColorSpace's online colour gradient generator](https://mycolor.space/gradient) was used to apply a metallic shine effect to the gold-, silver- and bronze-coloured landing page buttons, and to create the linear gradients found elsewhere throughout the site.
-
-The [JPG to PNG online editing tool](https://jpg2png.com/) was used to convert a `.jpeg` version of the Tokyo 2020 logo to `.png` format
 
 ['How to sort an array of objects by multiple fields?'](https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields) (Stack Overflow)
 
@@ -220,17 +271,9 @@ The situation in relation to Great Britain/The United Kingdom (or "Team GB", as 
 
 [Guidance on additional configuration requirements to facilitate continuous deployment (via Netlify) from John Smilga](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/22778973#content)
 
-Inspiration for applying dynamic colour styles to the `.container-flag` elements on the [Medallists page](https://going-for-gold.netlify.app/medallists) came from my mentor Tim, who alerted me to the fact that the five Olympic ring colours [represent the five main continents](https://en.wikipedia.org/wiki/Olympic_symbols#:~:text=The%201949%E2%80%9350%20edition%20of,%2C%20and%20red%20for%20America%22). After learning of this, I was able to conditionally target the `background-image` property of each of these elements based on the "region" property value of each corresponding item returned from the REST Countries API endpoint.
-
 ['How to print a number with commas as thousands separators in JavaScript'](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript) (Stack Overflow)
 
-[Box Shadow CSS Generator](https://cssgenerator.org/box-shadow-css-generator.html)
-
 CSS toggle-switch functionality adapted (for integration with React state values) [from Nick Bottomley's CodePen](https://codepen.io/nickbottomley/pen/uhfmn)
-
-Favicon generated using the [free online favicon.io tool](https://favicon.io/favicon-converter/)
-
-Responsive.ly app
 
 The site's [neumorphic Contact `form`](https://going-for-gold.netlify.app/contact/) is loosely based on the aesthetic of the developer's own [portfolio site Contact page](https://loosenthedark.tech/contact.html) - which in turn took inspiration from [this CSS-Tricks deep dive](https://css-tricks.com/neumorphism-and-css/) on the design trend
 
