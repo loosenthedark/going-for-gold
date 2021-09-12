@@ -58,7 +58,7 @@ const AppProvider = ({ children }) => {
         setPressed,
       }}
     >
-      {children}{" "}
+      {children}
     </AppContext.Provider>
   );
 };

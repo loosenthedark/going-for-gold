@@ -9,15 +9,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    {" "}
-    {/* // Wrap the entire app as well as the Router component inside the imported Provider component... */}{" "}
+    {/* // Wrap the entire app as well as the Router component inside the imported Provider component... */}
     <AppProvider>
-      {" "}
-      {/* // Wrap the app inside the imported Router component... */}{" "}
+      {/* // Wrap the app inside the imported Router component... */}
       <Router>
         <App />
-      </Router>{" "}
-    </AppProvider>{" "}
+      </Router>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

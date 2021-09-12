@@ -18,24 +18,24 @@ function App() {
     <>
       <Route path='/:id'>
         <SideNav />
-      </Route>{" "}
+      </Route>
       <Switch>
         <Route path='/' exact>
           <Landing />
-        </Route>{" "}
+        </Route>
         <Route path='/medallists'>
           <Main />
-        </Route>{" "}
+        </Route>
         <Route path='/about'>
           <About />
-        </Route>{" "}
+        </Route>
         <Route path='/contact'>
           <Contact />
-        </Route>{" "}
+        </Route>
         <Route path='*'>
           <ErrorHandler />
-        </Route>{" "}
-      </Switch>{" "}
+        </Route>
+      </Switch>
       <BackToTopBtn />
     </>
   );
