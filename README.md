@@ -87,8 +87,8 @@ The Medallists page is the site's main page content-wise. In its default state, 
 - Total medals per one million citizens (calculated from the two relevant figures above)
 
 | ![](docs/images/screenshots/medallists-ui-europe.png) | ![](docs/images/screenshots/medallists-ui-africa.png) | ![](docs/images/screenshots/medallists-ui-americas.png) | ![](docs/images/screenshots/medallists-ui-asia.png) | ![](docs/images/screenshots/medallists-ui-oceania.png) |
-| :---------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | --------------------------------------------------- | ------------------------------------------------------ |
-|                     blue (Europe)                     |                    black (Africa)                     |                     red (Americas)                      | yellow (Asia)                                       | green (Oceania)                                        |
+| :---------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: |
+|                     blue (Europe)                     |                    black (Africa)                     |                     red (Americas)                      |                    yellow (Asia)                    |                    green (Oceania)                     |
 
 In addition to this, the UI for each medallist includes a dynamically-rendered background image consisting of the aforementioned Tokyo 2020 emblem in the relevant Olympic ring colour that corresponds to that country's continent. Initially, these `.container-flag` elements were being differentially coloured based on their index number (using array iteration). It was actually my mentor Tim who alerted me to the fact that the five Olympic ring colours [represent the five main continents](https://en.wikipedia.org/wiki/Olympic_symbols#:~:text=The%201949%E2%80%9350%20edition%20of,%2C%20and%20red%20for%20America%22). After learning of this, I was able to conditionally target the `background-image` property of each of these elements based on the "region" property value of each corresponding item returned from the REST Countries API endpoint.
 
@@ -97,6 +97,25 @@ In addition to this, the UI for each medallist includes a dynamically-rendered b
 |                    `<FaAward />`                    |
 
 One more feature displayed for each medallist is a dynamically-rendered React Icon with numerical ranking corresponding to that particular country's standing (these values are bound to the index of each country when iterating through the overall array)
+
+</details>
+
+- #### [About page:](https://going-for-gold.netlify.app/about)
+
+  <details>
+    <summary>
+    <b>click to view</b>
+    </summary>
+
+  | ![](docs/images/screenshots/about-ui-mobile.jpg) | ![](docs/images/screenshots/about-ui-tablet.jpg) | ![](docs/images/screenshots/about-ui-desktop.jpg) |
+  | :----------------------------------------------: | :----------------------------------------------: | :-----------------------------------------------: |
+  |                      mobile                      |                      tablet                      |                      desktop                      |
+
+As you might expect, the site's About page presents users with a brief rundown on the site's purpose and intentions - all done in an engaging and aesthetically-pleasing manner. The parent `.container-about` element has been styled with a faint Tokyo 2020 logo `background-image`, while the page's main UI elements (heading, paragraphs of text and a bright CTA button) all transition into view thanks to staggered CSS `animation` effects on tablet and desktop (see image below)
+
+| ![](docs/images/screenshots/going-for-gold-about-animation-desktop.gif) |
+| :---------------------------------------------------------------------: |
+|                          About page animation                           |
 
 </details>
 
@@ -177,7 +196,6 @@ One more feature displayed for each medallist is a dynamically-rendered React Ic
   <summary>
   <b>click to view</b>
   </summary>
-
 
   | ![](docs/images/screenshots/about/about-mobile.png) | ![](docs/images/screenshots/about/about-tablet.png) | ![](docs/images/screenshots/about/about-desktop.png) |
   | :-------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------: |
