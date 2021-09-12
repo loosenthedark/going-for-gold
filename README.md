@@ -76,27 +76,27 @@ As showcased in the images above, the first thing the user sees upon landing is 
   | :------------------------------------------------: | :------------------------------------------------: | :-------------------------------------------------: |
   |                       mobile                       |                       tablet                       |                       desktop                       |
 
-The Medallists page is the site's main page content-wise. In its default state, it gives a list of all 93 medal-winning countries from the Tokyo Games with a breakdown of the following data for each individual country:
+  The Medallists page is the site's main page content-wise. In its default state, it gives a list of all 93 medal-winning countries from the Tokyo Games with a breakdown of the following data for each individual country:
 
-- National flag (pulled from a REST Countries API endpoint)
-- Country name (as above)
-- Population (as above)
-- Gold medals won at Tokyo 2020 (taken from the app's local data file)
-- Gold medals per one million citizens (calculated from the two relevant figures above)
-- Total medals won at Tokyo 2020 (taken from the app's local data file)
-- Total medals per one million citizens (calculated from the two relevant figures above)
+  - National flag (pulled from a REST Countries API endpoint)
+  - Country name (as above)
+  - Population (as above)
+  - Gold medals won at Tokyo 2020 (taken from the app's local data file)
+  - Gold medals per one million citizens (calculated from the two relevant figures above)
+  - Total medals won at Tokyo 2020 (taken from the app's local data file)
+  - Total medals per one million citizens (calculated from the two relevant figures above)
 
-| ![](docs/images/screenshots/medallists-ui-europe.png) | ![](docs/images/screenshots/medallists-ui-africa.png) | ![](docs/images/screenshots/medallists-ui-americas.png) | ![](docs/images/screenshots/medallists-ui-asia.png) | ![](docs/images/screenshots/medallists-ui-oceania.png) |
-| :---------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: |
-|                     blue (Europe)                     |                    black (Africa)                     |                     red (Americas)                      |                    yellow (Asia)                    |                    green (Oceania)                     |
+  | ![](docs/images/screenshots/medallists-ui-europe.png) | ![](docs/images/screenshots/medallists-ui-africa.png) | ![](docs/images/screenshots/medallists-ui-americas.png) | ![](docs/images/screenshots/medallists-ui-asia.png) | ![](docs/images/screenshots/medallists-ui-oceania.png) |
+  | :---------------------------------------------------: | :---------------------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: |
+  |                     blue (Europe)                     |                    black (Africa)                     |                     red (Americas)                      |                    yellow (Asia)                    |                    green (Oceania)                     |
 
-In addition to this, the UI for each medallist includes a dynamically-rendered background image consisting of the aforementioned Tokyo 2020 emblem in the relevant Olympic ring colour that corresponds to that country's continent. Initially, these `.container-flag` elements were being differentially coloured based on their index number (using array iteration). It was actually my mentor Tim who alerted me to the fact that the five Olympic ring colours [represent the five main continents](https://en.wikipedia.org/wiki/Olympic_symbols#:~:text=The%201949%E2%80%9350%20edition%20of,%2C%20and%20red%20for%20America%22). After learning of this, I was able to conditionally target the `background-image` property of each of these elements based on the "region" property value of each corresponding item returned from the REST Countries API endpoint.
+  In addition to this, the UI for each medallist includes a dynamically-rendered background image consisting of the aforementioned Tokyo 2020 emblem in the relevant Olympic ring colour that corresponds to that country's continent. Initially, these `.container-flag` elements were being differentially coloured based on their index number (using array iteration). It was actually my mentor Tim who alerted me to the fact that the five Olympic ring colours [represent the five main continents](https://en.wikipedia.org/wiki/Olympic_symbols#:~:text=The%201949%E2%80%9350%20edition%20of,%2C%20and%20red%20for%20America%22). After learning of this, I was able to conditionally target the `background-image` property of each of these elements based on the "region" property value of each corresponding item returned from the REST Countries API endpoint.
 
-| ![](docs/images/screenshots/medallists-ui-icon.png) |
-| :-------------------------------------------------: |
-|                    `<FaAward />`                    |
+  | ![](docs/images/screenshots/medallists-ui-icon.png) |
+  | :-------------------------------------------------: |
+  |                    `<FaAward />`                    |
 
-One more feature displayed for each medallist is a dynamically-rendered React Icon with numerical ranking corresponding to that particular country's standing (these values are bound to the index of each country when iterating through the overall array)
+  One more feature displayed for each medallist is a dynamically-rendered React Icon with numerical ranking corresponding to that particular country's standing (these values are bound to the index of each country when iterating through the overall array)
 
 </details>
 
@@ -111,11 +111,30 @@ One more feature displayed for each medallist is a dynamically-rendered React Ic
   | :----------------------------------------------: | :----------------------------------------------: | :-----------------------------------------------: |
   |                      mobile                      |                      tablet                      |                      desktop                      |
 
-As you might expect, the site's About page presents users with a brief rundown on the site's purpose and intentions - all done in an engaging and aesthetically-pleasing manner. The parent `.container-about` element has been styled with a faint Tokyo 2020 logo `background-image`, while the page's main UI elements (heading, paragraphs of text and a bright CTA button) all transition into view thanks to staggered CSS `animation` effects on tablet and desktop (see image below)
+  As you might expect, the site's About page presents users with a brief rundown on the site's purpose and intentions - all done in an engaging and aesthetically-pleasing manner. The parent `.container-about` element has been styled with a faint Tokyo 2020 logo `background-image`, while the page's main UI elements (heading, paragraphs of text and a bright CTA button) all transition into view thanks to staggered CSS `animation` effects on tablet and desktop (see image below)
 
-| ![](docs/images/screenshots/going-for-gold-about-animation-desktop.gif) |
-| :---------------------------------------------------------------------: |
-|                          About page animation                           |
+  | ![](docs/images/screenshots/going-for-gold-about-animation-desktop.gif) |
+  | :---------------------------------------------------------------------: |
+  |                          About page animation                           |
+
+</details>
+
+- #### [Contact page:](https://going-for-gold.netlify.app/contact)
+
+  <details>
+    <summary>
+    <b>click to view</b>
+    </summary>
+
+  | ![](docs/images/screenshots/contact-ui-mobile.jpg) | ![](docs/images/screenshots/contact-ui-tablet.jpg) | ![](docs/images/screenshots/contact-ui-desktop.jpg) |
+  | :------------------------------------------------: | :------------------------------------------------: | :-------------------------------------------------: |
+  |                       mobile                       |                       tablet                       |                       desktop                       |
+
+  As with most Contact pages, a `form` element is the centrepiece of this section of the site. Going for Gold's form boasts a neumorphic design, and is vertically and horizontally centred across all device sizes. A concise form submission sequence comprising two `input` fields followed by a `textarea` and a 'SEND' button means the user is not bombarded with too many requests or criteria. Strict form validation (outlined in detail below) has nevertheless been put into place to constrain user input. Once the form has been successfully submitted, the user is taken to a custom confirmation screen, which also contains a helpful CTA button guiding them back to the Home page.
+
+  | ![](docs/images/screenshots/contact-confirmation-ui-mobile.jpg) | ![](docs/images/screenshots/contact-confirmation-ui-tablet.jpg) | ![](docs/images/screenshots/contact-confirmation-ui-desktop.jpg) |
+  | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------------------: |
+  |                             mobile                              |                             tablet                              |                             desktop                              |
 
 </details>
 
