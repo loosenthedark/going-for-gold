@@ -233,6 +233,47 @@ As showcased in the [images above](#going-for-gold), the first thing the user se
 
 Full application testing details can be found [here](testing.md)
 
+## Deployment
+
+<details>
+  <summary>
+    <b>click to view</b>
+  </summary>
+
+### Netlify:
+
+This project has been deployed to [Netlify](https://www.netlify.com/) using continuous deployment in sync with [GitHub](https://en.wikipedia.org/wiki/GitHub). A full step-by-step guide to what's involved in setting up this workflow can be found [here](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)
+
+### Forking the GitHub Repository:
+
+It is possible to fork this GitHub repository to view and/or make changes without affecting the original. This is achieved by following these steps...
+
+1. [**Sign in** to your GitHub account](https://github.com/login) and locate the [relevant repository](https://github.com/loosenthedark/going-for-gold).
+2. Click on **Fork**, located near the top right-hand corner of the repository page.
+3. You will now have a copy of this project's repository in your own GitHub account.
+
+### Making a local clone:
+
+It is possible to copy the repository to your local machine so that you can fix merge conflicts, add or remove files and push larger commits without affecting the original project code. Cloning a repository pulls down a full copy of all the repo data that GitHub has at that point in time. See the [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for further information, and below for a brief summary...
+
+1. [**Sign in** to your GitHub account](https://github.com/login) and locate the [relevant repository](https://github.com/loosenthedark/going-for-gold).
+2. Click on the **Code** dropdown next to the green **Gitpod** button. This will reveal the **Clone** option.
+3. In order to clone the repository using `HTTPS`, select **HTTPS** and copy the link shown (there is a copy button to the right of the URL).
+4. Next, open **Git Bash** (see [here](https://git-scm.com/downloads) for an overview of download options, if required).
+5. Change the current working directory on your local machine to the location where you want the cloning to be made.
+6. Type `git clone` into your IDE terminal followed by the URL you copied in Step 3 above, i.e.
+
+```
+https://github.com/loosenthedark/going-for-gold.git
+```
+
+7. Press **Enter**.
+8. Your local clone has now been created.
+
+_See the [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories) for more information on all of the above processes._
+
+</details>
+
 ## Notice
 
 This site has been created for development purposes only.
