@@ -4,7 +4,7 @@ import medalsData from "./data/medalsData";
 import kosovoData from "./data/kosovoData";
 
 // Store root API request URL in a variable...
-const API_ENDPOINT = "https://restcountries.eu/rest/v2/";
+const API_ENDPOINT = "https://restcountries.com/v2/";
 
 const useRequests = (urlParams) => {
   // Set up primary state values...
